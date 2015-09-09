@@ -21,7 +21,7 @@
     "predeploy": "npm run-script min",
     "jshint": "jshint ./bin/*.js ./bin/**/*.js ./src/js/*.js ./gulpfile.js",
     "start": "node ./bin/server.js",
-    "min": "gulp"
+    "min": "./node_modules/.bin/gulp"
   },
   "contributors": [{
     "name": "Trygve Lie",
@@ -40,7 +40,7 @@
     "url": "https://github.com/webrebels/cssconf-2016/issues"
   },
   "licenses": [],
-  "subdomain": "wr2016",
+  "subdomain": "2016",
   "domains": [
     "www.cssconf.no",
     "cssconf.no"
