@@ -1,0 +1,4 @@
+{
+    "logConsoleLevel"   : "info",
+    "docRoot" 			: "/public"
+}
