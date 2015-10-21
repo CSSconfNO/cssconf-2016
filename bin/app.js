@@ -102,7 +102,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 if (config.get('env') === 'development') {
-  app.get('/css/*', routeAssets.appCss);
+  app.get('/css/styles.css', routeAssets.appCss);
   app.get('/js/app.js', routeAssets.appJs);
 }
 

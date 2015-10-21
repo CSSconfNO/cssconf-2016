@@ -422,3 +422,176 @@ td,
 th {
   padding: 0;
 }
+
+/* Base
+--------------------------------------------------- */
+
+html {
+    background-color: #fff;
+    color: #444;
+    font-size: 100%;
+    font-family: Monaco, Consolas, Lucida Console, monospace;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    line-height: 1.4;
+    margin: 0 0 0.5em 0;
+}
+
+p, ul, ol, dl {
+    margin: 0 0 1.5em 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    background-color: #e3e1df;
+    color: #333;
+    padding: 0.06em 0.3em;
+}
+
+a:hover,
+a:focus,
+a:active {
+    background-color: #dbd7d1;
+}
+
+a:link.cleanlink,
+a:visited.cleanlink {
+   background-color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+
+
+
+/* Layout
+--------------------------------------------------- */
+
+header {
+    background-color: #dbd7d1;
+    padding-top: 3em;
+    padding-bottom: 0.1em;
+    margin-bottom: 1em;
+}
+
+.content {
+
+}
+
+footer {
+    background-color: #dbd7d1;
+    margin-top: 6em;
+    min-height: 6em;
+    padding-top: 2em;
+}
+
+.inner {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+   .inner {
+      max-width: 50em;
+   }
+}
+
+
+
+/* Modules
+--------------------------------------------------- */
+
+.what {
+    font-size: 2.75em;
+    margin-bottom: 0;
+    margin-left: -0.02em;
+    line-height: 1.2;
+}
+
+.whereandwhen {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.family-text {
+    max-width: 30em;
+    float: left;
+}
+
+.css-family-logo {
+    max-width: 15em;
+    float: right;
+}
+
+.circle-yellow {
+    fill: #FCC720;
+}
+
+.circle-red {
+    fill: #EA3939;
+}
+
+.circle-blue {
+    fill: #2176FF;
+}
+
+[class^="type__letter"] {
+    fill: #EA3939;
+}
+
+[class^="globe__"] {
+    fill: #212121;
+}
+
+.shoutout {
+    border-top: 3px solid #dbd7d1;
+    border-bottom: 3px solid #dbd7d1;
+    padding: 1em 2em;
+    margin: 3em 0;
+    text-align: center;
+}
+
+
+/* Helper classes
+--------------------------------------------------- */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.group:before,
+.group:after {
+    content: " ";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+@media screen and (min-width: 900px) {
+.rwd-line {
+    display: block;
+}
+
+
+/* --------------------------------------------------- */
