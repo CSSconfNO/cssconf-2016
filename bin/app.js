@@ -108,13 +108,19 @@ if (config.get('env') === 'development') {
 
 // Set http routes
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
   res.render('index', {
-    pageTitle: 'CSSConf.no - Oslo - 2016',
+    pageTitle: 'CSSconf Nordic 2016',
     css: css
   });
 });
 
+app.get('/call-for-speakers', function (req, res) {
+    res.render('call-for-speakers', {
+        pageTitle: 'Call for Speakers / CSSconf Nordic 2016',
+        css: css
+    });
+});
 
 // Set up http server
 
