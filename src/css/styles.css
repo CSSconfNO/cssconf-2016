@@ -583,6 +583,10 @@ footer {
     text-align: center;
 }
 
+.signupform {
+  margin: 0 0 2em 2em;
+}
+
 
 /* Helper classes
 --------------------------------------------------- */
