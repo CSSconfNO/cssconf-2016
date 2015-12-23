@@ -513,6 +513,26 @@ footer {
 /* Modules
 --------------------------------------------------- */
 
+.btn {
+    background-color: #2176FF !important;
+    color: #fff !important;
+    padding: 0.5em  1em 1em 1em !important;
+    display: inline-block;
+    margin-bottom: 2em;
+}
+
+.btn-emoji {
+  font-size: 2em;
+  line-height: 1;
+  position: relative;
+  top: 7px;
+  margin: 0 5px 0 10px;
+}
+
+.btn:hover {
+    background-color: #195BBC !important;  
+}
+
 .what {
     font-size: 2.75em;
     margin-bottom: 0;
