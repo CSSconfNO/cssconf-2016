@@ -13,7 +13,7 @@
   },
   "keywords": [
     "conference",
-    "javascript",
+    "css",
     "web"
   ],
   "homepage": "http://www.cssconf.no/",
@@ -34,7 +34,7 @@
     "email": "bodil@bodil.tv"
   }],
   "engines": {
-    "iojs": "2.0.x"
+    "node": "5.3.0"
   },
   "bugs": {
     "url": "https://github.com/webrebels/cssconf-2016/issues"
