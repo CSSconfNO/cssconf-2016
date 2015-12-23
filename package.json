@@ -53,21 +53,21 @@
     "jshint": "latest",
     "vinyl-buffer": "latest",
     "vinyl-source-stream": "latest",
-    "picturefill": "2.x"
+    "picturefill": "3.x"
   },
   "dependencies": {
     "body": "5.x",
     "body-parser": "1.x",
-    "browserify": "10.x",
+    "browserify": "12.x",
     "combined-stream": "1.0.x",
     "compression": "1.x",
-    "convict": "0.7.x",
-    "express": "4.12.x",
-    "express-validator": "2.10.x",
-    "hbs": "3.x",
-    "helmet": "0.9.x",
+    "convict": "1.x",
+    "express": "4.13.x",
+    "express-validator": "2.18.x",
+    "hbs": "4.x",
+    "helmet": "1.x",
     "mandrill-api": "1.0.x",
     "serve-static": "1.9.x",
-    "winston": "1.0.x"
+    "winston": "2.0.x"
   }
 }

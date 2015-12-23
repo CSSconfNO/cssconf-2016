@@ -76,16 +76,18 @@ app.use(helmet.frameguard('deny'));
 
 
 app.use(helmet.csp({
-  defaultSrc: ["'none'"],
-  scriptSrc: ["'self'", "data:", "'unsafe-inline'", "'unsafe-eval'", "www.google-analytics.com", "ssl.google-analytics.com", "professional.player.qbrick.com", "publisher.qbrick.com"],
-  styleSrc: ["'self'", "'unsafe-inline'"],
-  imgSrc: ["'self'", "data:", "server.arcgisonline.com", "ssl.google-analytics.com"],
-  frameSrc: ["eventbrite.com", "www.eventbrite.com"],
-  objectSrc: ["'self'", "professional.player.qbrick.com"],
-  fontSrc: ["'self'"],
-  connectSrc: ["*"],
-  sandbox: ['allow-forms', 'allow-scripts'],
-  reportUri: '/api/v1/csp',
+  directives : {
+    defaultSrc: ["'none'"],
+    scriptSrc: ["'self'", "data:", "'unsafe-inline'", "'unsafe-eval'", "www.google-analytics.com", "ssl.google-analytics.com", "professional.player.qbrick.com", "publisher.qbrick.com"],
+    styleSrc: ["'self'", "'unsafe-inline'"],
+    imgSrc: ["'self'", "data:", "server.arcgisonline.com", "ssl.google-analytics.com"],
+    frameSrc: ["eventbrite.com", "www.eventbrite.com"],
+    objectSrc: ["'self'", "professional.player.qbrick.com"],
+    fontSrc: ["'self'"],
+    connectSrc: ["*"],
+    sandbox: ['allow-forms', 'allow-scripts'],
+    reportUri: '/api/v1/csp'
+  },
   reportOnly: true, // set to true if you only want to report errors
   setAllHeaders: true, // set to true if you want to set all headers
   safari5: false // set to true if you want to force buggy CSP in Safari 5
