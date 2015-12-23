@@ -61,6 +61,16 @@ gulp.task('icon', function() {
 });
 
 
+
+// Copy files
+
+gulp.task('files', function() {
+    return gulp.src('./src/files/**/*')
+        .pipe(gulp.dest('./public/files/'));
+});
+
+
+
 // Copy fonts
 
 gulp.task('fonts', function() {
@@ -72,4 +82,4 @@ gulp.task('fonts', function() {
 
 // The default task
 
-gulp.task('default', ['js', 'css-fold', 'css-app', 'img', 'fonts', 'icon']);
+gulp.task('default', ['js', 'css-fold', 'css-app', 'img', 'fonts', 'icon', 'files']);
