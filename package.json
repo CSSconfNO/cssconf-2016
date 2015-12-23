@@ -24,6 +24,12 @@
     "min": "./node_modules/.bin/gulp"
   },
   "contributors": [{
+    "name": "Elisabeth Irgens",
+    "email": "elisabeth@cssconf.no"
+  }, {
+    "name": "Ida Franceen",
+    "email": "ida@cssconf.no"
+  }, {
     "name": "Trygve Lie",
     "email": "post@trygve-lie.com"
   }, {

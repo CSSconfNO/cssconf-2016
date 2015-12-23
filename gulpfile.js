@@ -38,7 +38,7 @@ gulp.task('css-fold', function() {
 gulp.task('css-app', function() {
     return gulp.src(['src/css/styles.css'])
         .pipe(minifyCSS({removeEmpty : true}))
-        .pipe(concat('app.css'))
+        .pipe(concat('styles.css'))
         .pipe(gulp.dest('./public/css/'));
 });
 
