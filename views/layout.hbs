@@ -15,6 +15,11 @@
                 <h1 class="what">CSSconf Nordic</h1>
                 <p class="whereandwhen">Oslo, Norway — 01 June 2016</p>
             </div>
+            <nav>
+                {{#each navItems}}
+                    <a href="{{link}}">{{title}}</a>
+                {{/each}}
+            </nav>
         </header>
 
 {{{body}}}

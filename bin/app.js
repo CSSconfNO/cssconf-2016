@@ -110,18 +110,43 @@ if (config.get('env') === 'development') {
 
 // Set http routes
 
+var navItems = [{
+  title: 'Info',
+  link: '#info'
+},{
+  title: 'Venue',
+  link: '#venue'
+},{
+  title: 'Speakers',
+  link: '#speakers'
+},{
+  title: 'Schedule',
+  link: '#schedule'
+},{
+  title: 'Sponsors',
+  link: '#sponsors'
+},{
+  title: 'Team',
+  link: '#team'
+},{
+  title: 'Tickets',
+  link: '#tickets'
+}];
+
 app.get('/', function (req, res) {
   res.render('index', {
     pageTitle: 'CSSconf Nordic 2016',
-    css: css
+    css: css,
+    navItems: navItems
   });
 });
 
 app.get('/call-for-speakers', function (req, res) {
-    res.render('call-for-speakers', {
-        pageTitle: 'Call for Speakers / CSSconf Nordic 2016',
-        css: css
-    });
+  res.render('call-for-speakers', {
+    pageTitle: 'Call for Speakers / CSSconf Nordic 2016',
+    css: css,
+    navItems: navItems
+  });
 });
 
 // Set up http server
