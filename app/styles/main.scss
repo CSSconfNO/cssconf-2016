@@ -133,12 +133,29 @@ nav {
 header {
   background: $background;
   color: $light-text-default;
-  padding: 100px 10px 0;
+  padding: 80px 10px 100px;
+  position: relative;
+  z-index: 0;
   > p {
     text-align: center;
     padding: 1em 20%;
     margin: 0;
     font-style: italic;
+  }
+  &:before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: block;
+    height: 211px;
+    width: 1300px;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -650px;
+    background: lighten($background, 5%);
+    overflow: hidden;
+    mask-image: url('/images/oslo-skyline.png');
   }
 }
 
@@ -213,7 +230,6 @@ $section-end-background: $background;
 
 .content {
   background: $section-end-background;
-  padding-top: 4em;
 }
 
 .content > section {
