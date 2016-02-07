@@ -1,79 +1,43 @@
 {
-  "name": "cssconf-2016",
-  "version": "1.0.0",
-  "author": {
-    "name": "CSSConf.no",
-    "email": "hello@cssconf.no"
-  },
-  "description": "The CSSConf.no 2016 web site",
-  "main": "./bin/server.js",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:webrebels/cssconf-2016.git"
-  },
-  "keywords": [
-    "conference",
-    "css",
-    "web"
-  ],
-  "homepage": "http://www.cssconf.no/",
-  "scripts": {
-    "predeploy": "npm run-script min",
-    "jshint": "jshint ./bin/*.js ./bin/**/*.js ./src/js/*.js ./gulpfile.js",
-    "start": "node ./bin/server.js",
-    "min": "./node_modules/.bin/gulp"
-  },
-  "contributors": [{
-    "name": "Elisabeth Irgens",
-    "email": "elisabeth@cssconf.no"
-  }, {
-    "name": "Ida Franceen",
-    "email": "ida@cssconf.no"
-  }, {
-    "name": "Trygve Lie",
-    "email": "post@trygve-lie.com"
-  }, {
-    "name": "Espen Dalløkken",
-    "email": "espen@dallokken.com"
-  }, {
-    "name": "Bodil Stokke",
-    "email": "bodil@bodil.tv"
-  }],
+  "private": true,
   "engines": {
-    "node": "5.3.0"
+    "node": ">=0.12.0"
   },
-  "bugs": {
-    "url": "https://github.com/webrebels/cssconf-2016/issues"
-  },
-  "licenses": [],
-  "subdomain": "2016",
-  "domains": [
-    "www.cssconf.no",
-    "cssconf.no"
-  ],
   "devDependencies": {
-    "gulp": "latest",
-    "gulp-concat": "latest",
-    "gulp-minify-css": "latest",
-    "gulp-uglify": "latest",
-    "jshint": "latest",
-    "vinyl-buffer": "latest",
-    "vinyl-source-stream": "latest",
-    "picturefill": "3.x"
+    "babel-core": "^6.4.0",
+    "babel-preset-es2015": "^6.3.13",
+    "browser-sync": "^2.2.1",
+    "del": "^1.1.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-babel": "^6.1.1",
+    "gulp-cache": "^0.2.8",
+    "gulp-cssnano": "^2.0.0",
+    "gulp-eslint": "^0.13.2",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.0",
+    "gulp-size": "^1.2.1",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-useref": "^3.0.0",
+    "main-bower-files": "^2.5.0",
+    "wiredep": "^2.2.2"
   },
-  "dependencies": {
-    "body": "5.x",
-    "body-parser": "1.x",
-    "browserify": "12.x",
-    "combined-stream": "1.0.x",
-    "compression": "1.x",
-    "convict": "1.x",
-    "express": "4.13.x",
-    "express-validator": "2.18.x",
-    "hbs": "4.x",
-    "helmet": "1.x",
-    "mandrill-api": "1.0.x",
-    "serve-static": "1.9.x",
-    "winston": "2.0.x"
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    },
+    "rules": {
+      "quotes": [
+        2,
+        "single"
+      ]
+    }
   }
 }
