@@ -120,7 +120,8 @@ nav {
       height: 50px;
       background: lighten($background, 10%);
       opacity: 0;
-      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      //clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      clip-path: url(#polygonclip-1);
       transition: transform 300ms ease-in-out, opacity 300ms linear;
     }
     &:hover:before, &.is-active:before {
@@ -166,21 +167,23 @@ header {
   margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  padding-top: 49px;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  padding-top: 58px;
+  //clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: url(#polygonclip-1);
+  overflow: hidden;
   > h2 {
-    margin: 0;
-    font-size: 50px;
+    margin: 0 8% 0 6%;
+    font-size: 44px;
     line-height: 0.85;
     text-align: center;
     > span {
-      letter-spacing: 0.13em;
+      letter-spacing: 0.12em;
     }
   }
   > div {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    margin: 0 6.7%;
     text-align: justify;
     text-transform: uppercase;
     font-weight: 300;
@@ -287,14 +290,14 @@ $section-end-background: $background;
   position: relative;
   justify-content: flex-start;
   transform: translateX(50%);
-  left: -60px;
-  margin-bottom: -55px;
+  left: -67px;
+  margin-bottom: -58px;
 
   &:nth-child(2n+1) {
     justify-content: flex-start;
     flex-direction: row-reverse;
     transform: translateX(-50%);
-    left: 60px;
+    left: 67px;
     text-align: right;
   }
 }
@@ -303,14 +306,16 @@ $section-end-background: $background;
   flex-basis: 240px;
   width: 240px;
   height: 240px;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  //clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   > img {
     filter: grayscale(100%);
+    clip-path: url(#polygonclip-1);
   }
 }
 
 .schedule-item:hover .schedule-item-image > img {
   filter: grayscale(0%);
+  clip-path: url(#polygonclip-2);
 }
 
 .schedule-item-content {
