@@ -1,25 +1,3 @@
-var Navigation = {
-  activeItem: null,
-  init: function() {
-    $('.main-nav > a').click(function(e) {
-      e.preventDefault();
-      if (Navigation.activeItem) {
-        $(Navigation.activeItem).removeClass('is-active');
-      }
-      if (this == Navigation.activeItem) {
-        Navigation.activeItem = null;
-      }
-      else {
-        $(this).addClass('is-active');
-        Navigation.activeItem = this;
-        $('html, body').animate({
-            scrollTop: $(e.target.dataset.target).offset().top - 130
-        }, 500);
-      }
-    });
-  }
-}
-
 var Schedule = {
   activeItem: null,
   init: function() {
@@ -81,7 +59,13 @@ var Map = {
 }
 
 $(function () {
-  Navigation.init();
+  /*new Foundation.Magellan($('.main-nav'), {
+    activeClass: 'is-active',
+    barOffset: 100
+  });*/
+  //new Foundation.Sticky($('#main-nav'));
   Schedule.init();
   Map.init();
 });
+
+$(document).foundation();

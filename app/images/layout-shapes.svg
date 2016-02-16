@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve">
+  <defs>
+    <clipPath id="polygon-clip-1" clipPathUnits="objectBoundingBox">
+      <path d="M 0.503 0 L 0.93 0.25 L 0.503 0.493 z" fill="black" />
+      <path d="M 0.933 0.253 L 0.933 0.747 L 0.503 0.5 z" fill="black" />
+      <path d="M 0.933 0.753 L 0.503 1 L 0.503 0.507 z" fill="black" />
+      <path d="M 0.497 1 L 0.067 0.753 L 0.497 0.507 z" fill="black" />
+      <path d="M 0.067 0.747 L 0.067 0.253 L 0.497 0.5 z" fill="black" />
+      <path d="M 0.067 0.247 L 0.497 0 L 0.497 0.493 z" fill="black" />
+    </clipPath>
+    <clipPath id="polygon-clip-2" clipPathUnits="objectBoundingBox">
+      <polygon points="0.5,0 0.933,0.25 0.933,0.75 0.5,1 0.067,0.75 0.067,0.25" />
+    </clipPath>
+    <clipPath id="diamond-clip-1" clipPathUnits="objectBoundingBox">
+      <path d="M 0.01 0 L 0.99 0 L 0.5 0.49 z" fill="black" />
+      <path d="M 1 0.01 L 1 0.99 L 0.51 0.5 z" fill="black" />
+      <path d="M 0.99 1 L 0.01 1 L 0.5 0.51 z" fill="black" />
+      <path d="M 0 0.99 L 0 0.01 L 0.49 0.5 z" fill="black" />
+    </clipPath>
+    <clipPath id="diamond-clip-2" clipPathUnits="objectBoundingBox">
+      <rect x="0" y="0" width="1" height="1" fill="black" />
+    </clipPath>
+  </defs>
+</svg>

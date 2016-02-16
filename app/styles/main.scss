@@ -1,4 +1,5 @@
 // bower:scss
+@import "bower_components/foundation-sites/scss/foundation.scss";
 // endbower
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700);
@@ -27,7 +28,7 @@ $background: #1b374b;
 $dark-text-default: #333333;
 $light-text-default: #dddddd;
 
-$cta-color: #d48222;
+$cta-color: #ee882e;
 $primary-color: #2a80c5;
 
 * {
@@ -40,6 +41,7 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 p {
@@ -59,6 +61,7 @@ p {
 quote {
   position: relative;
   display: block;
+  clear: both;
   width: 100%;
   text-align: center;
   margin: 2em 0;
@@ -79,54 +82,70 @@ quote {
   }
 }
 
+.float-right {
+  float: right;
+  margin-left: 1em;
+}
+
+.float-left {
+  float: left;
+  margin-right: 1em;
+}
+
 @keyframes rotate-nav-item {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(135deg);
+  }
+  75% {
+    transform: rotate(180deg);
   }
   100% {
-    transform: rotate(180deg);
+    transform: rotate(225deg);
   }
 }
 
-nav {
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  left: 0;
-  right: 0;
+.main-nav {
+  height: 70px;
+  width: 100%;
+  position: relative;
+  z-index: 99 !important;
   background: $background;
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
   color: $light-text-default;
-  padding: 10px;
-  > a {
-    display: inline-block;
-    padding: 1em;
+  > .menu {
+    height: 70px;
+    line-height: 70px;
+  }
+  a {
+    text-align: center;
     color: inherit;
-    text-decoration: none;
     position: relative;
     z-index: 0;
     &:before {
       position: absolute;
       top: 50%;
       left: 50%;
-      margin-left: -25px;
-      margin-top: -25px;
+      margin-left: -20px;
+      margin-top: -20px;
       z-index: -1;
       content: '';
       display: block;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       background: lighten($background, 10%);
       opacity: 0;
-      //clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-      clip-path: url(#polygonclip-1);
+      transform: rotate(45deg);
+      clip-path: url('/images/layout-shapes.svg#diamond-clip-1');
       transition: transform 300ms ease-in-out, opacity 300ms linear;
     }
     &:hover:before, &.is-active:before {
       opacity: 1;
-      animation: rotate-nav-item 500ms 1;
+      animation: rotate-nav-item 300ms 1;
     }
   }
 }
@@ -134,15 +153,9 @@ nav {
 header {
   background: $background;
   color: $light-text-default;
-  padding: 80px 10px 100px;
+  padding-bottom: 100px;
   position: relative;
   z-index: 0;
-  > p {
-    text-align: center;
-    padding: 1em 20%;
-    margin: 0;
-    font-style: italic;
-  }
   &:before {
     position: absolute;
     z-index: -1;
@@ -158,6 +171,120 @@ header {
     overflow: hidden;
     mask-image: url('/images/oslo-skyline.png');
   }
+  p {
+    text-align: center;
+    padding: 1em 20%;
+    margin: 0;
+    font-style: italic;
+  }
+}
+
+.header-graphics {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 20em;
+  width: 25em;
+  margin: 0 auto;
+  transform: rotate(45deg);
+  box-sizing: content-box;
+
+  > .box-row {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .box {
+    overflow: hidden;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: rgba(#fff, 0.05);
+    border: 1px solid $background;
+    clip-path: url('/images/layout-shapes.svg#diamond-clip-1');
+    &:hover, &.no-lines {
+      clip-path: url('/images/layout-shapes.svg#diamond-clip-2');
+      cursor: default;
+    }
+  }
+
+  .box-empty {
+    opacity: 0;
+  }
+
+  .box-large {
+    width: 160px;
+    height: 160px;
+    background: rgba(#fff, 0.1);
+    .box-content {
+      font-size: 1.9em;
+    }
+  }
+
+  .box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(-45deg);
+    font-size: 1.3em;
+    font-weight: 200;
+    text-transform: uppercase;
+    > strong {
+      font-size: 1.2em;
+      display: block;
+    }
+    > small {
+      font-size: 0.7em;
+    }
+  }
+
+  .box-logo > .box-content {
+    transform: rotate(-90deg);
+  }
+}
+
+.css-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/css-family-logo.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 90%;
+  filter: saturate(50%);
+  &:hover {
+    filter: saturate(100%);
+  }
+}
+
+h2.logo {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  line-height: 1.1em;
+  text-align: center;
+  color: $cta-color;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:nth-child(1) {
+      font-size: 1.6em;
+    }
+    &:nth-child(3) {
+      font-size: 0.8em;
+      font-weight: 100;
+    }
+  }
 }
 
 .header-title {
@@ -169,7 +296,7 @@ header {
   text-align: center;
   padding-top: 58px;
   //clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: url(#polygonclip-1);
+  clip-path: url('/images/layout-shapes.svg#polygon-clip-1');
   overflow: hidden;
   > h2 {
     margin: 0 8% 0 6%;
@@ -309,13 +436,13 @@ $section-end-background: $background;
   //clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   > img {
     filter: grayscale(100%);
-    clip-path: url(#polygonclip-1);
+    clip-path: url('/images/layout-shapes.svg#polygon-clip-1');
   }
 }
 
 .schedule-item:hover .schedule-item-image > img {
   filter: grayscale(0%);
-  clip-path: url(#polygonclip-2);
+  clip-path: url('/images/layout-shapes.svg#polygon-clip-2');
 }
 
 .schedule-item-content {
@@ -368,30 +495,6 @@ section#venue {
 }
 
 
-.css-family-logo {
-    max-width: 12em;
-    margin-left: 1em;
-    float: right;
-}
 
-.circle-yellow {
-    fill: #FCC720;
-}
-
-.circle-red {
-    fill: #EA3939;
-}
-
-.circle-blue {
-    fill: #2176FF;
-}
-
-[class^="type__letter"] {
-    fill: #EA3939;
-}
-
-[class^="globe__"] {
-    fill: #212121;
-}
 
 
