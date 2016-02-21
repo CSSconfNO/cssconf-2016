@@ -65,7 +65,7 @@ $(function () {
   });*/
   //new Foundation.Sticky($('#main-nav'));
   Schedule.init();
-  Map.init();
+  //Map.init();
 });
 
 $(document).foundation();

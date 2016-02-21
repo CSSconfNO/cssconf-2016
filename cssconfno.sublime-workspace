@@ -1,0 +1,1245 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"dgrid-item",
+				"dgrid-item-border-size"
+			],
+			[
+				"dgrid",
+				"dgrid-item-size"
+			],
+			[
+				"dgri",
+				"dgrid-row-items"
+			],
+			[
+				"na",
+				"navigationItems"
+			],
+			[
+				"Nav",
+				"NavigationItem"
+			],
+			[
+				"bds-",
+				"bds-nav__item"
+			],
+			[
+				"sub",
+				"subNavColumns"
+			],
+			[
+				"subn",
+				"subNavContent"
+			],
+			[
+				"subN",
+				"subNavColumns"
+			],
+			[
+				"subNa",
+				"subNavContent"
+			],
+			[
+				"Route",
+				"RoutesHandler"
+			],
+			[
+				"dekt",
+				"desktopSubMenu"
+			],
+			[
+				"show",
+				"showDropdown"
+			],
+			[
+				"drop",
+				"dropdownLinks"
+			],
+			[
+				"TetherCo",
+				"TetherComponent"
+			],
+			[
+				"bds-app-na",
+				"bds-app-nav-text-shadow"
+			],
+			[
+				"bds-app-",
+				"bds-app-nav-font-family"
+			],
+			[
+				"bds-app-n",
+				"bds-app-nav-color"
+			],
+			[
+				"gr",
+				"groupedChildren"
+			],
+			[
+				"sort",
+				"sortedChildren"
+			],
+			[
+				"rec",
+				"receivedAt"
+			],
+			[
+				"in",
+				"initial-state"
+			],
+			[
+				"ini",
+				"initialState"
+			],
+			[
+				"ac",
+				"accordionTitle"
+			],
+			[
+				"body",
+				"bodyNode"
+			],
+			[
+				"act",
+				"activeItems"
+			],
+			[
+				"cont",
+				"contentNode"
+			],
+			[
+				"watc",
+				"watchLiveIcon"
+			],
+			[
+				"titleC",
+				"titleClassName"
+			],
+			[
+				"titl",
+				"titleClass"
+			],
+			[
+				"matc",
+				"matchesData"
+			],
+			[
+				"grou",
+				"groupedData"
+			],
+			[
+				"Math",
+				"MatchListLeagueItem"
+			],
+			[
+				"MatchList",
+				"MatchListItem"
+			],
+			[
+				"Mat",
+				"MatchListItem"
+			],
+			[
+				"bds-acco",
+				"bds-accordion-border"
+			],
+			[
+				"bds-ac",
+				"bds-accordion-hover-background"
+			],
+			[
+				"bds-acc",
+				"bds-accordion-background"
+			],
+			[
+				"Ac",
+				"AccordionItem"
+			],
+			[
+				"bds-mat",
+				"bds-matchlist-text"
+			],
+			[
+				"code",
+				"codePresentation"
+			],
+			[
+				"time",
+				"timeFormat"
+			],
+			[
+				"retu",
+				"returnDate"
+			],
+			[
+				"timestam",
+				"timestampFormat"
+			],
+			[
+				"mome",
+				"momentDisplay"
+			],
+			[
+				"isTo",
+				"isTomorrow"
+			],
+			[
+				"momen",
+				"momentMatchTime"
+			],
+			[
+				"match",
+				"matchData"
+			],
+			[
+				"mat",
+				"matchesData"
+			],
+			[
+				"bds-colo",
+				"bds-icon-light-color"
+			],
+			[
+				"bds-icon",
+				"bds-icon-color"
+			],
+			[
+				"pre",
+				"presenterClass"
+			],
+			[
+				"input-",
+				"bds-input-focus-bg"
+			],
+			[
+				"inp",
+				"inputElement"
+			],
+			[
+				"icon",
+				"iconElement"
+			],
+			[
+				"bds-check",
+				"bds-checkbox-active-label"
+			],
+			[
+				"input",
+				"inputWrapperClassName"
+			],
+			[
+				"bds-la",
+				"bds-label-text"
+			],
+			[
+				"bds-label",
+				"bds-label-font-weight"
+			],
+			[
+				"bds-labl",
+				"bds-label-font-size"
+			],
+			[
+				"bds-ch",
+				"bds-checkbox-active-text"
+			],
+			[
+				"bds-che",
+				"bds-checkbox-border"
+			],
+			[
+				"chec",
+				"bds-checkbox-text"
+			],
+			[
+				"checkbox-",
+				"bds-checkbox-bg"
+			],
+			[
+				"checkbox",
+				"bds-checkbox-border"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 11601,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/main.scss",
+			"settings":
+			{
+				"buffer_size": 11831,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/main.js",
+			"settings":
+			{
+				"buffer_size": 3667,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "rei",
+		"selected_items":
+		[
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"goto",
+				"Go To Definition"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/steph/Git/cssconf-2016",
+		"/Users/steph/Git/cssconf-2016/app",
+		"/Users/steph/Git/cssconf-2016/app/scripts",
+		"/Users/steph/Git/cssconf-2016/app/styles"
+	],
+	"file_history":
+	[
+		"/Users/steph/Git/bettingexpert/src/routes-handler.js",
+		"/Users/steph/Git/bettingexpert/config/webpack.config.js",
+		"/Users/steph/Git/bettingexpert/src/routes.js",
+		"/Users/steph/Git/bettingexpert/src/client.js",
+		"/Users/steph/Git/bettingexpert/src/containers/app.js",
+		"/Users/steph/Git/bettingexpert/src/redux/modules/index.js",
+		"/Users/steph/Git/bettingexpert/src/containers/dummy.js",
+		"/Users/steph/Git/bettingexpert/src/components/app-navigation/index.jsx",
+		"/Users/steph/Git/bettingexpert/src/components/app-navigation/demo.jsx",
+		"/Users/steph/Git/bettingexpert/src/containers/app-header.js",
+		"/Users/steph/Git/bettingexpert/src/containers/not-found.js",
+		"/Users/steph/Git/bettingexpert/src/components/app-topbar/app-topbar.jsx",
+		"/Users/steph/Git/bettingexpert/src/styles/modules/_top-bar.scss",
+		"/Users/steph/Git/bettingexpert/src/redux/modules/navigation.js",
+		"/Users/steph/Git/bettingexpert/src/elements/navigation/_navigation.scss",
+		"/Users/steph/Git/bettingexpert/src/components/styleguideblocks/components/topbar.js",
+		"/Users/steph/Git/bettingexpert/src/elements/navigation/navigation.jsx",
+		"/Users/steph/Git/bettingexpert/src/elements/tether/tether.jsx",
+		"/Users/steph/Git/bettingexpert/src/containers/dummyadddatabutton.js",
+		"/Users/steph/Git/bettingexpert/src/redux/modules/dummy.js",
+		"/Users/steph/Git/bettingexpert/node_modules/react-router/es6/Link.js",
+		"/Users/steph/Git/bettingexpert/node_modules/react/lib/ReactLink.js",
+		"/Users/steph/Git/bettingexpert/src/components/app-topbar/_app-topbar.scss",
+		"/Users/steph/Git/bettingexpert/src/components/match-list/demo.jsx",
+		"/Users/steph/Git/bettingexpert/src/styles/main.scss",
+		"/Users/steph/.Trash/app-nav/_app-nav.scss",
+		"/Users/steph/Git/bettingexpert/src/components/app-nav/app-nav.jsx",
+		"/Users/steph/Git/bettingexpert/src/elements/navigation/index.jsx",
+		"/Users/steph/Git/bettingexpert/src/elements/navigation/demo.jsx",
+		"/Users/steph/Git/bettingexpert/src/components/app-topbar/demo.jsx",
+		"/Users/steph/Git/bettingexpert/src/components/app-topbar/index.jsx",
+		"/Users/steph/Git/bettingexpert/src/components/styleguide/components/presenter.js",
+		"/Users/steph/Git/bettingexpert/gruntfile.js",
+		"/Users/steph/Git/bettingexpert/src/tests/fixtures/matches.json",
+		"/Users/steph/Git/bettingexpert/README.md",
+		"/Users/steph/Git/bettingexpert/bettingexpert.sublime-project",
+		"/Users/steph/Git/bettingexpert/src/elements/tether/demo.jsx",
+		"/Users/steph/Git/bettingexpert/src/components/styleguide/styleguidecreator.js",
+		"/Users/steph/Git/bettingexpert/src/containers/styleguide.js",
+		"/Users/steph/Git/bettingexpert/src/components/form/form-fieldset.jsx",
+		"/Users/steph/Git/bettingexpert/src/components/styleguide/sass/styleguide.scss",
+		"/Users/steph/Git/bettingexpert/src/components/app-nav/_app-nav.scss",
+		"/Users/steph/Git/bettingexpert/src/redux/create.js",
+		"/Users/steph/Git/bettingexpert/src/containers/matches.jsx",
+		"/Users/steph/Git/bettingexpert/src/redux/modules/matches.js",
+		"/Users/steph/Git/bettingexpert/src/containers/landingpage.js",
+		"/Users/steph/Git/bettingexpert/src/redux/modules/auth.js",
+		"/Users/steph/Git/bettingexpert/src/containers/about.js",
+		"/Users/steph/Git/bettingexpert/src/components/app-nav/index.jsx",
+		"/Users/steph/Git/bettingexpert/src/components/app-nav/demo.jsx",
+		"/Users/steph/Git/bettingexpert/config/gruntfile.js",
+		"/Users/steph/Git/bettingexpert/src/components/match-list/match-list.jsx",
+		"/Users/steph/Git/bettingexpert/src/components/layout/layout.jsx",
+		"/Users/steph/Git/bettingexpert/src/components/layout/templates/layout-no-sidebar.jsx",
+		"/Users/steph/Git/bettingexpert/src/components/layout/templates/layout-hero.jsx",
+		"/Users/steph/Git/bettingexpert/src/components/layout/templates/layout-sidebar.jsx",
+		"/Users/steph/Git/bettingexpert/src/components/layout/templates/layout-sidebars.jsx",
+		"/Users/steph/Git/bettingexpert/node_modules/scroll-behavior/package.json",
+		"/Users/steph/Git/bettingexpert/node_modules/scroll-behavior/README.md",
+		"/Users/steph/Git/bettingexpert/src/components/matchlist-old/matchlist.js",
+		"/Users/steph/Git/bettingexpert/src/containers/app-footer.js",
+		"/Users/steph/Git/bettingexpert/node_modules/react-router/lib/Link.js",
+		"/Users/steph/Git/bettingexpert/node_modules/react-router/lib/Route.js",
+		"/Users/steph/Git/bettingexpert/node_modules/react/lib/ReactChildren.js",
+		"/Users/steph/Git/bettingexpert/node_modules/react-router/package.json",
+		"/Users/steph/Git/bettingexpert/package.json",
+		"/Users/steph/Git/bettingexpert/dist/api/matches.json",
+		"/Users/steph/Git/bettingexpert/src/components/match-list/dummy-data.jsx",
+		"/Users/steph/Git/bettingexpert/src/containers/protomatch.js",
+		"/Users/steph/Git/bettingexpert/src/elements/accordion/accordion.jsx",
+		"/Users/steph/Git/bettingexpert/src/redux/modules/app.js",
+		"/Users/steph/Git/bettingexpert/src/components/match-list/index.jsx",
+		"/Users/steph/Git/bettingexpert/src/containers/matchlist.jsx",
+		"/Users/steph/Git/bettingexpert/src/tests/fixtures/initial-state.fixture.js",
+		"/Users/steph/Git/bettingexpert/src/redux/modules/meta.js",
+		"/Users/steph/Git/bettingexpert/src/env.js",
+		"/Users/steph/Git/bettingexpert/src/tests/fixtures/initial-state.prod.fixture.js",
+		"/Users/steph/Git/bettingexpert/node_modules/foundation-sites/js/foundation.util.triggers.js",
+		"/Users/steph/Git/bettingexpert/src/components/matchlist/dummy-data.jsx",
+		"/Users/steph/Git/bettingexpert/config/bettingexpert.config.js",
+		"/Users/steph/Git/bettingexpert/node_modules/foundation-sites/dist/foundation.js",
+		"/Users/steph/Git/bettingexpert/dist/index.html",
+		"/Users/steph/Git/bettingexpert/src/index.html",
+		"/Users/steph/Git/bettingexpert/webpack.config.js",
+		"/Users/steph/Git/bettingexpert/src/styles/settings/_global-settings.scss",
+		"/Users/steph/Git/bettingexpert/src/styles/settings/_foundation-settings.scss",
+		"/Users/steph/Git/bettingexpert/lib/server.js",
+		"/Users/steph/Git/bettingexpert/config/bettingexpert.config",
+		"/Users/steph/Git/bettingexpert/src/utils/store-dev.js",
+		"/Users/steph/Git/bettingexpert/src/client.dev.js",
+		"/Users/steph/Git/bettingexpert/src/utils/main-dev.js",
+		"/Users/steph/Git/bettingexpert/src/client.prod.js",
+		"/Users/steph/Git/bettingexpert/src/utils/main.js",
+		"/Users/steph/Git/bettingexpert/src/utils/store.js",
+		"/Users/steph/Git/bettingexpert/src/fixtures/initial-state.dev.fixture.js",
+		"/Users/steph/Git/bettingexpert/src/fixtures/initial-state.prod.fixture.js",
+		"/Users/steph/Git/bettingexpert/node_modules/babel-core/package.json",
+		"/Users/steph/Git/bettingexpert/.gitignore",
+		"/Users/steph/Git/bettingexpert/src/components/matchlist/matchlist.jsx",
+		"/Users/steph/Git/bettingexpert/src/elements/list/list.jsx",
+		"/Users/steph/Git/bettingexpert/src/elements/accordion/_accordion.scss",
+		"/Users/steph/Git/bettingexpert/src/elements/accordion/demo.jsx",
+		"/Users/steph/Git/bettingexpert/src/components/matchlist/_matchlist.scss",
+		"/Users/steph/Git/bettingexpert/src/components/matchlist/test.html",
+		"/Users/steph/Git/bettingexpert/src/elements/icon/demo.jsx",
+		"/Users/steph/Git/bettingexpert/src/styles/settings/_bds-settings.scss",
+		"/Users/steph/Git/bettingexpert/src/elements/list/_list.scss",
+		"/Users/steph/Git/bettingexpert/src/elements/icon/icon.jsx",
+		"/Users/steph/Git/bettingexpert/src/elements/icon/_icon.scss",
+		"/Users/steph/Downloads/fontello-82c7208b/css/fontello-codes.css",
+		"/Users/steph/Downloads/fontello-82c7208b/css/fontello-embedded.css",
+		"/Users/steph/Downloads/fontello-82c7208b/css/fontello.css",
+		"/Users/steph/Downloads/fontello-cc93ac5f/demo.html",
+		"/Users/steph/Downloads/fontello-cc93ac5f/config.json",
+		"/Users/steph/Git/bettingexpert/src/components/matchlist/demo.jsx",
+		"/Users/steph/Git/bettingexpert/node_modules/lodash/package.json",
+		"/Users/steph/Git/bettingexpert/src/components/matchlist/dummy-data-2.jsx",
+		"/Users/steph/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/steph/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/steph/Git/bettingexpert/src/elements/badge/_badge.scss",
+		"/Users/steph/Git/bettingexpert/src/components/form/form-input.jsx",
+		"/Users/steph/Git/bettingexpert/src/elements/accordion/index.jsx",
+		"/Users/steph/Git/bettingexpert/src/components/matchlist-old/matchlistitem.js",
+		"/Users/steph/Git/bettingexpert/src/elements/badge/demo.jsx",
+		"/Users/steph/Git/bettingexpert/src/elements/badge/badge.jsx",
+		"/Users/steph/Git/bettingexpert/dist/assets/images/flags.svg",
+		"/Users/steph/Git/bettingexpert/src/assets/images/flags.svg",
+		"/Users/steph/Git/bettingexpert/src/utils/webicon.jsx"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/steph/Git/bettingexpert/src",
+			"/Users/steph/Git/bettingexpert/node_modules,package.json",
+			"/Users/steph/Git/bettingexpert,package.json",
+			"/Users/steph/Git/bettingexpert/node_modules",
+			"/Users/steph/Git/bettingexpert",
+			"/Users/steph/Git/bettingexpert/node_modules/foundation-sites/js",
+			"/Users/steph/Git/bettingexpert/src",
+			"/Users/steph/Git/bettingexpert/node_modules/babel-core",
+			"/Users/steph/Git/bettingexpert/src",
+			"/Users/steph/Git/bettingexpert",
+			"/Users/steph/Git/bettingexpert,*.jsx",
+			"/Users/steph/Git/bettingexpert",
+			"/Users/steph/Git/bettingexpert/src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			" logo-letter",
+			"<div class=\"diamond\">\n      <div class=\"text\"></div>",
+			"vertical",
+			"horizontal",
+			" nth-",
+			":",
+			"2px",
+			"170px",
+			"160px",
+			" ",
+			"$grid",
+			"grid",
+			"</a>",
+			"a href=\"http://www.1stwebdesigner.com/\" target=\"_blank\" ",
+			"Shine Bright like a Diamond",
+			"<div class=\"text\">\n        Shine Bright like a Diamond\n      </div>",
+			"{",
+			";",
+			"}",
+			"navigationItems",
+			"this.props.type",
+			"AppNavigation",
+			"#444",
+			" !default",
+			"fff",
+			"title",
+			" group=\"\"",
+			"nav__item",
+			"Tips",
+			"MyComponent",
+			" handler={RoutesHandler}",
+			" /",
+			"<Route",
+			"|  |- Tips - ",
+			"max-height",
+			"tertiar",
+			"10px",
+			"1em",
+			"text",
+			"$bds-nav",
+			"subNav",
+			"items",
+			"this.props.menuLinks",
+			"': '",
+			"trigger",
+			"hideDropdown",
+			"let",
+			"hideDropdown",
+			"let",
+			"let className",
+			"FETCH_DATA",
+			"ADD_DATA",
+			"constrains",
+			"constraints",
+			"top-bar-height",
+			"nav--app",
+			"default-color",
+			"bar-background-color",
+			"dropdownLinks",
+			"nav",
+			"tether",
+			"bds-app-nav",
+			"AppNav",
+			"MyComponent",
+			"\"",
+			"console",
+			"styles",
+			"div",
+			"(() => this.setState({show: !show}))",
+			"() =",
+			"this.toggleTether",
+			"{isOpen: !isOpen}",
+			"enabled",
+			"isOpen",
+			"</button>",
+			"<button type=\"button\">",
+			".bind(this)",
+			"TetherAction",
+			"flags.svg",
+			";",
+			"margin",
+			"_it",
+			"\"",
+			"onlyActiveOnIndex",
+			"hover",
+			"match-list",
+			"nav-item",
+			"fjalla",
+			"MyComponent",
+			"MyComponentDemo",
+			"MyComponent",
+			"@connect",
+			".s",
+			"flags",
+			" ref=\"",
+			"data",
+			"title",
+			"scrollIntoView",
+			"title=\"",
+			"id=",
+			"id",
+			"sortedChildren",
+			"child",
+			"sortedChildren[key]",
+			"sorted",
+			"createHistory",
+			"console.",
+			"header",
+			"\n\n  static propTypes = {\n\n  };\n\n  static defaultProps = {\n\n  };\n\n  constructor(props) {\n    super(props);\n  }",
+			"{children}",
+			"<L",
+			"r>;",
+			"Header",
+			"this.props.children",
+			"return",
+			"'}}",
+			"\">",
+			"HashHistory",
+			"history",
+			"header",
+			"div",
+			"content",
+			"\"'",
+			"console",
+			"// ",
+			"C",
+			"\\\"",
+			"'"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$prefix"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11601,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1586,
+								1586
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 412.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/styles/main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11831,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11641,
+								9747
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 9346.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/scripts/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3667,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3625,
+								3625
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 555.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "cssconfno.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"routes-h",
+				"All/src/routes-handler.js"
+			],
+			[
+				"accor",
+				"Elements/accordion/accordion.jsx"
+			],
+			[
+				"webpack",
+				"Config/webpack.config.js"
+			],
+			[
+				"navi",
+				"Elements/navigation/_navigation.scss"
+			],
+			[
+				"app-he",
+				"Containers/app-header.js"
+			],
+			[
+				"appj",
+				"Containers/app.js"
+			],
+			[
+				"app-top",
+				"Components/app-topbar/app-topbar.jsx"
+			],
+			[
+				"webpa",
+				"Config/webpack.config.js"
+			],
+			[
+				"not-f",
+				"Containers/not-found.js"
+			],
+			[
+				"dumm",
+				"Containers/dummy.js"
+			],
+			[
+				"app",
+				"Containers/app.js"
+			],
+			[
+				"navigation",
+				"Elements/navigation/_navigation.scss"
+			],
+			[
+				"navig",
+				"Elements/navigation/navigation.jsx"
+			],
+			[
+				"reduxnavi",
+				"Redux/modules/navigation.js"
+			],
+			[
+				"top-bar",
+				"Styles/modules/_top-bar.scss"
+			],
+			[
+				"tether",
+				"Elements/tether/tether.jsx"
+			],
+			[
+				"reduxmoduledu",
+				"Redux/modules/dummy.js"
+			],
+			[
+				"dummy",
+				"Containers/dummy.js"
+			],
+			[
+				"client",
+				"All/src/client.js"
+			],
+			[
+				"nodereact-routerlink",
+				"All/node_modules/react-router/es6/Link.js"
+			],
+			[
+				"nodereactli",
+				"All/node_modules/react/lib/ReactLink.js"
+			],
+			[
+				"webpac",
+				"Config/webpack.config.js"
+			],
+			[
+				"match-lde",
+				"Components/match-list/demo.jsx"
+			],
+			[
+				"navisc",
+				"Elements/navigation/_navigation.scss"
+			],
+			[
+				"app-nav",
+				"Components/app-nav/app-nav.jsx"
+			],
+			[
+				"grunt",
+				"All/gruntfile.js"
+			],
+			[
+				"tetherdem",
+				"Elements/tether/demo.jsx"
+			],
+			[
+				"fieldset",
+				"Components/form/form-fieldset.jsx"
+			],
+			[
+				"styleg",
+				"Components/styleguide/styleguidecreator.js"
+			],
+			[
+				"style",
+				"Src/containers/styleguide.js"
+			],
+			[
+				"tetherdemo",
+				"Elements/tether/demo.jsx"
+			],
+			[
+				"moduleindex.",
+				"Redux/modules/index.js"
+			],
+			[
+				"route",
+				"Src/routes.js"
+			],
+			[
+				"landi",
+				"Containers/landingpage.js"
+			],
+			[
+				"matche",
+				"Containers/matches.jsx"
+			],
+			[
+				"react-routerlink",
+				"All/node_modules/react-router/es6/Link.js"
+			],
+			[
+				"routes",
+				"Src/routes.js"
+			],
+			[
+				"mains",
+				"Styles/main.scss"
+			],
+			[
+				"sty",
+				"Containers/styleguide.js"
+			],
+			[
+				"scroll-behavipack",
+				"All/node_modules/scroll-behavior/package.json"
+			],
+			[
+				"scroll-behavior",
+				"All/node_modules/scroll-behavior/README.md"
+			],
+			[
+				"match-li",
+				"Components/match-list/match-list.jsx"
+			],
+			[
+				"matchli",
+				"Components/matchlist-old/matchlist.js"
+			],
+			[
+				"react-roulink",
+				"All/node_modules/react-router/es6/Link.js"
+			],
+			[
+				"styleguidec",
+				"Components/styleguide/styleguidecreator.js"
+			],
+			[
+				"containerstyle",
+				"Containers/styleguide.js"
+			],
+			[
+				"nodereact-router",
+				"All/node_modules/react-router/package.json"
+			],
+			[
+				"nodereactchildn",
+				"All/node_modules/react/lib/ReactChildren.js"
+			],
+			[
+				"nodereact-routerpakc",
+				"All/node_modules/react-router/package.json"
+			],
+			[
+				"packa",
+				"All/package.json"
+			],
+			[
+				"pack",
+				"All/package.json"
+			],
+			[
+				"app-foo",
+				"Containers/app-footer.js"
+			],
+			[
+				"layout",
+				"Components/layout/templates/layout-no-sidebar.jsx"
+			],
+			[
+				"lay",
+				"Components/layout/templates/layout-sidebars.jsx"
+			],
+			[
+				"layou",
+				"Components/layout/layout.jsx"
+			],
+			[
+				"confweb",
+				"All/config/webpack.config.js"
+			],
+			[
+				"dummy-da",
+				"Components/matchlist/dummy-data.jsx"
+			],
+			[
+				"listjsx",
+				"Elements/list/list.jsx"
+			],
+			[
+				"match",
+				"All/src/components/matchlist/matchlist.jsx"
+			],
+			[
+				"web",
+				"All/webpack.config.js"
+			],
+			[
+				"package",
+				"All/package.json"
+			],
+			[
+				"accoddem",
+				"Elements/accordion/demo.jsx"
+			],
+			[
+				"accscss",
+				"Elements/accordion/_accordion.scss"
+			],
+			[
+				"accordi",
+				"Elements/accordion/accordion.jsx"
+			],
+			[
+				"iconjs",
+				"Elements/icon/icon.jsx"
+			],
+			[
+				"listscs",
+				"Elements/list/_list.scss"
+			],
+			[
+				"icondemo",
+				"Elements/icon/demo.jsx"
+			],
+			[
+				"iconscs",
+				"Elements/icon/_icon.scss"
+			],
+			[
+				"accoscs",
+				"Elements/accordion/_accordion.scss"
+			],
+			[
+				"acco",
+				"Elements/accordion/accordion.jsx"
+			],
+			[
+				"accosc",
+				"Elements/accordion/_accordion.scss"
+			],
+			[
+				"lodashpackag",
+				"All/node_modules/lodash/package.json"
+			],
+			[
+				"accodem",
+				"Elements/accordion/demo.jsx"
+			],
+			[
+				"accorscs",
+				"Elements/accordion/_accordion.scss"
+			],
+			[
+				"dumda",
+				"Components/matchlist/dummy-data.jsx"
+			],
+			[
+				"matchscs",
+				"Components/matchlist/_matchlist.scss"
+			],
+			[
+				"matchlidem",
+				"Components/matchlist/demo.jsx"
+			],
+			[
+				"matchlist",
+				"Components/matchlist/matchlist.jsx"
+			],
+			[
+				"form-",
+				"Components/form/form-fieldset.jsx"
+			],
+			[
+				"form-input",
+				"Components/form/form-input.jsx"
+			],
+			[
+				"badgedemo",
+				"Elements/badge/demo.jsx"
+			],
+			[
+				"badge",
+				"Elements/badge/badge.jsx"
+			],
+			[
+				"listscss",
+				"Elements/list/_list.scss"
+			],
+			[
+				"elelist",
+				"Elements/list/list.jsx"
+			],
+			[
+				"flags",
+				"All/dist/assets/images/flags.svg"
+			],
+			[
+				"flag",
+				"Assets/images/flags.svg"
+			],
+			[
+				"flags.sv",
+				"All/dist/assets/images/flags.svg"
+			],
+			[
+				"iconscss",
+				"Elements/icon/_icon.scss"
+			],
+			[
+				"icondem",
+				"Elements/icon/demo.jsx"
+			],
+			[
+				"iconde",
+				"Elements/icon/demo.jsx"
+			],
+			[
+				"icon",
+				"Elements/icon/icon.jsx"
+			],
+			[
+				"flags.s",
+				"All/dist/assets/images/flags.svg"
+			],
+			[
+				"grun",
+				"All/gruntfile.js"
+			],
+			[
+				"iconsc",
+				"Elements/icon/_icon.scss"
+			],
+			[
+				"datetimedem",
+				"Elements/datetime/demo.jsx"
+			],
+			[
+				"main",
+				"Styles/main.scss"
+			],
+			[
+				"butt",
+				"Elements/button/_button.scss"
+			],
+			[
+				"list",
+				"Elements/list/list.jsx"
+			],
+			[
+				"form-in",
+				"Components/form/form-input.jsx"
+			],
+			[
+				"toastrdemo",
+				"Elements/toastr/demo.jsx"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 731.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 214.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
