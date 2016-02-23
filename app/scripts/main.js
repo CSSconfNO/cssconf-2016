@@ -59,13 +59,8 @@ var Map = {
 }
 
 $(function () {
-  /*new Foundation.Magellan($('.main-nav'), {
-    activeClass: 'is-active',
-    barOffset: 100
-  });*/
-  //new Foundation.Sticky($('#main-nav'));
   Schedule.init();
-  //Map.init();
+  Map.init();
 });
 
 $(document).foundation();

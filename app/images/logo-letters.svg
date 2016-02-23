@@ -1,35 +1,28 @@
-<svg
-xmlns="http://www.w3.org/2000/svg"
-xmlns:xlink="http://www.w3.org/1999/xlink"
-width="260"
-height="120">
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="120" viewbox="0 0 80 120">
   <defs>
     <g id="C">
-      <rect width="20" height="20" x="0" y="20" />
-      <rect width="20" height="20" x="0" y="40" />
-      <rect width="20" height="20" x="0" y="60" />
-      <rect width="20" height="20" x="0" y="80" />
-      <rect width="20" height="20" x="20" y="0" />
-      <rect width="20" height="20" x="20" y="100" />
-      <rect width="20" height="20" x="40" y="0" />
-      <rect width="20" height="20" x="40" y="100" />
-      <rect width="20" height="20" x="60" y="20" />
-      <rect width="20" height="20" x="60" y="80" />
+      <rect width="20" height="20" x="0" y="20" fill="black" />
+      <rect width="20" height="20" x="0" y="40" fill="black" />
+      <rect width="20" height="20" x="0" y="60" fill="black" />
+      <rect width="20" height="20" x="0" y="80" fill="black" />
+      <rect width="20" height="20" x="20" y="0" fill="black" />
+      <rect width="20" height="20" x="20" y="100" fill="black" />
+      <rect width="20" height="20" x="40" y="0" fill="black" />
+      <rect width="20" height="20" x="40" y="100" fill="black" />
+      <rect width="20" height="20" x="60" y="20" fill="black" />
+      <rect width="20" height="20" x="60" y="80" fill="black" />
     </g>
     <g id="S">
-      <rect width="20" height="20" x="0" y="20" />
-      <rect width="20" height="20" x="0" y="80" />
-      <rect width="20" height="20" x="20" y="0" />
-      <rect width="20" height="20" x="20" y="40" />
-      <rect width="20" height="20" x="20" y="100" />
-      <rect width="20" height="20" x="40" y="0" />
-      <rect width="20" height="20" x="40" y="60" />
-      <rect width="20" height="20" x="40" y="100" />
-      <rect width="20" height="20" x="60" y="20" />
-      <rect width="20" height="20" x="60" y="80" />
+      <rect width="20" height="20" x="0" y="20" fill="black" />
+      <rect width="20" height="20" x="0" y="80" fill="black" />
+      <rect width="20" height="20" x="20" y="0" fill="black" />
+      <rect width="20" height="20" x="20" y="40" fill="black" />
+      <rect width="20" height="20" x="20" y="100" fill="black" />
+      <rect width="20" height="20" x="40" y="0" fill="black" />
+      <rect width="20" height="20" x="40" y="60" fill="black" />
+      <rect width="20" height="20" x="40" y="100" fill="black" />
+      <rect width="20" height="20" x="60" y="20" fill="black" />
+      <rect width="20" height="20" x="60" y="80" fill="black" />
     </g>
   </defs>
-  <use x="0" y="0" style="fill:red;stroke:white;stroke-width:2" xlink:href="#C" />
-  <use x="90" y="0" style="fill:orange;stroke:white;stroke-width:2" xlink:href="#S" />
-  <use x="180" y="0" style="fill:green;stroke:white;stroke-width:2" xlink:href="#S" />
 </svg>

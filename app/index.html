@@ -25,7 +25,7 @@
   </head>
   <body>
 
-  <div class="row expanded" data-sticky-container>
+  <!--<div class="row expanded" data-sticky-container>
     <nav class="main-nav" data-sticky data-options="marginTop:0;barOffset:200;">
       <ul class="row horizontal menu expanded" data-magellan data-options="activeClass:is-active;">
         <li><a class="nav-link" href="#info">Info</a></li>
@@ -37,9 +37,65 @@
         <li><a class="nav-link" href="#team">Team</a></li>
       </ul>
     </nav>
+  </div>-->
+
+  <div class="row expanded" data-hide-for="medium">
+    <div class="main-nav title-bar" data-options="marginTop:0;barOffset:200;" data-responsive-toggle="main-nav">
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title">Menu</div>
+    </div>
+  </div>
+
+  <div class="row expanded" data-sticky-container>
+    <div class="row main-nav top-bar clearfix" id="main-nav" data-sticky data-options="marginTop:0;barOffset:200;">
+      <div class="top-bar-left show-for-medium">
+        <img class="topbar-logo" src="/images/logos/logo-6.png" title="CSSconf Nordic" />
+      </div>
+      <div class="top-bar-right">
+        <ul class="dropdown menu" data-dropdown-menu data-magellan data-options="activeClass:is-active;">
+          <li><a class="nav-link" href="#info">Info</a></li>
+          <li><a class="nav-link" href="#speakers">Speakers</a></li>
+          <li><a class="nav-link" href="#schedule">Schedule</a></li>
+          <li><a class="nav-link" href="#venue">Venue</a></li>
+          <li><a class="nav-link" href="#sponsors">Sponsors</a></li>
+          <li><a class="nav-link" href="#tickets">Tickets</a></li>
+          <li><a class="nav-link" href="#team">Team</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <header class="row expanded">
+     <div class="row">
+      <ul class="diamond-grid clearfix">
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+        <li><div class="diamond"></div></li>
+      </ul>
+    </div>
+  </header>
+
+  <!--<header class="row expanded">
     <div class="row">
       <ul class="diamond-grid">
         <li><div class="diamond"><div class="text">
@@ -149,7 +205,7 @@
         </div></div></li>
       </ul>
     </div>
-  </header>
+  </header>-->
 
   <div class="content">
     <section class="row expanded" id="info" data-magellan-target="info">
@@ -261,7 +317,7 @@
   <!-- endbower -->
   <!-- endbuild -->
 
-  <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>-->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 
   <!-- build:js scripts/main.js -->

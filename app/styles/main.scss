@@ -30,7 +30,7 @@ $light-background: #e5f3fc;
 $dark-text-default: #333333;
 $light-text-default: #dddddd;
 
-$cta-color: #d97720;
+$cta-color: saturate(lighten(#d97720,10%),30%);
 $primary-color: #2a80c5;
 
 * {
@@ -68,7 +68,7 @@ quote {
   text-align: center;
   margin: 2em 0;
   padding: 1em;
-  background: rgba($background, 0.15);
+  background: rgba($primary-color,0.5); //rgba($background, 0.15);
   border-radius: 5px;
   &:after {
     position: absolute;
@@ -112,28 +112,74 @@ quote {
   }
 }
 
-$nav-height: 70px;
+$nav-height: 60px;
 .main-nav {
-  height: $nav-height;
   width: 100%;
   position: relative;
   z-index: 99 !important;
-  background: $light-background; //$background;
+  background: rgba($light-background,0.9); //$background;
   color: $background; //$dark-text-default;
-  font-family: 'VT323';
-  font-size: 25px;
-  > .menu {
-    height: $nav-height;
-    line-height: $nav-height;
+  font-family: 'Monaco';
+  font-size: 18px;
+  transition: box-shadow 300ms linear;
+  &.is-stuck {
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
   }
   a {
-    text-align: center;
+    text-align: left;
     color: inherit;
     position: relative;
     z-index: 0;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    color: #fff;
     &:hover, &.is-active {
       color: $cta-color;
+    }
+  }
+
+  @media screen and (min-width: 40em) {
+    height: $nav-height;
+    line-height: $nav-height;
+
+    a {
+      color: $background;
+      text-align: center;
+    }
+  }
+
+  /* &.top-bar ul.menu {
+    background: transparent;
+  } */
+}
+
+.main-nav.title-bar {
+  background: $background;
+  color: #fff;
+}
+
+.topbar-logo {
+  max-height: $nav-height - 15px;
+  line-height: 1;
+  vertical-align: 0;
+}
+
+.main-nav .dropdown.menu {
+  background: $background;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  > li {
+    display: table-row;
+  }
+  @media screen and (min-width: 40em) {
+    position: relative;
+    background: transparent;
+    height: $nav-height;
+    line-height: $nav-height;
+    > li {
+      display: table-cell;
     }
   }
 }
@@ -141,7 +187,7 @@ $nav-height: 70px;
 header {
   background: $light-background; //$background;
   color: $light-text-default;
-  padding-bottom: 100px;
+  padding: 50px 50px 100px;
   position: relative;
   p {
     text-align: center;
@@ -396,148 +442,405 @@ section#venue {
   width: 100%;
 }
 
+$dgrid-breakpoint: 40em;
+
 $dgrid-background: $light-background;
 $dgrid-item-background: darken($light-background,5%);
-$dgrid-item-hover-background: darken($light-background,5%);
+$dgrid-item-hover-background: darken($light-background,10%);
+
 $dgrid-item-color: lighten($background, 5%);
 $dgrid-item-hover-color: #fff;
+
+$dgrid-item-border-size: 0;
 $dgrid-item-border-color: $dgrid-background;
 $dgrid-item-hover-border-color: $dgrid-background;
 
-$dgrid-item-size: 160px;
-$dgrid-item-border-size: 2px;
-$dgrid-row-items: 5;
-$dgrid-select-rows: 1n + #{$dgrid-row-items + 1};
-$dgrid-select-even-rows: #{$dgrid-row-items + $dgrid-row-items - 1}n + #{$dgrid-row-items+1};
-$dgrid-select-odd-rows: #{$dgrid-row-items + $dgrid-row-items - 1}n + 1;
+$dgrid-diamond-scale-up: 1.4142135623731;
+$dgrid-diamond-scale-down: 0.68;//0.70710678;
 
-$dgrid-min-width: ($dgrid-item-size * 1.45 * $dgrid-row-items);
-$dgrid-item-add-size: ($dgrid-item-size / 4.84848484);
-$dgrid-margin: $dgrid-item-add-size;
-$dgrid-x-align-margin: ($dgrid-item-size / 2) + ($dgrid-margin * 2) - ($dgrid-item-border-size / 2);
-$dgrid-y-align-margin: (($dgrid-item-size / 2) + ($dgrid-item-border-size / 2)) * -1;
+$dgrid-row-items: 3;
+$dgrid-select-rows: 1n + #{$dgrid-row-items + 1};
+$dgrid-select-even-rows-first: #{$dgrid-row-items + $dgrid-row-items - 1}n + #{$dgrid-row-items + 1};
+$dgrid-select-even-rows-last: #{$dgrid-row-items + $dgrid-row-items - 1}n + #{$dgrid-row-items + $dgrid-row-items - 1};
+
+$dgrid-large-row-items: 5;
+$dgrid-large-select-rows: 1n + #{$dgrid-large-row-items + 1};
+$dgrid-large-select-even-rows-first: #{$dgrid-large-row-items + $dgrid-large-row-items - 1}n + #{$dgrid-large-row-items + 1};
+$dgrid-large-select-even-rows-last: #{$dgrid-large-row-items + $dgrid-large-row-items - 1}n + #{$dgrid-large-row-items + $dgrid-large-row-items - 1};
 
 .diamond-grid {
- //width: 100%;
- width: $dgrid-min-width;
- margin: 0 auto;
- background: $dgrid-background;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  background: $dgrid-background;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
+
 .diamond-grid > li {
- list-style: none;
- float: left;
- margin: $dgrid-margin;
-}
-.diamond {
- transition: all 200ms linear;
- height: $dgrid-item-size;
- width: $dgrid-item-size;
- background: $dgrid-item-background;
- color: $dgrid-item-color;
- border: $dgrid-item-border-size solid $dgrid-item-border-color;
- display: block;
- position: relative;
- z-index: 1;
- text-decoration: none;
- transform: rotate(45deg);
- margin-left: (-1 * $dgrid-item-border-size);
-}
-.diamond:hover {
- cursor: pointer;
- background: $dgrid-item-hover-background;
- color: $dgrid-item-hover-color;
- border-color: $dgrid-item-hover-border-color;
- cursor: default;
-}
-.diamond-grid>li:nth-child(#{$dgrid-select-rows}) { // Make sure all rows align with the one above (except the first row)
- margin-top: $dgrid-y-align-margin;
-}
-.diamond-grid>li:nth-child(#{$dgrid-select-even-rows}) { // Make every second row align yly
- margin-left: $dgrid-x-align-margin;
- clear: left;
-}
-.diamond-grid>li:nth-child(#{$dgrid-select-odd-rows}) {
- clear: left;
-}
-.text {
- transition: all 200ms linear;
- width: $dgrid-item-size;
- height: $dgrid-item-size;
- font-family: 'VT323', 'Open Sans',sans-serif;
- font-size: 30px;
- text-transform:  uppercase;
- display: table-cell;
- vertical-align: middle;
- transform: rotate(-45deg);
- text-align: center;
-
- &.small {
-  line-height: 1;
-  > small {
-    font-size: 20px;
-  }
- }
-}
-
-$logo-letter-background: $background; //darken($light-background,15%);
-$logo-letter-color: $light-background;
-$logo-letter-hover-background: $light-background; //$cta-color;
-$logo-letter-hover-color: #fff;
-
-.logo-label {
-  display: block;
-  padding: 3px 10px;
-  position: absolute;
-  z-index: 98;
-  bottom: -2px;
-  left: 20%;
-  background: $cta-color; //$background;
-  color: #fff;
-  font-size: 14px;
-  transform-origin: top left;
-  transform: translateY(100%);
-  //transform: rotate(-90deg);
-  border-radius: 0 0 3px 3px;
-}
-
-.logo-letter {
-  background: $logo-letter-background;
+  list-style: none;
+  height: 0;
+  width: (100% / $dgrid-row-items);
+  padding-bottom: (100% / $dgrid-row-items);
+  flex: (100% / $dgrid-row-items);
   position: relative;
-  z-index: 97;
-  svg {
-    margin: 0 35px;
-    > rect {
-      fill: $light-background;
-      stroke: $logo-letter-background;
-      stroke-width: 2;
-      transition: all 200ms linear;
+  @media screen and (min-width: $dgrid-breakpoint) {
+    width: (100% / $dgrid-large-row-items);
+    padding-bottom: (100% / $dgrid-large-row-items);
+    flex: (100% / $dgrid-large-row-items);
+  }
+}
+
+.diamond {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: rotate(45deg) scale($dgrid-diamond-scale-down);
+  text-decoration: none;
+  background: $dgrid-item-background;
+  color: $dgrid-item-color;
+  border: $dgrid-item-border-size solid $dgrid-item-border-color;
+}
+
+.diamond:after {
+  //border: 1px solid red;
+  content: '';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: 'VT323', 'Open Sans',sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.25;
+  transform: rotate(-45deg);
+}
+
+.diamond:hover {
+  cursor: pointer;
+  background: $dgrid-item-hover-background;
+  color: $dgrid-item-hover-color;
+  border-color: $dgrid-item-hover-border-color;
+  cursor: default;
+}
+
+.diamond-grid > li:nth-child(#{$dgrid-select-rows}) {
+  margin-top: -(100% / ($dgrid-row-items * 2));
+  @media screen and (min-width: 40em) { margin-top: 0; }
+}
+.diamond-grid > li:nth-child(#{$dgrid-select-even-rows-first}) {
+  margin-left: (100% / ($dgrid-row-items * 2));
+  @media screen and (min-width: 40em) { margin-left: 0; }
+}
+.diamond-grid > li:nth-child(#{$dgrid-select-even-rows-last}) {
+  margin-right: (100% / ($dgrid-row-items * 2));
+  @media screen and (min-width: 40em) { margin-right: 0; }
+}
+@media screen and (min-width: 40em) {
+  .diamond-grid > li:nth-child(#{$dgrid-large-select-rows}) {
+    margin-top: -(100% / ($dgrid-large-row-items * 2));
+  }
+  .diamond-grid > li:nth-child(#{$dgrid-large-select-even-rows-first}) {
+    margin-left: (100% / ($dgrid-large-row-items * 2));
+  }
+  .diamond-grid > li:nth-child(#{$dgrid-large-select-even-rows-last}) {
+    margin-right: (100% / ($dgrid-large-row-items * 2));
+  }
+}
+
+// $dgrid-background: $light-background;
+// $dgrid-item-background: darken($light-background,5%);
+// $dgrid-item-hover-background: darken($light-background,5%);
+// $dgrid-item-color: lighten($background, 5%);
+// $dgrid-item-hover-color: #fff;
+// $dgrid-item-border-color: $dgrid-background;
+// $dgrid-item-hover-border-color: $dgrid-background;
+
+// $dgrid-item-size: 160px;
+// $dgrid-item-border-size: 2px;
+// $dgrid-row-items: 5;
+// $dgrid-select-rows: 1n + #{$dgrid-row-items + 1};
+// $dgrid-select-even-rows: #{$dgrid-row-items + $dgrid-row-items - 1}n + #{$dgrid-row-items+1};
+// $dgrid-select-odd-rows: #{$dgrid-row-items + $dgrid-row-items - 1}n + 1;
+
+// $dgrid-min-width: ($dgrid-item-size * 1.45 * $dgrid-row-items);
+// $dgrid-item-add-size: ($dgrid-item-size / 4.84848484);
+// $dgrid-margin: $dgrid-item-add-size;
+// $dgrid-x-align-margin: ($dgrid-item-size / 2) + ($dgrid-margin * 2) - ($dgrid-item-border-size / 2);
+// $dgrid-y-align-margin: (($dgrid-item-size / 2) + ($dgrid-item-border-size / 2)) * -1;
+
+// .diamond-grid {
+//  width: 100%;
+//  width: $dgrid-min-width;
+//  margin: 0 auto;
+//  background: $dgrid-background;
+// }
+// .diamond-grid > li {
+//  list-style: none;
+//  float: left;
+//  margin: $dgrid-margin;
+// }
+// .diamond {
+//  transition: all 200ms linear;
+//  height: $dgrid-item-size;
+//  width: $dgrid-item-size;
+//  background: $dgrid-item-background;
+//  color: $dgrid-item-color;
+//  border: $dgrid-item-border-size solid $dgrid-item-border-color;
+//  display: block;
+//  position: relative;
+//  z-index: 1;
+//  text-decoration: none;
+//  transform: rotate(45deg);
+//  margin-left: (-1 * $dgrid-item-border-size);
+// }
+// .diamond:hover {
+//  cursor: pointer;
+//  background: $dgrid-item-hover-background;
+//  color: $dgrid-item-hover-color;
+//  border-color: $dgrid-item-hover-border-color;
+//  cursor: default;
+// }
+// .diamond-grid>li:nth-child(#{$dgrid-select-rows}) { // Make sure all rows align with the one above (except the first row)
+//  margin-top: $dgrid-y-align-margin;
+// }
+// .diamond-grid>li:nth-child(#{$dgrid-select-even-rows}) { // Make every second row align yly
+//  margin-left: $dgrid-x-align-margin;
+//  clear: left;
+// }
+// .diamond-grid>li:nth-child(#{$dgrid-select-odd-rows}) {
+//  clear: left;
+// }
+// .text {
+//  transition: all 200ms linear;
+//  width: $dgrid-item-size;
+//  height: $dgrid-item-size;
+//  font-family: 'VT323', 'Open Sans',sans-serif;
+//  font-size: 30px;
+//  text-transform:  uppercase;
+//  display: table-cell;
+//  vertical-align: middle;
+//  transform: rotate(-45deg);
+//  text-align: center;
+
+//  &.small {
+//   line-height: 1;
+//   > small {
+//     font-size: 20px;
+//   }
+//  }
+// }
+@media screen and (max-width: $dgrid-breakpoint) {
+  .diamond-grid > li:nth-child(1n + 14) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+$child-css-family: 12;
+$child-desktop-css-family: 18;
+
+@media screen and (max-width: $dgrid-breakpoint) {
+  .diamond-grid > li:nth-child(#{$child-css-family}) > .diamond:after {
+    background: url(/images/css-family-logo.svg) no-repeat center center;
+    background-size: auto 70%;
+    filter: saturate(60%);
+  }
+}
+
+@media screen and (min-width: $dgrid-breakpoint) {
+  .diamond-grid > li:nth-child(#{$child-desktop-css-family}) > .diamond:after {
+    background: url(/images/css-family-logo.svg) no-repeat center center;
+    background-size: auto 70%;
+    filter: saturate(60%);
+  }
+}
+
+$content-date: ' 1 June \A  2016';
+$child-date: 11;
+$child-desktop-date: 8;
+
+$content-place: ' Oslo, \A  Norway';
+$child-place: 13;
+$child-desktop-place: 9;
+
+$content-tickets: ' Get your \A  ticket!';
+$child-tickets: 13;
+$child-desktop-tickets: 9;
+
+$content-desc-1: ' A one-day \A  conference';
+$child-desc-1: 19;
+$child-desktop-desc-1: 19;
+
+$content-desc-2: ' for designers \A  and developers';
+$child-desc-2: 20;
+$child-desktop-desc-2: 20;
+
+$content-desc-3: 'who ♥ CSS';
+$child-desc-3: 21;
+$child-desktop-desc-3: 21;
+
+@mixin insertContent($content, $nthChild, $fontSize: 2.5em) {
+  .diamond-grid > li:nth-child(#{$nthChild}) > .diamond {
+    font-size: $fontSize;
+    &:after {
+      content: $content;
+      white-space: pre;
     }
   }
+}
+@media screen and (max-width: $dgrid-breakpoint) {
+  @include insertContent($content-date, $child-date);
+  @include insertContent($content-place, $child-place);
+  //@include insertContent($content-tickets, $child-tickets);
+  // @include insertContent($content-desc-1, $child-desc-1, 1.5em);
+  // @include insertContent($content-desc-2, $child-desc-2, 1.5em);
+  // @include insertContent($content-desc-3, $child-desc-3, 1.5em);
+}
+@media screen and (min-width: $dgrid-breakpoint) {
+  @include insertContent($content-date, $child-desktop-date);
+  @include insertContent($content-place, $child-desktop-place);
+  //@include insertContent($content-tickets, $child-desktop-tickets);
+  @include insertContent($content-desc-1, $child-desktop-desc-1, 1.5em);
+  @include insertContent($content-desc-2, $child-desktop-desc-2, 1.5em);
+  @include insertContent($content-desc-3, $child-desktop-desc-3, 1.5em);
+}
 
-  &:hover {
-    background: $logo-letter-hover-background;
-    svg {
-      > rect {
-        fill: $logo-letter-hover-color;
-        stroke: $logo-letter-hover-background;
+$logo-letter-background: $background;
+$logo-letter-color: $light-background;
+$logo-letter-hover-background: $cta-color;
+$logo-letter-hover-color: #fff;
+
+@mixin showLetter($letter, $nthChild, $fontSize) {
+  .diamond-grid > li:nth-child(#{$nthChild}) > .diamond {
+    font-size: $fontSize;
+    background-color: $logo-letter-background;
+    z-index: 97;
+    &:after {
+      background-color: $logo-letter-color;
+      mask: url(/images/logo-letter-#{$letter}.svg) no-repeat center center;
+      mask-size: auto 90%;
+    }
+    &:hover {
+      background-color: $logo-letter-hover-background;
+      &:after {
+        background-color: $logo-letter-hover-color;
       }
     }
   }
 }
 
-.tickets {
-  background: $cta-color;
-  .text {
-    font-weight: 400;
+@mixin showLabel($nthChild) {
+  .diamond-grid > li:nth-child(#{$nthChild}) > .diamond:before {
+    content: 'NORDIC';
+    display: block;
+    padding: 3px 10px;
+    position: absolute;
+    z-index: 98;
+    bottom: 0;
+    left: 20%;
+    background: $cta-color;
     color: #fff;
-  }
-  &:hover {
-    background: #fff;
-    .text {
-      color: $cta-color;
-    }
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform-origin: top left;
+    transform: translateY(100%);
+    border-radius: 0 0 3px 3px;
   }
 }
+
+$dgrid-logo-C-child: 4;
+$dgrid-desktop-logo-C-child: 6;
+
+$dgrid-logo-S1-child: 5;
+$dgrid-desktop-logo-S1-child: 7;
+
+$dgrid-logo-S2-child: 7;
+$dgrid-desktop-logo-S2-child: 11;
+
+@media screen and (max-width: $dgrid-breakpoint) {
+  @include showLetter('C', $dgrid-logo-C-child, 14px);
+  @include showLetter('S', $dgrid-logo-S1-child, 14px);
+  @include showLetter('S', $dgrid-logo-S2-child, 14px);
+  @include showLabel($dgrid-logo-C-child);
+}
+
+@media screen and (min-width: $dgrid-breakpoint) {
+  @include showLetter('C', $dgrid-desktop-logo-C-child, 20px);
+  @include showLetter('S', $dgrid-desktop-logo-S1-child, 20px);
+  @include showLetter('S', $dgrid-desktop-logo-S2-child, 20px);
+  @include showLabel($dgrid-desktop-logo-C-child);
+}
+
+// .logo-label {
+//   display: block;
+//   padding: 3px 10px;
+//   position: absolute;
+//   z-index: 98;
+//   bottom: -2px;
+//   left: 20%;
+//   background: $cta-color; //$background;
+//   color: #fff;
+//   font-size: 14px;
+//   text-transform: uppercase;
+//   transform-origin: top left;
+//   transform: translateY(100%);
+//   //transform: rotate(-90deg);
+//   border-radius: 0 0 3px 3px;
+// }
+
+// .logo-letter {
+//   background: $logo-letter-background;
+//   position: relative;
+//   z-index: 97;
+//   svg {
+//     margin: 0 35px;
+//     > rect {
+//       fill: $light-background;
+//       stroke: $logo-letter-background;
+//       stroke-width: 2;
+//       transition: all 200ms linear;
+//     }
+//   }
+
+//   &:hover {
+//     background: $logo-letter-hover-background;
+//     svg {
+//       > rect {
+//         fill: $logo-letter-hover-color;
+//         stroke: $logo-letter-hover-background;
+//       }
+//     }
+//   }
+// }
+
+// .tickets {
+//   background: $cta-color;
+//   .text {
+//     font-weight: 400;
+//     color: #fff;
+//   }
+//   &:hover {
+//     background: #fff;
+//     .text {
+//       color: $cta-color;
+//     }
+//   }
+// }
 
 
 
