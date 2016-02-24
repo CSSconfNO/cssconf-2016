@@ -38,4 +38,11 @@ $ bower install
 $ gulp serve
 ```
 
+## Deploying
+````sh
+$ gulp build # Packaging assets and things
+$ modulus login
+$ modulus project deploy -p cssconf_no
+````
+
 
