@@ -2,8 +2,9 @@
 @import "bower_components/foundation-sites/scss/foundation.scss";
 // endbower
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700);
-@import url(https://fonts.googleapis.com/css?family=VT323);
+@import url(https://fonts.googleapis.com/css?family=VT323|Open+Sans:400,300,600,800);
+$primary-font-family: 'Open Sans';
+$secondary-font-family: 'VT323';
 
 // Calculeate brightness of a given color.
 @function brightness($color) {
@@ -39,7 +40,7 @@ $primary-color: #2a80c5;
 
 body {
   background: #fafafa;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: $primary-font-family;
   color: #333;
   margin: 0;
   padding: 0;
@@ -124,8 +125,8 @@ $nav-desktop-background: rgba($light-background,0.9);
   z-index: 99 !important;
   //background: rgba($light-background,0.9); //$background;
   //color: $background; //$dark-text-default;
-  font-family: 'Monaco';
-  font-size: 14px;
+  font-family: $secondary-font-family;
+  font-size: 22px;
   transition: box-shadow 300ms linear, font-size 300ms linear, line-height 300ms linear;
   &.is-stuck {
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -135,7 +136,8 @@ $nav-desktop-background: rgba($light-background,0.9);
     height: $nav-height;
     line-height: $nav-height - 5px;
     padding: 0 10px;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    text-transform: uppercase;
   }
 
   &.top-bar {
@@ -180,7 +182,7 @@ $nav-desktop-background: rgba($light-background,0.9);
   @media screen and (min-width: 40em) {
     height: $nav-height;
     //line-height: $nav-height;
-    font-size: 16px;
+    font-size: 22px;
 
     ul {
       position: relative;
@@ -285,9 +287,11 @@ footer {
     bottom: 0;
     left: 50%;
     margin-left: -650px;
-    background: lighten($background, 10%);
-    overflow: hidden;
-    mask-image: url('/images/oslo-skyline-2.png');
+    // background: lighten($background, 10%);
+    // overflow: hidden;
+    // mask-image: url('/images/oslo-skyline-2.png');
+    background: url('/images/oslo-skyline-3.png') no-repeat center bottom;
+    background-size: 100% auto;
   }
 }
 
@@ -317,7 +321,6 @@ $section-end-background: $background;
   width: 100%;
   padding: 2em 20% 4em 20%;
   position: relative;
-  filter: drop-shadow(0 -2px 1px rgba(#000,0.3));
 }
 
 @for $i from 1 through $total-sections {
@@ -332,6 +335,7 @@ $section-end-background: $background;
     z-index: ($i + 1);
     background: $background;
     color: color-contrast($background);
+    filter: drop-shadow(0 -1px 1px rgba(darken($background,50%),0.2));
     > h2:first-child {
       z-index: $i;
       color: $background;
@@ -341,7 +345,7 @@ $section-end-background: $background;
 }
 
 .content > section > h2:first-child {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $primary-font-family;
   font-size: 50px;
   font-weight: 700;
   line-height: 0.85;
@@ -353,10 +357,10 @@ $section-end-background: $background;
   left: 10px;
   transform: translateY(-90%);
   &:before {
-    content: '<';
+    content: '< ';
   }
   &:after {
-    content: '/>';
+    content: ' />';
   }
 }
 
@@ -529,7 +533,7 @@ $dgrid-large-select-even-rows-last: #{$dgrid-large-row-items + $dgrid-large-row-
   left: 0;
   right: 0;
   bottom: 0;
-  font-family: 'VT323', 'Open Sans',sans-serif;
+  font-family: $secondary-font-family;
   text-transform: uppercase;
   text-align: center;
   line-height: 1.25;
@@ -654,20 +658,68 @@ $logo-letter-color: $light-background;
 $logo-letter-hover-background: $cta-color;
 $logo-letter-hover-color: #fff;
 
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+
+@function urlEncode($string) {
+  $string: str-replace($string, ' ', '%20');
+  $string: str-replace($string, '<', '%3C');
+  $string: str-replace($string, '>', '%3E');
+  $string: str-replace($string, '/', '%2F');
+  $string: str-replace($string, '=', '%3D');
+  $string: str-replace($string, '"', '%22');
+  $string: str-replace($string, ':', '%3A');
+  @return $string;
+}
+
+@function buildSvg($letterShapes) {
+  $letterOut: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="120">#{$letterShapes}</svg>';
+  @return $letterOut;
+}
+
+@function svgLetter($letter, $color) {
+  $svgLetters: (
+    C: '<rect width="18" height="18" x="0" y="20" fill="#{$color}" /><rect width="18" height="18" x="0" y="40" fill="#{$color}" /><rect width="18" height="18" x="0" y="60" fill="#{$color}" /><rect width="18" height="18" x="0" y="80" fill="#{$color}" /><rect width="18" height="18" x="20" y="0" fill="#{$color}" /><rect width="18" height="18" x="20" y="100" fill="#{$color}" /><rect width="18" height="18" x="40" y="0" fill="#{$color}" /><rect width="18" height="18" x="40" y="100" fill="#{$color}" /><rect width="18" height="18" x="60" y="20" fill="#{$color}" /><rect width="18" height="18" x="60" y="80" fill="#{$color}" />',
+    S: '<rect width="18" height="18" x="0" y="20" fill="#{$color}" /><rect width="18" height="18" x="0" y="80" fill="#{$color}" /><rect width="18" height="18" x="20" y="0" fill="#{$color}" /><rect width="18" height="18" x="20" y="40" fill="#{$color}" /><rect width="18" height="18" x="20" y="100" fill="#{$color}" /><rect width="18" height="18" x="40" y="0" fill="#{$color}" /><rect width="18" height="18" x="40" y="60" fill="#{$color}" /><rect width="18" height="18" x="40" y="100" fill="#{$color}" /><rect width="18" height="18" x="60" y="20" fill="#{$color}" /><rect width="18" height="18" x="60" y="80" fill="#{$color}" />'
+  );
+
+  $letterOut: urlEncode(buildSvg(map-get($svgLetters, $letter)));
+  @return url('data:image/svg+xml;charset=utf8,#{$letterOut}');
+}
+
 @mixin showLetter($letter, $nthChild, $fontSize) {
   .diamond-grid > li:nth-child(#{$nthChild}) > .diamond {
     font-size: $fontSize;
     background-color: $logo-letter-background;
     z-index: 97;
     &:after {
-      background-color: $logo-letter-color;
-      mask: url(/images/logo-letter-#{$letter}.svg) no-repeat center center;
-      mask-size: auto 90%;
+      // background-color: $logo-letter-color;
+      // mask: url(/images/logo-letter-#{$letter}.svg) no-repeat center center;
+      // mask-size: auto 90%;
+      // background: url('/images/logo-letter-#{$letter}.svg#red') no-repeat center center;
+      background-size: auto 90%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url('/images/logo-letter-#{$letter}.png');
+      background-image: svgLetter($letter, $logo-letter-color);
     }
     &:hover {
       background-color: $logo-letter-hover-background;
       &:after {
-        background-color: $logo-letter-hover-color;
+        //background-color: $logo-letter-hover-color;
+        //background-image: url('/images/logo-letter-#{$letter}-2.png')
+        background-image: svgLetter($letter, $logo-letter-hover-color);
       }
     }
   }
