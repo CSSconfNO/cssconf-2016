@@ -80,7 +80,7 @@ quote {
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 15px solid rgba($background, 0.15);
+    border-top: 15px solid rgba($primary-color,0.5);
   }
 }
 
@@ -113,18 +113,58 @@ quote {
 }
 
 $nav-height: 60px;
+$nav-background: $background;
+$nav-desktop-background: rgba($light-background,0.9);
+.row.expanded.sticky-container {
+  background: rgba($light-background,0.9);
+}
 .main-nav {
   width: 100%;
   position: relative;
   z-index: 99 !important;
-  background: rgba($light-background,0.9); //$background;
-  color: $background; //$dark-text-default;
+  //background: rgba($light-background,0.9); //$background;
+  //color: $background; //$dark-text-default;
   font-family: 'Monaco';
-  font-size: 18px;
-  transition: box-shadow 300ms linear;
+  font-size: 14px;
+  transition: box-shadow 300ms linear, font-size 300ms linear, line-height 300ms linear;
   &.is-stuck {
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
   }
+
+  &.title-bar {
+    height: $nav-height;
+    line-height: $nav-height - 5px;
+    padding: 0 10px;
+    font-size: 1.2em;
+  }
+
+  &.top-bar {
+    height: $nav-height;
+    line-height: $nav-height - 5px;
+    background: $nav-desktop-background;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $nav-background;
+    color: $light-text-default;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    > li {
+      padding: 10px 12px;
+      display: block;
+      border-top: 1px solid rgba($light-text-default,0.5);
+    }
+  }
+
   a {
     text-align: left;
     color: inherit;
@@ -139,17 +179,29 @@ $nav-height: 60px;
 
   @media screen and (min-width: 40em) {
     height: $nav-height;
-    line-height: $nav-height;
+    //line-height: $nav-height;
+    font-size: 16px;
+
+    ul {
+      position: relative;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      > li {
+        display: inline-block;
+        margin: 0;
+        padding: 0 10px;
+        border-top: none;
+      }
+    }
 
     a {
       color: $background;
       text-align: center;
+      line-height: $nav-height + 5px;
     }
   }
-
-  /* &.top-bar ul.menu {
-    background: transparent;
-  } */
 }
 
 .main-nav.title-bar {
@@ -159,8 +211,14 @@ $nav-height: 60px;
 
 .topbar-logo {
   max-height: $nav-height - 15px;
-  line-height: 1;
-  vertical-align: 0;
+  // line-height: 1;
+  // vertical-align: 0;
+}
+
+.title-bar-logo {
+  max-height: $nav-height - 5px;
+  padding: 5px 0;
+  float: right;
 }
 
 .main-nav .dropdown.menu {
@@ -210,61 +268,6 @@ header {
     filter: saturate(100%);
   }
 }
-/*
-h2.logo {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 50px;
-  line-height: 1.1em;
-  text-align: center;
-  color: $cta-color;
-
-  > div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    &:nth-child(1) {
-      font-size: 1.6em;
-    }
-    &:nth-child(3) {
-      font-size: 0.8em;
-      font-weight: 100;
-    }
-  }
-} */
-
-/* .header-title {
-  background: $cta-color; //lighten($background, 30%);
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-  padding-top: 58px;
-  //clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: url('/images/layout-shapes.svg#polygon-clip-1');
-  overflow: hidden;
-  > h2 {
-    margin: 0 8% 0 6%;
-    font-size: 44px;
-    line-height: 0.85;
-    text-align: center;
-    > span {
-      letter-spacing: 0.12em;
-    }
-  }
-  > div {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 6.7%;
-    text-align: justify;
-    text-transform: uppercase;
-    font-weight: 300;
-    line-height: 1;
-  }
-} */
 
 footer {
   min-height: 220px;
@@ -314,6 +317,7 @@ $section-end-background: $background;
   width: 100%;
   padding: 2em 20% 4em 20%;
   position: relative;
+  filter: drop-shadow(0 -2px 1px rgba(#000,0.3));
 }
 
 @for $i from 1 through $total-sections {
@@ -347,10 +351,13 @@ $section-end-background: $background;
   margin: 0;
   top: 0;
   left: 10px;
-  transform: translateY(-85%);
-  /* &:before {
-    content: '#';
-  } */
+  transform: translateY(-90%);
+  &:before {
+    content: '<';
+  }
+  &:after {
+    content: '/>';
+  }
 }
 
 .schedule {
@@ -381,7 +388,6 @@ $section-end-background: $background;
   flex-basis: 240px;
   width: 240px;
   height: 240px;
-  //clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   > img {
     filter: grayscale(100%);
     clip-path: url('/images/layout-shapes.svg#polygon-clip-1');
@@ -507,6 +513,7 @@ $dgrid-large-select-even-rows-last: #{$dgrid-large-row-items + $dgrid-large-row-
   background: $dgrid-item-background;
   color: $dgrid-item-color;
   border: $dgrid-item-border-size solid $dgrid-item-border-color;
+  overflow: hidden;
 }
 
 .diamond:after {
@@ -561,88 +568,7 @@ $dgrid-large-select-even-rows-last: #{$dgrid-large-row-items + $dgrid-large-row-
   }
 }
 
-// $dgrid-background: $light-background;
-// $dgrid-item-background: darken($light-background,5%);
-// $dgrid-item-hover-background: darken($light-background,5%);
-// $dgrid-item-color: lighten($background, 5%);
-// $dgrid-item-hover-color: #fff;
-// $dgrid-item-border-color: $dgrid-background;
-// $dgrid-item-hover-border-color: $dgrid-background;
-
-// $dgrid-item-size: 160px;
-// $dgrid-item-border-size: 2px;
-// $dgrid-row-items: 5;
-// $dgrid-select-rows: 1n + #{$dgrid-row-items + 1};
-// $dgrid-select-even-rows: #{$dgrid-row-items + $dgrid-row-items - 1}n + #{$dgrid-row-items+1};
-// $dgrid-select-odd-rows: #{$dgrid-row-items + $dgrid-row-items - 1}n + 1;
-
-// $dgrid-min-width: ($dgrid-item-size * 1.45 * $dgrid-row-items);
-// $dgrid-item-add-size: ($dgrid-item-size / 4.84848484);
-// $dgrid-margin: $dgrid-item-add-size;
-// $dgrid-x-align-margin: ($dgrid-item-size / 2) + ($dgrid-margin * 2) - ($dgrid-item-border-size / 2);
-// $dgrid-y-align-margin: (($dgrid-item-size / 2) + ($dgrid-item-border-size / 2)) * -1;
-
-// .diamond-grid {
-//  width: 100%;
-//  width: $dgrid-min-width;
-//  margin: 0 auto;
-//  background: $dgrid-background;
-// }
-// .diamond-grid > li {
-//  list-style: none;
-//  float: left;
-//  margin: $dgrid-margin;
-// }
-// .diamond {
-//  transition: all 200ms linear;
-//  height: $dgrid-item-size;
-//  width: $dgrid-item-size;
-//  background: $dgrid-item-background;
-//  color: $dgrid-item-color;
-//  border: $dgrid-item-border-size solid $dgrid-item-border-color;
-//  display: block;
-//  position: relative;
-//  z-index: 1;
-//  text-decoration: none;
-//  transform: rotate(45deg);
-//  margin-left: (-1 * $dgrid-item-border-size);
-// }
-// .diamond:hover {
-//  cursor: pointer;
-//  background: $dgrid-item-hover-background;
-//  color: $dgrid-item-hover-color;
-//  border-color: $dgrid-item-hover-border-color;
-//  cursor: default;
-// }
-// .diamond-grid>li:nth-child(#{$dgrid-select-rows}) { // Make sure all rows align with the one above (except the first row)
-//  margin-top: $dgrid-y-align-margin;
-// }
-// .diamond-grid>li:nth-child(#{$dgrid-select-even-rows}) { // Make every second row align yly
-//  margin-left: $dgrid-x-align-margin;
-//  clear: left;
-// }
-// .diamond-grid>li:nth-child(#{$dgrid-select-odd-rows}) {
-//  clear: left;
-// }
-// .text {
-//  transition: all 200ms linear;
-//  width: $dgrid-item-size;
-//  height: $dgrid-item-size;
-//  font-family: 'VT323', 'Open Sans',sans-serif;
-//  font-size: 30px;
-//  text-transform:  uppercase;
-//  display: table-cell;
-//  vertical-align: middle;
-//  transform: rotate(-45deg);
-//  text-align: center;
-
-//  &.small {
-//   line-height: 1;
-//   > small {
-//     font-size: 20px;
-//   }
-//  }
-// }
+// Hide some of the grid-diamonds on small screens
 @media screen and (max-width: $dgrid-breakpoint) {
   .diamond-grid > li:nth-child(1n + 14) {
     display: none;
@@ -650,6 +576,7 @@ $dgrid-large-select-even-rows-last: #{$dgrid-large-row-items + $dgrid-large-row-
   }
 }
 
+// Insert CSS Family logo
 $child-css-family: 12;
 $child-desktop-css-family: 18;
 
@@ -669,6 +596,7 @@ $child-desktop-css-family: 18;
   }
 }
 
+// Insert content into specific diamonds depending on screen sice
 $content-date: ' 1 June \A  2016';
 $child-date: 11;
 $child-desktop-date: 8;
@@ -719,6 +647,8 @@ $child-desktop-desc-3: 21;
   @include insertContent($content-desc-3, $child-desktop-desc-3, 1.5em);
 }
 
+
+// Insert logo into specific diamonds depending on screen size
 $logo-letter-background: $background;
 $logo-letter-color: $light-background;
 $logo-letter-hover-background: $cta-color;
@@ -744,22 +674,25 @@ $logo-letter-hover-color: #fff;
 }
 
 @mixin showLabel($nthChild) {
-  .diamond-grid > li:nth-child(#{$nthChild}) > .diamond:before {
-    content: 'NORDIC';
-    display: block;
-    padding: 3px 10px;
-    position: absolute;
-    z-index: 98;
-    bottom: 0;
-    left: 20%;
-    background: $cta-color;
-    color: #fff;
-    font-size: 0.9em;
-    font-weight: bold;
-    text-transform: uppercase;
-    transform-origin: top left;
-    transform: translateY(100%);
-    border-radius: 0 0 3px 3px;
+  .diamond-grid > li:nth-child(#{$nthChild}) > .diamond {
+    overflow: visible;
+    &:before {
+      content: 'NORDIC';
+      display: block;
+      padding: 3px 10px;
+      position: absolute;
+      z-index: 98;
+      bottom: 0;
+      left: 20%;
+      background: $cta-color;
+      color: #fff;
+      font-size: 0.9em;
+      font-weight: bold;
+      text-transform: uppercase;
+      transform-origin: top left;
+      transform: translateY(100%);
+      border-radius: 0 0 3px 3px;
+    }
   }
 }
 
@@ -785,62 +718,6 @@ $dgrid-desktop-logo-S2-child: 11;
   @include showLetter('S', $dgrid-desktop-logo-S2-child, 20px);
   @include showLabel($dgrid-desktop-logo-C-child);
 }
-
-// .logo-label {
-//   display: block;
-//   padding: 3px 10px;
-//   position: absolute;
-//   z-index: 98;
-//   bottom: -2px;
-//   left: 20%;
-//   background: $cta-color; //$background;
-//   color: #fff;
-//   font-size: 14px;
-//   text-transform: uppercase;
-//   transform-origin: top left;
-//   transform: translateY(100%);
-//   //transform: rotate(-90deg);
-//   border-radius: 0 0 3px 3px;
-// }
-
-// .logo-letter {
-//   background: $logo-letter-background;
-//   position: relative;
-//   z-index: 97;
-//   svg {
-//     margin: 0 35px;
-//     > rect {
-//       fill: $light-background;
-//       stroke: $logo-letter-background;
-//       stroke-width: 2;
-//       transition: all 200ms linear;
-//     }
-//   }
-
-//   &:hover {
-//     background: $logo-letter-hover-background;
-//     svg {
-//       > rect {
-//         fill: $logo-letter-hover-color;
-//         stroke: $logo-letter-hover-background;
-//       }
-//     }
-//   }
-// }
-
-// .tickets {
-//   background: $cta-color;
-//   .text {
-//     font-weight: 400;
-//     color: #fff;
-//   }
-//   &:hover {
-//     background: #fff;
-//     .text {
-//       color: $cta-color;
-//     }
-//   }
-// }
 
 
 
