@@ -5,3 +5,5 @@ dist
 .DS_Store
 bower_components
 test/bower_components
+*.sublime-project
+*.sublime-workspace
