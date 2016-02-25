@@ -15,5 +15,5 @@
 ````bash
   $ npm run predeploy # packaging assets and things
   $ modulus login
-  $ modulus project deploy -p cssconf_no
+  $ modulus project deploy -p css-conf
 ````
