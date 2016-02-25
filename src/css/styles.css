@@ -521,6 +521,10 @@ footer {
     margin-bottom: 2em;
 }
 
+.call-to-action{
+  text-align: center;
+}
+
 .btn-emoji {
   font-size: 2em;
   line-height: 1;
