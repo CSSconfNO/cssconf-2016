@@ -1,6 +1,24 @@
 'use strict';
 /*global $, google*/
 
+var Speakers = {
+  activeItem: null,
+  init: function() {
+    $('.speaker-item').click(function() {
+      if (Speakers.activeItem) {
+        $(Speakers.activeItem).removeClass('is-active');
+      }
+      if (this === Speakers.activeItem) {
+        Speakers.activeItem = null;
+      }
+      else {
+        $(this).addClass('is-active');
+        Speakers.activeItem = this;
+      }
+    });
+  }
+};
+
 var Schedule = {
   activeItem: null,
   init: function() {
@@ -87,6 +105,7 @@ var GoogleMap = {
 };
 
 $(function () {
+  Speakers.init();
   Schedule.init();
   GoogleMap.init();
 });
