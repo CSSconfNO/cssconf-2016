@@ -335,7 +335,7 @@ $section-end-background: $background;
     z-index: ($i + 1);
     background: $background;
     color: color-contrast($background);
-    filter: drop-shadow(0 -1px 1px rgba(darken($background,50%),0.2));
+    filter: drop-shadow(0 -1px 0px rgba(darken($background,50%),0.3));
     > h2:first-child {
       z-index: $i;
       color: $background;
@@ -451,6 +451,15 @@ section#venue {
   height: 400px;
   width: 100%;
   color: $dark-text-default;
+}
+
+#map-infowindow {
+  h3 {
+    font-size: 1em;
+  }
+  img {
+    max-height: 70px;
+  }
 }
 
 $dgrid-breakpoint: 40em;

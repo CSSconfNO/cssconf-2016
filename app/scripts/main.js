@@ -33,124 +33,17 @@ var GoogleMap = {
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
       // How zoomed in you want the map to start at (always required)
-      zoom: 13,
+      zoom: 15,
       scrollwheel: false,
 
       // The latitude and longitude to center the map (always required)
-      center: new google.maps.LatLng(59.916108, 10.751773), // Oslo
+      center: new google.maps.LatLng(59.923000, 10.752872), // Dansens Hus
 
 
       // How you would like to style the map.
       // This is where you would paste any style found on Snazzy Maps.
-      styles: [{
-        'featureType': 'administrative.locality',
-        'elementType': 'all',
-        'stylers': [{
-          'hue': '#2c2e33'
-          }, {
-            'saturation': 7
-          }, {
-            'lightness': 19
-          }, {
-            'visibility': 'on'
-          }]
-      }, {
-        'featureType': 'landscape',
-        'elementType': 'all',
-        'stylers': [{
-          'hue': '#ffffff'
-        }, {
-          'saturation': -100
-        }, {
-          'lightness': 100
-        }, {
-          'visibility': 'simplified'
-        }]
-      }, {
-        'featureType': 'poi',
-        'elementType': 'all',
-        'stylers': [{
-          'hue': '#ffffff'
-        }, {
-          'saturation': -100
-        }, {
-          'lightness': 100
-        }, {
-          'visibility': 'off'
-        }]
-      }, {
-        'featureType': 'road',
-        'elementType': 'geometry',
-        'stylers': [{
-          'hue': '#bbc0c4'
-        }, {
-          'saturation': -93
-        }, {
-          'lightness': 31
-        }, {
-          'visibility': 'simplified'
-        }]
-      }, {
-        'featureType': 'road',
-        'elementType': 'labels',
-        'stylers': [{
-          'hue': '#bbc0c4'
-        }, {
-          'saturation': -93
-        }, {
-          'lightness': 31
-        }, {
-          'visibility': 'on'
-        }]
-      }, {
-        'featureType': 'road.arterial',
-        'elementType': 'labels',
-        'stylers': [{
-          'hue': '#bbc0c4'
-        }, {
-          'saturation': -93
-        }, {
-          'lightness': -2
-        }, {
-          'visibility': 'simplified'
-        }]
-      }, {
-        'featureType': 'road.local',
-        'elementType': 'geometry',
-        'stylers': [{
-          'hue': '#e9ebed'
-        }, {
-          'saturation': -90
-        }, {
-          'lightness': -8
-        }, {
-          'visibility': 'simplified'
-        }]
-      }, {
-        'featureType': 'transit',
-        'elementType': 'all',
-        'stylers': [{
-          'hue': '#e9ebed'
-        }, {
-          'saturation': 10
-        }, {
-          'lightness': 69
-        }, {
-          'visibility': 'on'
-        }]
-      }, {
-        'featureType': 'water',
-        'elementType': 'all',
-        'stylers': [{
-          'hue': '#e9ebed'
-        }, {
-          'saturation': -78
-        }, {
-          'lightness': 67
-        }, {
-          'visibility': 'simplified'
-        }]
-      }]
+      //styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#dde6e8"},{"visibility":"on"}]}]
+      styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"administrative.locality","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"},{"visibility":"simplified"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"simplified"},{"saturation":"-65"},{"lightness":"45"},{"gamma":"1.78"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"saturation":"-33"},{"lightness":"22"},{"gamma":"2.08"}]},{"featureType":"transit.station.airport","elementType":"geometry","stylers":[{"gamma":"2.08"},{"hue":"#ffa200"}]},{"featureType":"transit.station.airport","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.station.rail","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"transit.station.rail","elementType":"labels.icon","stylers":[{"visibility":"simplified"},{"saturation":"-55"},{"lightness":"-2"},{"gamma":"1.88"},{"hue":"#ffab00"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#bbd9e5"},{"visibility":"simplified"}]}]
     };
 
     // Get the HTML DOM element that will contain your map
@@ -160,12 +53,34 @@ var GoogleMap = {
     // Create the Google Map using our element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
 
+    var markerImage = {
+      url: '/images/map-marker-2.png',
+      size: new google.maps.Size(70, 60),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(35, 60)
+    };
+
     // Let's also add a marker while we're at it
     var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(59.916307, 10.750513),
+      position: new google.maps.LatLng(59.921341, 10.752872),
       map: map,
+      icon: markerImage,
       title: 'Rockefeller Music Hall'
     });
+
+    var contentString = '<div id="map-infowindow">'+
+      '<div id="bodyContent">'+
+        '<a href="http://www.dansenshus.com/" target="_blank">'+
+          '<img src="http://norskedansekunstnere.no/wp-content/uploads/2014/06/dhlogo.png" alt="Dansens Hus" />'+
+        '</a>'+
+        '<p><strong>Dansens Hus</strong><br/>Møllerveien 2<br/>0182 Oslo, Norway</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+  infowindow.open(map, marker);
 
     return {map: map, marker: marker};
   }
