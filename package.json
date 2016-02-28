@@ -6,6 +6,7 @@
     "email": "hello@cssconf.no"
   },
   "description": "The CSSConf.no 2016 website",
+  "main": "dist/index.html",
   "repository": {
     "type": "git",
     "url": "git@github.com:webrebels/cssconf-2016.git"
