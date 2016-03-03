@@ -4,7 +4,10 @@
 var Speakers = {
   activeItem: null,
   init: function() {
-    $('.speaker-item').click(function() {
+    $('.js-speaker-item').click(function(e) {
+      if ($(e.target).parents('.js-speaker-inner').length > 0) {
+        return;
+      }
       if (Speakers.activeItem) {
         $(Speakers.activeItem).removeClass('is-active');
       }
@@ -14,6 +17,11 @@ var Speakers = {
       else {
         $(this).addClass('is-active');
         Speakers.activeItem = this;
+      }
+    });
+    $('.js-close-speaker-item').click(function() {
+      if (Speakers.activeItem) {
+        $(Speakers.activeItem).removeClass('is-active');
       }
     });
   }
