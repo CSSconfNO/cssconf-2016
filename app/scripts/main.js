@@ -1,28 +1,63 @@
 'use strict';
 /*global $, google*/
 
+var SpeakerBios = {
+  "rachel": {
+    "name": "Rachel Nabors",
+    "photo": "/images/speakers/rachel-nabors.jpg",
+    "bio": "Rachel is an award-winning cartoonist turned web animation advocate. She speaks at conferences around the world, consults with large companies, and gives workshops about web animation. She’s an invited Expert at the W3C advocating for the web animation community, and a curator of Web Animation Weekly. Rachel loves studying birds, playing Pokémon, wearing boots, making comics, and helping people learn. When not biking around the city of Portland, you can find her tending her orchids or brewing a hot cup of golden tippy Yunnan in a gaiwan pot."
+  },
+  "eva": {
+    "name": "Eva Ferreira",
+    "photo": "/images/speakers/eva-ferreira.jpg",
+    "bio": "Eva is a freelance front-end developer with a passion for teaching. She currently works at the National Technological University of Argentina as a professor while she studies for a BA in Multimedia Design. She also speaks at front-end events such as CSSConf US, CSSConf Australia and SassConf; last but not least, Eva is currently organizing CSSConf Argentina 2016."
+  },
+  "dan": {
+    "name": "Dan Na",
+    "photo": "/images/speakers/dan-na.jpg",
+    "bio": "Dan is software engineer on the Front End Infrastructure Team at Etsy in Brooklyn. He is the creator of cheekswab.org — an initiative to spread awareness about the need for bone marrow donors. Dan likes to cook and nerds out about food on his cooking blog: <a href=\"http://fooddontlie.com\" target=\"_blank\">fooddontlie.com</a>"
+  },
+  "aga": {
+    "name": "Aga Naplocha",
+    "photo": "/images/speakers/aga-naplocha.png",
+    "bio": "Aga works @ Adobe in Warsaw, where she has an awesome opportunity to combine both Visual Designer & Front-end Developer roles. Apart from designing and coding, she enjoys organizing and engaging herself in many initiatives related with programming and front-end development. Currently, she is co-organizing HTML&CSS workshops in Warsaw called The Awwwesomes http://theawwwesomes.org. When she’s not in front of the comuputer, she usually spends her time sewing, eating or laughing."
+  },
+  "liam": {
+    "name": "Liam Campbell",
+    "photo": "/images/speakers/liam-campbell.jpg",
+    "bio": "Liam is a web designer and developer at Mule Design, a studio known for its beautiful and well-researched design work with non-profits, education, and the arts. There are two roughly 4.5cm-wide screenshots of Liam's work for Audubon.org featured in Ethan Marcotte's book, Responsive Design: Patterns & Principles. He considers this his finest achievement, but is willing to let it be supplanted by some greater honor, should one present itself. Liam lives on the unfashionable end of San Francisco, where he plans to stay indefinitely."
+  },
+  "jen": {
+    "name": "Jen Simmons",
+    "photo": "/images/speakers/jen-simmons.jpg",
+    "bio": "Dubbed “the Terry Gross of the tech industry,” Jen Simmons is the host and executive producer of The Web Ahead. Her in-depth interviews explain emerging technology and predict the future of the web — and won the 2015 Net Award for Podcast of the Year.<br/>Jen is a Designer and Developer Advocate at Mozilla, where she advocates for web standards and researches the coming revolution in graphic design on the web. She's spoken at events including SXSW, An Event Apart, Fluent, Generate, Future of Web Design, and Respond. Her talk, Modern Layouts: Getting Out of Our Ruts, was awarded Best Conference Presentation at CSS Dev Conf 2014.</br>Jen launched her first client website in 1998 and spent years making sites for small mom & pop shops, arts organization, and creative individuals. Her more well-known clients include CERN, the W3C, Google, Drupal, Temple University, and the Annenberg Foundation. Jen earned a MFA in Film and Media Arts from Temple University. She lives in New York City."
+  },
+  "lena": {
+    "name": "Lena Reinhard",
+    "photo": "/images/speakers/",
+    "bio": "Lena Reinhard is a consultant and team leader with an interdisciplinary background. She has been a contributor to the Open Source projects Hoodie and Apache CouchDB, and co-founded a software company. Through her work, Lena aims to support change in the tech industry to make it more accessible, diverse and inclusive. She currently lives in Berlin and really loves Alpacas."
+  }
+};
+console.log('SpeakerBios', SpeakerBios);
+
 var Speakers = {
-  activeItem: null,
   init: function() {
+    var modal = $('#speaker-modal');
+    var modalSpeakerName = $('#speaker-modal-name');
+    var modalSpeakerBio = $('#speaker-modal-bio');
+    var modalSpeakerPhoto = $('#speaker-modal-photo');
+
     $('.js-speaker-item').click(function(e) {
-      if ($(e.target).parents('.js-speaker-inner').length > 0) {
-        return;
-      }
-      if (Speakers.activeItem) {
-        $(Speakers.activeItem).removeClass('is-active');
-      }
-      if (this === Speakers.activeItem) {
-        Speakers.activeItem = null;
-      }
-      else {
-        $(this).addClass('is-active');
-        Speakers.activeItem = this;
-      }
-    });
-    $('.js-close-speaker-item').click(function() {
-      if (Speakers.activeItem) {
-        $(Speakers.activeItem).removeClass('is-active');
-      }
+      var speakerId = this.getAttribute('data-speaker');
+      var speakerObj = SpeakerBios[speakerId];
+      if (!speakerObj) return false;
+
+      modalSpeakerName.html(speakerObj.name);
+      modalSpeakerBio.html(speakerObj.bio);
+      modalSpeakerPhoto.attr('src', speakerObj.photo);
+      modalSpeakerPhoto.attr('alt', speakerObj.name);
+
+      $(modal).foundation('open');
     });
   }
 };

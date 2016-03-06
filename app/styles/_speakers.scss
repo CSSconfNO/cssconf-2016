@@ -1,0 +1,107 @@
+$sgrid-row-items: 1;
+$sgrid-diamond-scale-up: 1.42;
+$sgrid-diamond-scale-down: 0.68;
+$sgrid-item-width: 50%;
+$sgrid-dropshadow-color: #333;
+
+.speaker-grid {
+  max-width: 1000px;
+  @include diamond-grid(
+    2,
+    3,
+    transparent,
+    darken($light-background,5%),
+    darken($light-background,10%),
+    #fff,
+    #fff
+  );
+
+  .speaker-intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: rotate(-45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > * {
+      transform: scale($sgrid-diamond-scale-up);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    }
+    .speaker-name {
+      margin: 0;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: $secondary-font-family;
+      font-size: 2rem;
+      line-height: 0.75;
+      background: rgba($cta-color,0.7);
+    }
+    .speaker-image {
+      z-index: 2;
+      min-width: 100%;
+      min-height: 100%;
+      filter: saturate(20%);
+    }
+  }
+
+  .dgrid-column-inner:hover {
+    cursor: pointer;
+    .speaker-name {
+      z-index: 3;
+    }
+    .speaker-image {
+      filter: saturate(100%);
+    }
+  }
+}
+
+#speaker-modal {
+  background: $background;
+  color: $light-text-default;
+  border-color: transparent;
+  box-shadow: 0 0 15px 10px rgba(0,0,0,0.5);
+}
+
+#speaker-modal-name {
+  font-family: $secondary-font-family;
+  font-size: 2.5em;
+}
+
+#speaker-modal-name:before {
+  content: '';
+  display: inline-block;
+  width: (150px * $sgrid-diamond-scale-up);
+  height: (150px * $sgrid-diamond-scale-up);
+  position: relative;
+  margin-right: 10px;
+  float: left;
+  shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.speaker-modal-photo {
+  width: 150px;
+  height: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  margin: ((150px * $sgrid-diamond-scale-up) - 150px) / 2;
+  top: 1rem;
+  left: 1rem;
+  padding-bottom: 150px;
+
+  img {
+    transform: rotate(45deg) scale($sgrid-diamond-scale-up);
+  }
+}

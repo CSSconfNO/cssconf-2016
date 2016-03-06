@@ -10,7 +10,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/foundation-sites/dist/foundation.css">
+    <link rel="stylesheet" href="/bower_components/motion-ui/dist/motion-ui.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -28,14 +28,14 @@
     <div class="main-nav title-bar" data-options="marginTop:0;barOffset:200;" data-responsive-toggle="main-nav">
       <button class="menu-icon" type="button" data-toggle></button>
       <div class="title-bar-title">Menu</div>
-      <img class="title-bar-logo" src="/images/logos/logo-small-light.png" title="CSSconf Nordic" />
+      <img class="title-bar-logo" src="/images/logos/logo-small-light.png" title="CSSconf Nordic" alt="CSSconf Nordic" />
     </div>
   </div>
 
   <div class="row expanded" data-sticky-container>
-    <div class="row main-nav top-bar clearfix" id="main-nav" data-sticky data-margin-top="0">
+    <div class="main-nav top-bar clearfix" id="main-nav" data-sticky data-margin-top="0">
       <div class="show-for-medium logo">
-        <img class="topbar-logo" src="/images/logos/logo-6.png" title="CSSconf Nordic" />
+        <img class="topbar-logo" src="/images/logos/logo-6.png" title="CSSconf Nordic" alt="CSSconf Nordic" />
       </div>
       <div class="menu" data-magellan data-options="activeClass:is-active;barOffset:80;threshold:80;">
         <ul data-dropdown-menu>
@@ -45,6 +45,7 @@
           <li><a class="nav-link" href="#venue">Venue</a></li>
           <li><a class="nav-link" href="#sponsors">Sponsors</a></li>
           <li><a class="nav-link" href="https://webrebels.org/buytickets" target="_blank">Tickets</a></li>
+          <li><a class="nav-link" href="#updates">Updates</a></li>
           <li><a class="nav-link" href="#team">Team</a></li>
         </ul>
       </div>
@@ -52,217 +53,289 @@
   </div>
 
   <header class="row expanded">
-     <div class="row">
-      <ul class="diamond-grid clearfix">
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
-        <li><div class="diamond"></div></li>
+      <ul class="header-grid clearfix">
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
       </ul>
-    </div>
   </header>
 
   <div class="content">
-    <section class="row expanded" id="info" data-magellan-target="info">
+    <section id="info" data-magellan-target="info">
       <h2>Info</h2>
       <div class="row">
-        <h3>Want to visit Norway in June?</h3>
-        <p>Of course you do!!!</p>
+        <div class="column small-12">
+          <h3>Want to visit Norway in June?</h3>
+          <p>Of course you do!!!</p>
 
-        <p>CSSConf is one event out of three during the first week of June. The other two events are the two day conference Web Rebels and NodeConf Oslo.</p>
-        <p>Interested in buying tickets for more than one event? Excellent, because all three events are releasing tickets at the same place and at the same time. There will also be combo-tickets available.</p>
-        <p>The tickets for CSSConf will be priced at 2100 NOK.</p>
+          <p>CSSConf is one event out of three during the first week of June. The other two events are the two day conference Web Rebels and NodeConf Oslo.</p>
+          <p>Interested in buying tickets for more than one event? Excellent, because all three events are releasing tickets at the same place and at the same time. There will also be combo-tickets available.</p>
+          <p>The tickets for CSSConf will be priced at 2100 NOK.</p>
+          <a class="button large expanded" href="https://webrebels.org/buytickets" target="_blank">Get your ticket here!</a>
 
-        <div class="callout small">
-          <h5 class="text-center">💥 Next release is Friday, 4 March at 13:00 CET 💥</h5>
+          <h3>Part of the international CSSconf family</h3>
+          <p>
+            <a href="http://cssconf.org/" title="CSSconf Events Around the World" class="float-right no-style"><img src="/images/css-family-logo.svg" width="150" alt="CSSconf Family" /></a>
+            Since the prototype, CSSconf US, was started by Nicole Sullivan in 2013, the CSSconf family has expanded around the globe. All CSSconf organizer teams share the vision of an international, diverse and creative CSS community, for which the CSSconf series offers a platform to meet, hack, share knowledge and build friendships.
+          </p>
         </div>
-
-        <a class="button expanded" href="https://webrebels.org/buytickets" target="_blank">Get your ticket here!</a>
-
-        <h3>Call for Speakers — now closed</h3>
-        <p>We received 104 submissions and are really grateful for every single one of them. Thank you all so SO much for taking the time to write proposals for us! We have some plans lined up for how to choose among the submissions, read more about the <a href="https://github.com/CSSconfNO/cssconfno-admin/blob/master/talk-selection.md">talk selection process in our organizer docs</a>.</p>
-
-        <h3>Part of the international CSSconf family</h3>
-        <a href="http://cssconf.org/" title="CSSconf Events Around the World" class="float-right"><img src="/images/css-family-logo.svg" width="150" /></a>
-        <p>Since the prototype, CSSconf US, was started by Nicole Sullivan in 2013, the CSSconf family has expanded around the globe. All CSSconf organizer teams share the vision of an international, diverse and creative CSS community, for which the CSSconf series offers a platform to meet, hack, share knowledge and build friendships.</p>
-
-        <quote>Now we hope to see you in Oslo, Norway — 01 June 2016. <strong>\o/</strong></quote>
       </div>
     </section>
-    <section class="row expanded" id="speakers" data-magellan-target="speakers">
+    <section id="speakers" data-magellan-target="speakers">
       <h2>Speakers</h2>
-
-      <p><!-- TODO: Add cool intro about speakers --></p>
-
-
       <div class="row">
-        <ul class="speaker-grid clearfix js-speaker-grid">
-          <li class="speaker-item js-speaker-item">
-            <div class="speaker-intro">
-              <h3 class="speaker-name">Rachel<br/>Nabors</h3>
-              <img class="speaker-image" src="/images/speakers/rachel-nabors.jpg" />
-            </div>
-            <div class="speaker-inner js-speaker-inner">
-              <button class="close-button speaker-inner-close js-close-speaker-item">X</button>
-              <h4 class="speaker-name">Rachel Nabors</h4>
-              <p>Rachel is an award-winning cartoonist turned web animation advocate. She speaks at conferences around the world, consults with large companies, and gives workshops about web animation. She’s an invited Expert at the W3C advocating for the web animation community, and a curator of Web Animation Weekly. Rachel loves studying birds, playing Pokémon, wearing boots, making comics, and helping people learn. When not biking around the city of Portland, you can find her tending her orchids or brewing a hot cup of golden tippy Yunnan in a gaiwan pot.</p>
-            </div>
-          </li>
-          <li class="speaker-item js-speaker-item">
-            <div class="speaker-intro">
-              <h3 class="speaker-name">Eva<br/>Ferreira</h3>
-              <img class="speaker-image" src="/images/speakers/eva-ferreira.jpg" />
-            </div>
-            <div class="speaker-inner js-speaker-inner">
-              <button class="close-button speaker-inner-close js-close-speaker-item">X</button>
-              <h4 class="speaker-name">Eva Ferreira</h4>
-              <p>Eva is a freelance front-end developer with a passion for teaching. She currently works at the National Technological University of Argentina as a professor while she studies for a BA in Multimedia Design. She also speaks at front-end events such as CSSConf US, CSSConf Australia and SassConf; last but not least, Eva is currently organizing CSSConf Argentina 2016.</p>
-            </div>
-          </li>
-          <li class="speaker-item js-speaker-item">
-            <div class="speaker-intro">
-              <h3 class="speaker-name">Dan<br/>Na</h3>
-              <img class="speaker-image" src="/images/speakers/dan-na.jpg" />
-            </div>
-            <div class="speaker-inner js-speaker-inner">
-              <button class="close-button speaker-inner-close js-close-speaker-item">X</button>
-              <h4 class="speaker-name">Dan Na</h4>
-              <p>Dan is software engineer on the Front End Infrastructure Team at Etsy in Brooklyn. He is the creator of cheekswab.org — an initiative to spread awareness about the need for bone marrow donors. Dan likes to cook and nerds out about food on his cooking blog: <a href="http://fooddontlie.com" target="_blank">fooddontlie.com</a>.</p>
-            </div>
-          </li>
-          <li class="speaker-item js-speaker-item">
-            <div class="speaker-intro">
-              <h3 class="speaker-name">Aga<br/>Naplocha</h3>
-              <img class="speaker-image" src="/images/speakers/aga-naplocha.png" />
-            </div>
-            <div class="speaker-inner js-speaker-inner">
-              <button class="close-button speaker-inner-close js-close-speaker-item">X</button>
-              <h4 class="speaker-name">Aga Naplocha</h4>
-              <p>Aga works @ Adobe in Warsaw, where she has an awesome opportunity to combine both Visual Designer & Front-end Developer roles. Apart from designing and coding, she enjoys organizing and engaging herself in many initiatives related with programming and front-end development. Currently, she is co-organizing HTML&CSS workshops in Warsaw called <a href="http://theawwwesomes.org" target="_blank">The Awwwesomes</a>. When she’s not in front of the comuputer, she usually spends her time sewing, eating or laughing.</p>
-            </div>
-          </li>
-          <li class="speaker-item js-speaker-item">
-            <div class="speaker-intro">
-              <h3 class="speaker-name">Liam<br/>Campbell</h3>
-              <img class="speaker-image" src="/images/speakers/liam-campbell.jpg" />
-            </div>
-            <div class="speaker-inner js-speaker-inner">
-              <button class="close-button speaker-inner-close js-close-speaker-item">X</button>
-              <h4 class="speaker-name">Liam Campbell</h4>
-              <p>Liam is a web designer and developer at Mule Design, a studio known for its beautiful and well-researched design work with non-profits, education, and the arts. There are two roughly 4.5cm-wide screenshots of Liam's work for Audubon.org featured in Ethan Marcotte's book, Responsive Design: Patterns & Principles. He considers this his finest achievement, but is willing to let it be supplanted by some greater honor, should one present itself. Liam lives on the unfashionable end of San Francisco, where he plans to stay indefinitely.</p>
-            </div>
-          </li>
-          <li class="speaker-item js-speaker-item">
-            <div class="speaker-intro">
-              <h3 class="speaker-name">Jen<br/>Simmons</h3>
-              <img class="speaker-image" src="/images/speakers/jen-simmons.jpg" />
-            </div>
-            <div class="speaker-inner js-speaker-inner">
-              <button class="close-button speaker-inner-close js-close-speaker-item">X</button>
-              <h4 class="speaker-name">Jen Simmons</h4>
-              <p>Dubbed “the Terry Gross of the tech industry,” Jen Simmons is the host and executive producer of The Web Ahead. Her in-depth interviews explain emerging technology and predict the future of the web — and won the 2015 Net Award for Podcast of the Year.
-​               <br/>
-              Jen is a Designer and Developer Advocate at Mozilla, where she advocates for web standards and researches the coming revolution in graphic design on the web. She's spoken at events including SXSW, An Event Apart, Fluent, Generate, Future of Web Design, and Respond. Her talk, Modern Layouts: Getting Out of Our Ruts, was awarded Best Conference Presentation at CSS Dev Conf 2014.
-​               <br/>
-              Jen launched her first client website in 1998 and spent years making sites for small mom & pop shops, arts organization, and creative individuals. Her more well-known clients include CERN, the W3C, Google, Drupal, Temple University, and the Annenberg Foundation. Jen earned a MFA in Film and Media Arts from Temple University. She lives in New York City.</p>
-            </div>
-          </li>
-        </ul>
+        <div class="column small-12">
+          <p>We are extremely proud to announce our speakers for CSSConf Nordic! More info about our lineup will soon be found in <a href="#schedule" class="nav-link" data-target="#schedule">our schedule</a></p>
+          <ul class="speaker-grid clearfix js-speaker-grid">
+            <li class="dgrid-column js-speaker-item" data-speaker="rachel">
+              <div class="dgrid-column-inner">
+                <div class="speaker-intro">
+                  <h3 class="speaker-name">Rachel<br/>Nabors</h3>
+                  <img class="speaker-image" src="/images/speakers/rachel-nabors.jpg" alt="Rachel Nabors" />
+                </div>
+              </div>
+            </li>
+            <li class="dgrid-column js-speaker-item" data-speaker="eva">
+              <div class="dgrid-column-inner">
+                <div class="speaker-intro">
+                  <h3 class="speaker-name">Eva<br/>Ferreira</h3>
+                  <img class="speaker-image" src="/images/speakers/eva-ferreira.jpg" alt="Eva Ferreira" />
+                </div>
+              </div>
+            </li>
+            <li class="dgrid-column js-speaker-item" data-speaker="dan">
+              <div class="dgrid-column-inner">
+                <div class="speaker-intro">
+                  <h3 class="speaker-name">Dan<br/>Na</h3>
+                  <img class="speaker-image" src="/images/speakers/dan-na.jpg" alt="Dan Na" />
+                </div>
+              </div>
+            </li>
+            <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+            <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+            <li class="dgrid-column js-speaker-item" data-speaker="aga">
+              <div class="dgrid-column-inner">
+                <div class="speaker-intro">
+                  <h3 class="speaker-name">Aga<br/>Naplocha</h3>
+                  <img class="speaker-image" src="/images/speakers/aga-naplocha.png" alt="Aga Naplocha" />
+                </div>
+              </div>
+            </li>
+            <li class="dgrid-column js-speaker-item" data-speaker="liam">
+              <div class="dgrid-column-inner">
+                <div class="speaker-intro">
+                  <h3 class="speaker-name">Liam<br/>Campbell</h3>
+                  <img class="speaker-image" src="/images/speakers/liam-campbell.jpg" alt="Liam Campbell" />
+                </div>
+              </div>
+            </li>
+            <li class="dgrid-column js-speaker-item" data-speaker="jen">
+              <div class="dgrid-column-inner">
+                <div class="speaker-intro">
+                  <h3 class="speaker-name">Jen<br/>Simmons</h3>
+                  <img class="speaker-image" src="/images/speakers/jen-simmons.jpg" alt="Jen Simmons" />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
-    <section class="row expanded" id="schedule" data-magellan-target="schedule">
+    <section id="schedule" data-magellan-target="schedule">
       <h2>Schedule</h2>
       <div class="row">
-        <p>We are super busy putting together the schedule for the day, so stay tuned and have a look at our <a class="nav-link" href="#speakers" data-target="#info">awesome speakers</a></p>
+        <p>There's still a lot of things that need to fall into place for us to reveal the schedule but here's a rough overview of the timeslots. <a href="#updates" class="nav-link" data-target="#updates">Subscribe to our newsletter</a> to be the first one to know when the schedule is ready!</p>
+        <ol class="schedule-grid clearfix">
+          <li class="dgrid-column"><div class="dgrid-column-inner">
+            <div class="schedule-item">
+              <div class="schedule-time">08:00</div>
+              <div class="schedule-description">registration and breakfast</div>
+            </div>
+          </div></li>
+          <li class="dgrid-column"><div class="dgrid-column-inner">
+            <div class="schedule-item">
+              <div class="schedule-time">09:00</div>
+              <div class="schedule-description">welcome and talk #1</div>
+            </div>
+          </div></li>
+          <li class="dgrid-column"><div class="dgrid-column-inner">
+            <div class="schedule-item">
+              <div class="schedule-time">10:00</div>
+              <div class="schedule-description">talk #2</div>
+            </div>
+          </div></li>
+          <li class="dgrid-column"><div class="dgrid-column-inner">
+            <div class="schedule-item">
+              <div class="schedule-time">10:30</div>
+              <div class="schedule-description">break</div>
+            </div>
+          </div></li>
+          <li class="dgrid-column"><div class="dgrid-column-inner">
+            <div class="schedule-item">
+              <div class="schedule-time">11:00</div>
+              <div class="schedule-description">talk #3</div>
+            </div>
+          </div></li>
+          <li class="dgrid-column"><div class="dgrid-column-inner">
+            <div class="schedule-item">
+              <div class="schedule-time">11:45</div>
+              <div class="schedule-description">talk #4</div>
+            </div>
+          </div></li>
+          <li class="dgrid-column"><div class="dgrid-column-inner">
+            <div class="schedule-item">
+              <div class="schedule-time">12:30</div>
+              <div class="schedule-description">lunch</div>
+            </div>
+          </div></li>
+          <li class="dgrid-column"><div class="dgrid-column-inner">
+            <div class="schedule-item">
+              <div class="schedule-time">13:30</div>
+              <div class="schedule-description">talk #5</div>
+            </div>
+          </div></li>
+          <li class="dgrid-column"><div class="dgrid-column-inner">
+            <div class="schedule-item">
+              <div class="schedule-time">14:15</div>
+              <div class="schedule-description">talk #6</div>
+            </div>
+          </div></li>
+          <li class="dgrid-column"><div class="dgrid-column-inner">
+            <div class="schedule-item">
+              <div class="schedule-time">15:00</div>
+              <div class="schedule-description">break</div>
+            </div>
+          </div></li>
+          <li class="dgrid-column"><div class="dgrid-column-inner">
+            <div class="schedule-item">
+              <div class="schedule-time">15:30</div>
+              <div class="schedule-description">talk #7</div>
+            </div>
+          </div></li>
+          <li class="dgrid-column"><div class="dgrid-column-inner">
+            <div class="schedule-item">
+              <div class="schedule-time">16:15</div>
+              <div class="schedule-description">talk #8</div>
+              </div>
+          </div></li>
+          <li class="dgrid-column"><div class="dgrid-column-inner">
+            <div class="schedule-item">
+              <div class="schedule-time">17:00</div>
+              <div class="schedule-description">dinner and social gathering</div>
+            </div>
+          </div></li>
+          <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
+        </ol>
       </div>
     </section>
-    <section class="row expanded" id="venue" data-magellan-target="venue">
+    <section id="venue" data-magellan-target="venue">
       <h2>Venue</h2>
-
-      <p><!-- TODO: Add cool intro about the venue --></p>
-
+      <div class="row">
+        <div class="column small-12">
+          <p>Dansens Hus, Norway’s national stage for dance, is located in the Vulkan area of Oslo next to the Akerselva river. It's really close to the Grünerløkka district where you can find a lot of design shops, little cafés, restaurant and bars.</p>
+        </div>
+      </div>
       <div class="row expanded">
-        <div id="venue-map"></div>
+        <div class="column small-12">
+          <div id="venue-map"></div>
+        </div>
       </div>
     </section>
-    <section class="row expanded" id="sponsors" data-magellan-target="sponsors">
+    <section id="sponsors" data-magellan-target="sponsors">
       <h2>Sponsors</h2>
-      <div class="row sponsor-grid">
+      <div class="row">
         <div class="column large-3 medium-4 small-6 sponsor-item">
-          <img class="partner-logo" src="/images/mozilla-logo.png" />
+          <img class="partner-logo" src="/images/mozilla.png" alt="Mozilla" />
           <p><!-- TODO: Add kind words about mozilla --></p>
         </div>
       </div>
       <div class="row">
-        <p>We are looking for sponsors to help keep our tickets affordable. Check out our <a href="files/CSSconfNO-sponsorship.pdf">sponsorship packages</a> and <a href="mailto:hello@cssconf.no?subject=Let’s talk about sponsoring CSSconfNO">get in touch!</a></p>
+        <div class="column small-12">
+          <p>We are looking for sponsors to help keep our tickets affordable. Check out our <a href="files/CSSconfNO-sponsorship.pdf">sponsorship packages</a> and <a href="mailto:hello@cssconf.no?subject=Let’s talk about sponsoring CSSconfNO">get in touch!</a></p>
+        </div>
       </div>
 
     </section>
-    <section class="row expanded" id="updates" data-magellan-target="updates">
+    <section id="updates" data-magellan-target="updates">
       <h2>Updates</h2>
       <div class="row">
-        <!-- Begin MailChimp Signup Form -->
-        <div id="mc_embed_signup" class="signupform">
-          <form action="//cssconf.us12.list-manage.com/subscribe/post?u=af28cd54900fa02b909a91b07&amp;id=293c14cc80" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-              <p>Make sure you don't miss out on all the updates and news we will send out up till the event by subscribing to our mailing list!</p>
+        <div class="column small-12">
+          <!-- Begin MailChimp Signup Form -->
+          <div id="mc_embed_signup" class="signupform">
+            <form action="//cssconf.us12.list-manage.com/subscribe/post?u=af28cd54900fa02b909a91b07&amp;id=293c14cc80" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <p>Make sure you don't miss out on all the updates and news we will send out up till the event by subscribing to our mailing list!</p>
 
-              <div class="row">
-                <div class="column large-8 small-centered">
-                  <div class="input-group">
-                    <input type="email" value="" name="EMAIL" class="email input-group-field" id="mce-EMAIL" placeholder="E-mail" required />
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_af28cd54900fa02b909a91b07_293c14cc80" tabindex="-1" value=""></div>
-                    <div class="input-group-button">
-                      <input type="submit" class="button" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
+                <div class="row">
+                  <div class="column large-8 small-centered">
+                    <div class="input-group">
+                      <input type="email" value="" name="EMAIL" class="email input-group-field" id="mce-EMAIL" placeholder="E-mail" required />
+                      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_af28cd54900fa02b909a91b07_293c14cc80" tabindex="-1" value=""></div>
+                      <div class="input-group-button">
+                        <input type="submit" class="button" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
+          <!--End mc_embed_signup-->
         </div>
-        <!--End mc_embed_signup-->
       </div>
     </section>
-    <section class="row expanded" id="team" data-magellan-target="team">
+    <section id="team" data-magellan-target="team">
       <h2>Team</h2>
       <div class="row">
-        <p>CSSconf Nordic is organized by
-          <a href="https://twitter.com/elisabethirg">@elisabethirg</a> and
-          <a href="https://twitter.com/kolombiken">@kolombiken</a>
-          <br/>—&nbsp;with&nbsp;support from
-          <a href="https://twitter.com/cssconfeu">@CSSconfeu</a> and
-          <a href="https://twitter.com/web_rebels">@web_rebels</a>.
-        </p>
+        <div class="column small-12">
+          <p>CSSconf Nordic is organized by
+            <a href="https://twitter.com/elisabethirg">@elisabethirg</a> and
+            <a href="https://twitter.com/kolombiken">@kolombiken</a>
+            <br/>—&nbsp;with&nbsp;support from
+            <a href="https://twitter.com/cssconfeu">@CSSconfeu</a> and
+            <a href="https://twitter.com/web_rebels">@web_rebels</a>.
+          </p>
+        </div>
       </div>
     </section>
   </div>
 
   <footer class="row expanded">
-    <div class="column large-12 footer-content">
+    <div class="column small-12 footer-content">
       <p>CSSconf Nordic is commited to diversity and operates with a <a href="http://confcodeofconduct.com/" title="Conference Code of Conduct" id="CoC">Code of Conduct</a>.</p>
     </div>
   </footer>
+
+  <div class="reveal" id="speaker-modal" data-reveal data-overlay="false" data-animation-in="hinge-in-from-middle-x fast" data-animation-out="hinge-out-from-middle-x fast">
+    <h3 id="speaker-modal-name"></h3>
+    <!--<p class="lead">Your couch. It is mine.</p>-->
+    <p id="speaker-modal-bio"></p>
+    <div class="speaker-modal-photo"><img id="speaker-modal-photo" src="" alt="" /></div>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
@@ -279,6 +352,7 @@
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <script src="/bower_components/what-input/what-input.js"></script>
   <script src="/bower_components/foundation-sites/dist/foundation.js"></script>
+  <script src="/bower_components/motion-ui/dist/motion-ui.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 

@@ -1,0 +1,237 @@
+header {
+  background: $light-background; //$background;
+  color: $light-text-default;
+  padding: 0 0 100px;
+  position: relative;
+
+  @media screen and (min-width: 40em) {
+    padding: 50px 50px 100px;
+  }
+
+  p {
+    text-align: center;
+    padding: 1em 20%;
+    margin: 0;
+    font-style: italic;
+  }
+}
+
+$dgrid-breakpoint: map-get($breakpoints, medium);
+
+.header-grid {
+  max-width: 1000px;
+  @include diamond-grid(
+    3,
+    5,
+    $light-background,
+    darken($light-background,5%),
+    darken($light-background,10%),
+    lighten($background,5%),
+    #fff
+  );
+
+  .dgrid-column-inner:after {
+    font-family: $secondary-font-family;
+  }
+
+  // Hide some of the grid-diamonds on small screens
+  @media screen and (max-width: $dgrid-breakpoint) {
+    > .dgrid-column:nth-child(1n + 14) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  // Insert CSS Family logo
+  $child-css-family: 12;
+  $child-desktop-css-family: 18;
+
+  @media screen and (max-width: $dgrid-breakpoint) {
+    .dgrid-column:nth-child(#{$child-css-family}) > .dgrid-column-inner:after {
+      background: url(/images/css-family-logo.svg) no-repeat center center;
+      background-size: auto 70%;
+      filter: saturate(60%);
+    }
+  }
+
+  @media screen and (min-width: $dgrid-breakpoint) {
+    .dgrid-column:nth-child(#{$child-desktop-css-family}) > .dgrid-column-inner:after {
+      background: url(/images/css-family-logo.svg) no-repeat center center;
+      background-size: auto 70%;
+      filter: saturate(60%);
+    }
+  }
+
+  // Insert content into specific diamonds depending on screen sice
+  $content-date: ' 1 June \A  2016';
+  $child-date: 11;
+  $child-desktop-date: 8;
+
+  $content-place: ' Oslo, \A  Norway';
+  $child-place: 13;
+  $child-desktop-place: 9;
+
+  $content-tickets: ' Get your \A  ticket!';
+  $child-tickets: 13;
+  $child-desktop-tickets: 9;
+
+  $content-desc-1: ' A one-day \A  conference';
+  $child-desc-1: 19;
+  $child-desktop-desc-1: 19;
+
+  $content-desc-2: ' for designers \A  and developers';
+  $child-desc-2: 20;
+  $child-desktop-desc-2: 20;
+
+  $content-desc-3: 'who ♥ CSS';
+  $child-desc-3: 21;
+  $child-desktop-desc-3: 21;
+
+  @mixin insertContent($content, $nthChild, $fontSize: 2.5em) {
+    .dgrid-column:nth-child(#{$nthChild}) > .dgrid-column-inner {
+      font-size: $fontSize;
+      &:after {
+        content: $content;
+        white-space: pre;
+      }
+    }
+  }
+  @media screen and (max-width: $dgrid-breakpoint) {
+    @include insertContent($content-date, $child-date);
+    @include insertContent($content-place, $child-place);
+    //@include insertContent($content-tickets, $child-tickets);
+    // @include insertContent($content-desc-1, $child-desc-1, 1.5em);
+    // @include insertContent($content-desc-2, $child-desc-2, 1.5em);
+    // @include insertContent($content-desc-3, $child-desc-3, 1.5em);
+  }
+  @media screen and (min-width: $dgrid-breakpoint) {
+    @include insertContent($content-date, $child-desktop-date);
+    @include insertContent($content-place, $child-desktop-place);
+    //@include insertContent($content-tickets, $child-desktop-tickets);
+    @include insertContent($content-desc-1, $child-desktop-desc-1, 1.5em);
+    @include insertContent($content-desc-2, $child-desktop-desc-2, 1.5em);
+    @include insertContent($content-desc-3, $child-desktop-desc-3, 1.5em);
+  }
+
+
+  // Insert logo into specific diamonds depending on screen size
+  $logo-letter-background: $background;
+  $logo-letter-color: $light-background;
+  $logo-letter-hover-background: $cta-color;
+  $logo-letter-hover-color: #fff;
+
+  /// Replace `$search` with `$replace` in `$string`
+  /// @author Hugo Giraudel
+  /// @param {String} $string - Initial string
+  /// @param {String} $search - Substring to replace
+  /// @param {String} $replace ('') - New value
+  /// @return {String} - Updated string
+  @function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+    @if $index {
+      @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
+  }
+
+  @function urlEncode($string) {
+    $string: str-replace($string, ' ', '%20');
+    $string: str-replace($string, '<', '%3C');
+    $string: str-replace($string, '>', '%3E');
+    $string: str-replace($string, '/', '%2F');
+    $string: str-replace($string, '=', '%3D');
+    $string: str-replace($string, '"', '%22');
+    $string: str-replace($string, ':', '%3A');
+    @return $string;
+  }
+
+  @function buildSvg($letterShapes) {
+    $letterOut: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="120">#{$letterShapes}</svg>';
+    @return $letterOut;
+  }
+
+  @function svgLetter($letter, $color) {
+    $svgLetters: (
+      C: '<rect width="18" height="18" x="0" y="20" fill="#{$color}" /><rect width="18" height="18" x="0" y="40" fill="#{$color}" /><rect width="18" height="18" x="0" y="60" fill="#{$color}" /><rect width="18" height="18" x="0" y="80" fill="#{$color}" /><rect width="18" height="18" x="20" y="0" fill="#{$color}" /><rect width="18" height="18" x="20" y="100" fill="#{$color}" /><rect width="18" height="18" x="40" y="0" fill="#{$color}" /><rect width="18" height="18" x="40" y="100" fill="#{$color}" /><rect width="18" height="18" x="60" y="20" fill="#{$color}" /><rect width="18" height="18" x="60" y="80" fill="#{$color}" />',
+      S: '<rect width="18" height="18" x="0" y="20" fill="#{$color}" /><rect width="18" height="18" x="0" y="80" fill="#{$color}" /><rect width="18" height="18" x="20" y="0" fill="#{$color}" /><rect width="18" height="18" x="20" y="40" fill="#{$color}" /><rect width="18" height="18" x="20" y="100" fill="#{$color}" /><rect width="18" height="18" x="40" y="0" fill="#{$color}" /><rect width="18" height="18" x="40" y="60" fill="#{$color}" /><rect width="18" height="18" x="40" y="100" fill="#{$color}" /><rect width="18" height="18" x="60" y="20" fill="#{$color}" /><rect width="18" height="18" x="60" y="80" fill="#{$color}" />'
+    );
+
+    $letterOut: urlEncode(buildSvg(map-get($svgLetters, $letter)));
+    @return url('data:image/svg+xml;charset=utf8,#{$letterOut}');
+  }
+
+  @mixin showLetter($letter, $nthChild, $fontSize) {
+    .dgrid-column:nth-child(#{$nthChild}) > .dgrid-column-inner {
+      font-size: $fontSize;
+      background-color: $logo-letter-background;
+      z-index: 97;
+      &:after {
+        // background-color: $logo-letter-color;
+        // mask: url(/images/logo-letter-#{$letter}.svg) no-repeat center center;
+        // mask-size: auto 90%;
+        // background: url('/images/logo-letter-#{$letter}.svg#red') no-repeat center center;
+        background-size: auto 90%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('/images/logo-letter-#{$letter}.png');
+        background-image: svgLetter($letter, $logo-letter-color);
+      }
+      &:hover {
+        background-color: $logo-letter-hover-background;
+        &:after {
+          //background-color: $logo-letter-hover-color;
+          //background-image: url('/images/logo-letter-#{$letter}-2.png')
+          background-image: svgLetter($letter, $logo-letter-hover-color);
+        }
+      }
+    }
+  }
+
+  @mixin showLabel($nthChild) {
+    .dgrid-column:nth-child(#{$nthChild}) > .dgrid-column-inner {
+      overflow: visible;
+      &:before {
+        content: 'NORDIC';
+        display: block;
+        padding: 3px 10px;
+        position: absolute;
+        z-index: 98;
+        bottom: 0;
+        left: 20%;
+        background: $cta-color;
+        color: #fff;
+        font-size: 0.9em;
+        font-weight: bold;
+        text-transform: uppercase;
+        transform-origin: top left;
+        transform: translateY(100%);
+        border-radius: 0 0 3px 3px;
+      }
+    }
+  }
+
+  $dgrid-logo-C-child: 4;
+  $dgrid-desktop-logo-C-child: 6;
+
+  $dgrid-logo-S1-child: 5;
+  $dgrid-desktop-logo-S1-child: 7;
+
+  $dgrid-logo-S2-child: 7;
+  $dgrid-desktop-logo-S2-child: 11;
+
+  @media screen and (max-width: $dgrid-breakpoint) {
+    @include showLetter('C', $dgrid-logo-C-child, 14px);
+    @include showLetter('S', $dgrid-logo-S1-child, 14px);
+    @include showLetter('S', $dgrid-logo-S2-child, 14px);
+    @include showLabel($dgrid-logo-C-child);
+  }
+
+  @media screen and (min-width: $dgrid-breakpoint) {
+    @include showLetter('C', $dgrid-desktop-logo-C-child, 20px);
+    @include showLetter('S', $dgrid-desktop-logo-S1-child, 20px);
+    @include showLetter('S', $dgrid-desktop-logo-S2-child, 20px);
+    @include showLabel($dgrid-desktop-logo-C-child);
+  }
+
+
+}

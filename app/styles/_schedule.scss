@@ -1,0 +1,71 @@
+$sgrid-row-items: 1;
+$sgrid-diamond-scale-up: 1.42;
+$sgrid-diamond-scale-down: 0.68;
+$sgrid-item-width: 50%;
+$sgrid-dropshadow-color: #333;
+
+.schedule-grid {
+  max-width: 300px;
+  @include diamond-grid(
+    2,
+    2,
+    transparent,
+    $cta-color,
+    darken($cta-color,10%),
+    #fff,
+    #fff
+  );
+
+  $total-slots: 14;
+  $base-bg: $background;
+  $treshold: 20;
+
+  @for $i from 1 through $total-slots {
+    $alpha: (random(100) / 100 * $treshold);
+    $background: adjust-hue( $base-bg , $alpha );
+    .dgrid-column:nth-child(#{$i}) > .dgrid-column-inner {
+      background: $background;
+    }
+  }
+
+  .schedule-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: rotate(-45deg);
+    font-family: $secondary-font-family;
+    text-align: center;
+
+    > div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .schedule-time {
+      opacity: 1;
+      font-size: 2.5rem;
+    }
+
+    .schedule-description {
+      opacity: 0;
+      line-height: 0.9;
+      font-size: 2rem;
+    }
+  }
+
+  .dgrid-column-inner:hover {
+    cursor: default;
+    .schedule-time {
+      opacity: 0;
+    }
+    .schedule-description {
+      opacity: 1;
+    }
+  }
+}
