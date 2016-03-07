@@ -1,6 +1,7 @@
 'use strict';
 /*global $, google*/
 
+/*eslint-disable */
 var SpeakerBios = {
   "rachel": {
     "name": "Rachel Nabors",
@@ -38,7 +39,7 @@ var SpeakerBios = {
     "bio": "Lena Reinhard is a consultant and team leader with an interdisciplinary background. She has been a contributor to the Open Source projects Hoodie and Apache CouchDB, and co-founded a software company. Through her work, Lena aims to support change in the tech industry to make it more accessible, diverse and inclusive. She currently lives in Berlin and really loves Alpacas."
   }
 };
-console.log('SpeakerBios', SpeakerBios);
+/*eslint-enable */
 
 var Speakers = {
   init: function() {
@@ -47,10 +48,10 @@ var Speakers = {
     var modalSpeakerBio = $('#speaker-modal-bio');
     var modalSpeakerPhoto = $('#speaker-modal-photo');
 
-    $('.js-speaker-item').click(function(e) {
+    $('.js-speaker-item').click(function() {
       var speakerId = this.getAttribute('data-speaker');
       var speakerObj = SpeakerBios[speakerId];
-      if (!speakerObj) return false;
+      if (!speakerObj){return false; }
 
       modalSpeakerName.html(speakerObj.name);
       modalSpeakerBio.html(speakerObj.bio);
