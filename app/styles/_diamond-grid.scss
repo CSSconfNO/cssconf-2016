@@ -38,10 +38,7 @@
     width: 100%;
     margin: 0 auto;
     background: $dgrid-background;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+    display: block;
   //}
 
   //.diamond-grid > li {
@@ -52,6 +49,7 @@
     padding-bottom: (100% / $dgrid-row-items);
     flex: (100% / $dgrid-row-items);
     position: relative;
+    float: left;
     @media screen and (min-width: $dgrid-breakpoint) {
       width: (100% / $dgrid-large-row-items);
       padding-bottom: (100% / $dgrid-large-row-items);

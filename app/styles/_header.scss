@@ -142,6 +142,7 @@ $dgrid-breakpoint: map-get($breakpoints, medium);
     $string: str-replace($string, '=', '%3D');
     $string: str-replace($string, '"', '%22');
     $string: str-replace($string, ':', '%3A');
+    $string: str-replace($string, '#', '%23');
     @return $string;
   }
 

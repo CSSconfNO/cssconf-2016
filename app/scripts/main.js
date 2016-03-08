@@ -6,7 +6,7 @@ var SpeakerBios = {
   "rachel": {
     "name": "Rachel Nabors",
     "photo": "/images/speakers/rachel-nabors.jpg",
-    "bio": "Rachel is an award-winning cartoonist turned web animation advocate. She speaks at conferences around the world, consults with large companies, and gives workshops about web animation. She’s an invited Expert at the W3C advocating for the web animation community, and a curator of Web Animation Weekly. Rachel loves studying birds, playing Pokémon, wearing boots, making comics, and helping people learn. When not biking around the city of Portland, you can find her tending her orchids or brewing a hot cup of golden tippy Yunnan in a gaiwan pot."
+    "bio": "Rachel is a web animation expert and invited expert at the W3C. She has worked on interactive projects with companies like Adobe, Sesame Street, and Mozilla. She travels the world advocating for animation and helping teams put it to work. Rachel helps cultivate the community by curating WebAnimationWeekly.com and founding the Animation at Work Slack community at <a href=\"http://slack.animationatwork.com\" target=\"_blank\">slack.animationatwork.com</a>. When not traveling, you can find her biking around her home city of Portland, Oregon, or catch her as <a href=\"https://twitter.com/rachelnabors\" target=\"_blank\">@rachelnabors</a> on Twitter and at <a href=\"http://rachelnabors.com/\" target=\"_blank\">rachelnabors.com</a>."
   },
   "eva": {
     "name": "Eva Ferreira",
@@ -35,8 +35,13 @@ var SpeakerBios = {
   },
   "lena": {
     "name": "Lena Reinhard",
-    "photo": "/images/speakers/",
+    "photo": "/images/speakers/lena-reinhard.jpg",
     "bio": "Lena Reinhard is a consultant and team leader with an interdisciplinary background. She has been a contributor to the Open Source projects Hoodie and Apache CouchDB, and co-founded a software company. Through her work, Lena aims to support change in the tech industry to make it more accessible, diverse and inclusive. She currently lives in Berlin and really loves Alpacas."
+  },
+  "haakon": {
+    "name": "Håkon Wium Lie",
+    "photo": "/images/speakers/hakon-wium-lie.jpg",
+    "bio": "Håkon is a web pioneer and CTO of Opera Software. As Wikipedia puts it; “He is best known for proposing the concept of Cascading Style Sheets (CSS) while working with Tim Berners-Lee and Robert Cailliau at CERN in 1994.” He was also recently spotted floating on a piece of balsa wood across the Pacific. The KonTiki2 Expedition sailed from Peru to Easter Island in 43 days."
   }
 };
 /*eslint-enable */
