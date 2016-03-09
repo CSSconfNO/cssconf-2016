@@ -59,7 +59,9 @@ $sgrid-dropshadow-color: #333;
     }
   }
 
-  .dgrid-column-inner:hover {
+  .dgrid-column-inner:hover,
+  .dgrid-column:focus {
+    outline: none;
     cursor: default;
     .schedule-time {
       opacity: 0;

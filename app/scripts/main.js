@@ -46,6 +46,18 @@ var SpeakerBios = {
 };
 /*eslint-enable */
 
+$.fn.enter = function (callback) {
+  if (!callback) return
+
+  $(this).keydown(function(e) {
+    var ev = e || event;
+    if (ev.keycode == 13) {
+      callback();
+      return false;
+    }
+  })
+}
+
 var Speakers = {
   init: function() {
     var modal = $('#speaker-modal');
@@ -53,8 +65,7 @@ var Speakers = {
     var modalSpeakerBio = $('#speaker-modal-bio');
     var modalSpeakerPhoto = $('#speaker-modal-photo');
 
-    $('.js-speaker-item').click(function() {
-      var speakerId = this.getAttribute('data-speaker');
+    var showSpeaker = function(speakerId) {
       var speakerObj = SpeakerBios[speakerId];
       if (!speakerObj){return false; }
 
@@ -64,6 +75,20 @@ var Speakers = {
       modalSpeakerPhoto.attr('alt', speakerObj.name);
 
       $(modal).foundation('open');
+    }
+
+    $('.js-speaker-item').keydown(function (e) {
+      var speakerId = this.getAttribute('data-speaker');
+      if (e.which == 13) { // enter
+        showSpeaker(speakerId);
+      } else if (e.which == 27) { // escape
+        $(modal).foundation('close');
+      }
+    });
+
+    $('.js-speaker-item').click(function() {
+      var speakerId = this.getAttribute('data-speaker');
+      showSpeaker(speakerId);
     });
   }
 };
