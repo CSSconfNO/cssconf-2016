@@ -1,5 +1,5 @@
 'use strict';
-/*global $, google*/
+/*global $, google, Foundation*/
 
 /*eslint-disable */
 var SpeakerBios = {
@@ -47,6 +47,7 @@ var SpeakerBios = {
 /*eslint-enable */
 
 var Speakers = {
+  lastFocus: null,
   init: function() {
     var modal = $('#speaker-modal');
     var modalSpeakerName = $('#speaker-modal-name');
@@ -63,14 +64,20 @@ var Speakers = {
       modalSpeakerPhoto.attr('alt', speakerObj.name);
 
       $(modal).foundation('open');
+
+      window.setTimeout(function() {
+        var focusable = Foundation.Keyboard.findFocusable(modal);
+        if (focusable[0]) {
+          focusable[0].focus();
+        }
+      }, 500);
     };
 
     $('.js-speaker-item').keydown(function (e) {
+      Speakers.lastFocus = e.target;
       var speakerId = this.getAttribute('data-speaker');
       if (e.which === 13) { // enter
         showSpeaker(speakerId);
-      } else if (e.which === 27) { // escape
-        $(modal).foundation('close');
       }
     });
 
@@ -78,6 +85,11 @@ var Speakers = {
       var speakerId = this.getAttribute('data-speaker');
       showSpeaker(speakerId);
     });
+  },
+  refocus: function() {
+    if (Speakers.lastFocus) {
+      Speakers.lastFocus.focus();
+    }
   }
 };
 
@@ -175,3 +187,15 @@ $(function () {
 });
 
 $(document).foundation();
+
+Foundation.Keyboard.register('DropdownMenu', {}); // Reset keyboard-events for menu
+Foundation.Keyboard.register('Reveal', {
+  'ESCAPE': 'close'
+}); // Reset keyboard-events for speaker-reveal
+$('#speaker-modal').on('closed.zf.reveal', Speakers.refocus); // refocus correct speaker when closing modal
+
+// Focus on section when navigating using keyboard
+$('#magellan-menu').on('click.zf.magellan', function(e) {
+  var arrival = e.target.getAttribute('href');
+  $(arrival).focus();
+});

@@ -311,6 +311,9 @@ $section-end-background: $background;
   padding-top: 2em;
   padding-bottom: 4em;
   position: relative;
+  &:focus {
+    outline: none;
+  }
 }
 
 @for $i from 1 through $total-sections {
