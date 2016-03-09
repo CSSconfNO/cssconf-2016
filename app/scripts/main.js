@@ -46,18 +46,6 @@ var SpeakerBios = {
 };
 /*eslint-enable */
 
-$.fn.enter = function (callback) {
-  if (!callback){ return; }
-
-  $(this).keydown(function(e) {
-    var ev = e || event;
-    if (ev.keycode === 13) {
-      callback();
-      return false;
-    }
-  });
-};
-
 var Speakers = {
   init: function() {
     var modal = $('#speaker-modal');
