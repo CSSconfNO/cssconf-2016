@@ -47,16 +47,16 @@ var SpeakerBios = {
 /*eslint-enable */
 
 $.fn.enter = function (callback) {
-  if (!callback) return
+  if (!callback){ return; }
 
-  $(this).keydown(function(e) {
+  $(this).keydown(function(e) {
     var ev = e || event;
-    if (ev.keycode == 13) {
+    if (ev.keycode === 13) {
       callback();
       return false;
     }
-  })
-}
+  });
+};
 
 var Speakers = {
   init: function() {
@@ -75,13 +75,13 @@ var Speakers = {
       modalSpeakerPhoto.attr('alt', speakerObj.name);
 
       $(modal).foundation('open');
-    }
+    };
 
     $('.js-speaker-item').keydown(function (e) {
       var speakerId = this.getAttribute('data-speaker');
-      if (e.which == 13) { // enter
+      if (e.which === 13) { // enter
         showSpeaker(speakerId);
-      } else if (e.which == 27) { // escape
+      } else if (e.which === 27) { // escape
         $(modal).foundation('close');
       }
     });
