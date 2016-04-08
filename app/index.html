@@ -184,19 +184,25 @@
             <li class="dgrid-column" tabindex="0"><div class="dgrid-column-inner">
               <div class="schedule-item">
                 <div class="schedule-time">08:00</div>
-                <div class="schedule-description">registration and breakfast</div>
+                <div class="schedule-description">registration</div>
               </div>
             </div></li>
             <li class="dgrid-column" tabindex="0"><div class="dgrid-column-inner">
               <div class="schedule-item">
                 <div class="schedule-time">09:00</div>
-                <div class="schedule-description">welcome and talk #1</div>
+                <div class="schedule-description">Welcome</div>
               </div>
             </div></li>
-            <li class="dgrid-column" tabindex="0"><div class="dgrid-column-inner">
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="0915"><div class="dgrid-column-inner">
+              <div class="schedule-item">
+                <div class="schedule-time">09:15</div>
+                <div class="schedule-description">Why CSS was invented</div>
+              </div>
+            </div></li>
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1000"><div class="dgrid-column-inner">
               <div class="schedule-item">
                 <div class="schedule-time">10:00</div>
-                <div class="schedule-description">talk #2</div>
+                <div class="schedule-description">A creative approach to SVG</div>
               </div>
             </div></li>
             <li class="dgrid-column" tabindex="0"><div class="dgrid-column-inner">
@@ -205,16 +211,16 @@
                 <div class="schedule-description">break</div>
               </div>
             </div></li>
-            <li class="dgrid-column" tabindex="0"><div class="dgrid-column-inner">
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1100"><div class="dgrid-column-inner">
               <div class="schedule-item">
                 <div class="schedule-time">11:00</div>
-                <div class="schedule-description">talk #3</div>
+                <div class="schedule-description">Transitioning to Sass at Scale</div>
               </div>
             </div></li>
-            <li class="dgrid-column" tabindex="0"><div class="dgrid-column-inner">
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1145"><div class="dgrid-column-inner">
               <div class="schedule-item">
                 <div class="schedule-time">11:45</div>
-                <div class="schedule-description">talk #4</div>
+                <div class="schedule-description">Alice in Web Animations API Land</div>
               </div>
             </div></li>
             <li class="dgrid-column" tabindex="0"><div class="dgrid-column-inner">
@@ -223,16 +229,16 @@
                 <div class="schedule-description">lunch</div>
               </div>
             </div></li>
-            <li class="dgrid-column" tabindex="0"><div class="dgrid-column-inner">
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1330"><div class="dgrid-column-inner">
               <div class="schedule-item">
                 <div class="schedule-time">13:30</div>
-                <div class="schedule-description">talk #5</div>
+                <div class="schedule-description">Revolutionize your page: Real art direction on the web</div>
               </div>
             </div></li>
-            <li class="dgrid-column" tabindex="0"><div class="dgrid-column-inner">
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1415"><div class="dgrid-column-inner">
               <div class="schedule-item">
                 <div class="schedule-time">14:15</div>
-                <div class="schedule-description">talk #6</div>
+                <div class="schedule-description">Mad Science with CSS</div>
               </div>
             </div></li>
             <li class="dgrid-column" tabindex="0"><div class="dgrid-column-inner">
@@ -241,22 +247,22 @@
                 <div class="schedule-description">break</div>
               </div>
             </div></li>
-            <li class="dgrid-column" tabindex="0"><div class="dgrid-column-inner">
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1530"><div class="dgrid-column-inner">
               <div class="schedule-item">
                 <div class="schedule-time">15:30</div>
-                <div class="schedule-description">talk #7</div>
+                <div class="schedule-description">You don't know Transforms</div>
               </div>
             </div></li>
-            <li class="dgrid-column" tabindex="0"><div class="dgrid-column-inner">
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1615"><div class="dgrid-column-inner">
               <div class="schedule-item">
                 <div class="schedule-time">16:15</div>
-                <div class="schedule-description">talk #8</div>
+                <div class="schedule-description">Surviving in a high-speed environment</div>
                 </div>
             </div></li>
             <li class="dgrid-column" tabindex="0"><div class="dgrid-column-inner">
               <div class="schedule-item">
                 <div class="schedule-time">17:00</div>
-                <div class="schedule-description">dinner and social gathering</div>
+                <div class="schedule-description">social stuff</div>
               </div>
             </div></li>
             <li class="dgrid-column"><div class="dgrid-column-inner"></div></li>
@@ -346,9 +352,18 @@
 
   <div class="reveal" id="speaker-modal" data-reveal data-overlay="false" data-animation-in="hinge-in-from-middle-x fast" data-animation-out="hinge-out-from-middle-x fast">
     <h3 id="speaker-modal-name"></h3>
-    <!--<p class="lead">Your couch. It is mine.</p>-->
     <p id="speaker-modal-bio"></p>
     <div class="speaker-modal-photo"><img id="speaker-modal-photo" src="" alt="" /></div>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="reveal" id="schedule-modal" data-reveal data-overlay="false" data-animation-in="hinge-in-from-middle-x fast" data-animation-out="hinge-out-from-middle-x fast">
+    <h3 id="schedule-modal-title"></h3>
+    <h4>by <span id="schedule-modal-speaker"></span></h4>
+    <p id="schedule-modal-description"></p>
+    <div class="schedule-modal-photo"><img id="schedule-modal-photo" src="" alt="" /></div>
     <button class="close-button" data-close aria-label="Close modal" type="button">
       <span aria-hidden="true">&times;</span>
     </button>

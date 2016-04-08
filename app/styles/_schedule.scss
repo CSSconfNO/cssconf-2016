@@ -5,7 +5,7 @@ $sgrid-item-width: 50%;
 $sgrid-dropshadow-color: #333;
 
 .schedule-grid {
-  max-width: 300px;
+  max-width: 500px;
   @include diamond-grid(
     2,
     2,
@@ -69,5 +69,44 @@ $sgrid-dropshadow-color: #333;
     .schedule-description {
       opacity: 1;
     }
+  }
+}
+
+#schedule-modal {
+
+}
+
+#schedule-modal-title {
+  font-family: $secondary-font-family;
+  font-size: 2.5em;
+  line-height: 1;
+}
+
+#schedule-modal-title:before {
+  content: '';
+  display: inline-block;
+  width: (150px * $sgrid-diamond-scale-up);
+  height: (150px * $sgrid-diamond-scale-up);
+  position: relative;
+  margin-right: 10px;
+  float: left;
+  shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.schedule-modal-photo {
+  width: 150px;
+  height: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  margin: ((150px * $sgrid-diamond-scale-up) - 150px) / 2;
+  top: 1rem;
+  left: 1rem;
+  padding-bottom: 150px;
+
+  img {
+    transform: rotate(45deg) scale($sgrid-diamond-scale-up);
   }
 }

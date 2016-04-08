@@ -21,7 +21,7 @@ var SpeakerBios = {
   "aga": {
     "name": "Aga Naplocha",
     "photo": "/images/speakers/aga-naplocha.png",
-    "bio": "Aga works @ Adobe in Warsaw, where she has an awesome opportunity to combine both Visual Designer & Front-end Developer roles. Apart from designing and coding, she enjoys organizing and engaging herself in many initiatives related with programming and front-end development. Currently, she is co-organizing HTML&CSS workshops in Warsaw called The Awwwesomes http://theawwwesomes.org. When she’s not in front of the comuputer, she usually spends her time sewing, eating or laughing."
+    "bio": "Aga works @ Adobe in Warsaw, where she has an awesome opportunity to combine both Visual Designer & Front-end Developer roles. Apart from designing and coding, she enjoys organizing and engaging herself in many initiatives related with programming and front-end development. Currently, she is co-organizing HTML&CSS workshops in Warsaw called The Awwwesomes http://theawwwesomes.org. When she's not in front of the comuputer, she usually spends her time sewing, eating or laughing."
   },
   "liam": {
     "name": "Liam Campbell",
@@ -93,21 +93,105 @@ var Speakers = {
   }
 };
 
+/*eslint-disable */
+var ScheduleDetails = {
+  "0915": {
+    speaker: "Håkon Wium Lie",
+    photo: "/images/speakers/hakon-wium-lie.jpg",
+    title: "Why CSS was invented",
+    description: "Let's go back to the beginning! CSS was first proposed by Håkon Wium Lie in 1994. We are really happy to open the first CSSconf Nordic with Håkon talking about <strong>why</strong> CSS was invented."
+  },
+  "1000": {
+    speaker: "Aga Naplocha",
+    photo: "/images/speakers/aga-naplocha.png",
+    title: "A Creative Approach to SVG",
+    description: "Have you ever thought that dabbling in SVG and animating it might be a cumbersome part of your work? Probably yes. To be honest, I had thought the same before I actually started playing with it. During my presentation I'll tell you why SVG is so hyped and powerful right now, giving you a couple of creative and fun examples. I'll also show you how to easily animate SVG using simple CSS animations, which advantages SVG has over other formats and finally I'll shed a light on SVG's accessibility."
+  },
+  "1100": {
+    speaker: "Dan Na",
+    photo: "/images/speakers/dan-na.jpg",
+    title: "Transitioning to Sass at Scale",
+    description: "CSS preprocessors like Sass add a variety of functions that streamline CSS development: variables, nesting, functions, mixins, etc. The documentation is great, the tools are mature, and starting a new project using Sass has a clear and straight-forward workflow. But transitioning a large legacy codebase from CSS to Sass is a different story. CSS syntax errors that may be harmless in production can completely prevent Sass from compiling. But fixing those errors creates a far juicier problem: will we introduce visual bugs by fixing syntax bugs?<br/><br/>At Etsy we faced this exact question multiplied across over 400,000 lines of CSS and 2100+ CSS files. During this talk I'll discuss the tools we used and built throughout our Sass workflow, from the initial transformation of CSS files using Abstract Syntax Trees (ASTs) to the libsass-powered Sass -> CSS render pipeline we have running on all development machines. I'll cover some of the tools we've built in-house to mitigate some of the biggest potential pitfalls of Sass (Sass live lint), how we ramped up our development and production services to gain confidence in our process and how this entire effort led to a single 1.2M line push that didn't break production and had minimal impact to developer and designer workflows."
+  },
+  "1145": {
+    speaker: "Rachel Nabors",
+    photo: "/images/speakers/rachel-nabors.jpg",
+    title: "Alice in Web Animations API Land",
+    description: "Animation is back in the web development tool chest! We know of declarative CSS Animations and Transitions and fully featured JavaScript animation libraries like GreenSock, but there's a third, dynamic option: the Web Animation API! In this talk Rachel will take you on a magical journey with Alice from Wonderland to show you how this new API is used to run the CSS Animations in your browser and how you can use it to generate and manipulate animations in your project. Colorful, interactive, useful fun for all disciplines."
+  },
+  "1330": {
+    speaker: "Jen Simmons",
+    photo: "/images/speakers/jen-simmons.jpg",
+    title: "Revolutionize your page: Real art direction on the web",
+    description: "We finally have the tools necessary to create amazing page designs on the web. Now we can art direct our layouts, leveraging the power and tradition of graphic design. In this eye-opening talk, Jen will explore concrete examples of an incredible range of new possibilities. She'll walk through a step-by-step design process for figuring out how to create a layout as unique as your content. You'll learn how Flexbox, Grid, Shapes, Multicolumn, Viewport Units, and more can be combined together to revolutionize how you approach the page —any page."
+  },
+  "1415": {
+    speaker: "Liam Campbell",
+    photo: "/images/speakers/liam-campbell.jpg",
+    title: "Mad Science with CSS",
+    description: "A little while ago, I began to worry about how much time I'd sunk into CSS. Years of my life had gone into styling webpages. It sounded rather pathetic. *I* sounded rather pathetic. So I went searching for unexpected things I could do with my modest skill with web technologies.<br/>Luckily for me—and my encroaching sense of existential dread—there's a lot that you can do with CSS (and yeah, a little javascript)! People are making art, games, and desktop apps with CSS, and even extending CSS to do things it was never intended to do.<br/>Now I've become a part-time adventurer in the hidden depths of CSS. What can it do now, and what can we persuade it to do if we try? Maybe more importantly, what can we learn about the way we write CSS every day? I have a hammer; I see nails everywhere. Let's explore!"
+  },
+  "1530": {
+    speaker: "Eva Ferreira",
+    photo: "/images/speakers/eva-ferreira.jpg",
+    title: "You don't know Transforms",
+    description: "In 2016 every developer has used transforms but its top-notch attributes are still hidden from view. In order to unleash the secret powers, it is necessary to enter the woods of geometry. In this talk, I'll take you through the most powerful features of this property with live-coding examples and a little help from our friend Maths."
+  },
+  "1615": {
+    speaker: "Lena Reinhard",
+    photo: "/images/speakers/lena-reinhard.jpg",
+    title: "Surviving in a high-speed environment: 15 things that will help you stand the pressure in tech",
+    description: "Over the past few years, several CSS methodologies and JavaScript frameworks have been released. In one year, we receive 32,120 business emails. Every weekday, we're active on Slack for 2 hours 15 minutes. Technology is moving fast, and constantly, there's so much going on. We read the latest think-pieces about which tools to use, but how often do we really change our behavior as a result? We constantly have to adapt in an ever-changing environment, while somehow still doing our job of building proper, functioning software to the latest tight-super-unrealistic deadline.<br/><br/>This talk will look at the human side of our daily work in technology. Together, we will examine which factors affect us physically and emotionally in our work. We'll learn how they lead to pressure, stress, self-consciousness and ultimately burnout, and we'll find out how to identify early warning signs of being affected. We'll learn from other fields like philosophy, psychology and climatology things that can help us cope. You'll leave with a realistic look at your own, human capabilities, and the knowledge of what you can do to take care of yourself while working on software."
+  }
+}
+/*eslint-enable */
+
 var Schedule = {
-  activeItem: null,
+  lastFocus: null,
   init: function() {
-    $('.schedule-item').click(function() {
-      if (Schedule.activeItem) {
-        $(Schedule.activeItem).removeClass('is-active');
-      }
-      if (this === Schedule.activeItem) {
-        Schedule.activeItem = null;
-      }
-      else {
-        $(this).addClass('is-active');
-        Schedule.activeItem = this;
+    var modal = $('#schedule-modal');
+    var modalScheduleSpeaker = $('#schedule-modal-speaker');
+    var modalScheduleTitle = $('#schedule-modal-title');
+    var modalScheduleDescription = $('#schedule-modal-description');
+    var modalSchedulePhoto = $('#schedule-modal-photo');
+
+    var showSlotDetails = function(scheduleTime) {
+      var scheduleObj = ScheduleDetails[scheduleTime];
+      if (!scheduleObj){return false; }
+
+      modalScheduleSpeaker.html(scheduleObj.speaker);
+      modalScheduleTitle.html(scheduleObj.title);
+      modalScheduleDescription.html(scheduleObj.description);
+      modalSchedulePhoto.attr('src', scheduleObj.photo);
+      modalSchedulePhoto.attr('alt', scheduleObj.speaker);
+
+      $(modal).foundation('open');
+
+      window.setTimeout(function() {
+        var focusable = Foundation.Keyboard.findFocusable(modal);
+        if (focusable[0]) {
+          focusable[0].focus();
+        }
+      }, 500);
+    };
+
+    $('.js-schedule-item').keydown(function (e) {
+      Schedule.lastFocus = e.target;
+      var scheduleTime = this.getAttribute('data-slot');
+      if (e.which === 13) { // enter
+        showSlotDetails(scheduleTime);
       }
     });
+
+    $('.js-schedule-item').click(function() {
+      var scheduleTime = this.getAttribute('data-slot');
+      showSlotDetails(scheduleTime);
+    });
+  },
+  refocus: function() {
+    if (Schedule.lastFocus) {
+      Schedule.lastFocus.focus();
+    }
   }
 };
 
@@ -193,6 +277,7 @@ Foundation.Keyboard.register('Reveal', {
   'ESCAPE': 'close'
 }); // Reset keyboard-events for speaker-reveal
 $('#speaker-modal').on('closed.zf.reveal', Speakers.refocus); // refocus correct speaker when closing modal
+$('#schedule-modal').on('closed.zf.reveal', Schedule.refocus); // refocus correct schedule-item when closing modal
 
 // Focus on section when navigating using keyboard
 $('#magellan-menu').on('click.zf.magellan', function(e) {
