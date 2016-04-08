@@ -16,7 +16,7 @@ var SpeakerBios = {
   "dan": {
     "name": "Dan Na",
     "photo": "/images/speakers/dan-na.jpg",
-    "bio": "Dan is software engineer on the Front End Infrastructure Team at Etsy in Brooklyn. He is the creator of cheekswab.org — an initiative to spread awareness about the need for bone marrow donors. Dan likes to cook and nerds out about food on his cooking blog: <a href=\"http://fooddontlie.com\" target=\"_blank\">fooddontlie.com</a>"
+    "bio": "Dan Na is a Senior Software Engineer on the Front-end Infrastructure Team at Etsy. He loves tackling the growing complexity of front-end engineering, learning and teaching in a collaborative environment and solving both the technical and people problems of producing software. He’s a fan of NBA basketball, soy lattes, New York City and exploring the boroughs with his wife."
   },
   "aga": {
     "name": "Aga Naplocha",
