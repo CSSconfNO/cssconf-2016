@@ -16,16 +16,20 @@ $sgrid-dropshadow-color: #333;
     #fff
   );
 
-  $total-slots: 14;
+  $total-slots: 15;
   $base-bg: $background;
   $treshold: 20;
 
   @for $i from 1 through $total-slots {
     $alpha: (random(100) / 100 * $treshold);
-    $background: adjust-hue( $base-bg , $alpha );
+    $newBackground: adjust-hue( $base-bg , $alpha );
     .dgrid-column:nth-child(#{$i}) > .dgrid-column-inner {
-      background: $background;
+      background: $newBackground;
     }
+  }
+
+  .dgrid-column.schedule-item-special > .dgrid-column-inner {
+    opacity: 0.8;
   }
 
   .schedule-item {
@@ -59,8 +63,8 @@ $sgrid-dropshadow-color: #333;
     }
   }
 
-  .dgrid-column-inner:hover,
-  .dgrid-column:focus {
+  .dgrid-column-inner:not(.no-hover):hover,
+  .dgrid-column:not(.no-hover):focus {
     outline: none;
     cursor: default;
     .schedule-time {
@@ -91,6 +95,10 @@ $sgrid-dropshadow-color: #333;
   margin-right: 10px;
   float: left;
   shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+#schedule-modal h4 {
+  font-size: 1em;
 }
 
 .schedule-modal-photo {
