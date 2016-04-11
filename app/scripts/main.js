@@ -95,7 +95,7 @@ var Speakers = {
 
 /*eslint-disable */
 var ScheduleDetails = {
-  "0915": {
+  "0900": {
     speaker: "Håkon Wium Lie",
     photo: "/images/speakers/hakon-wium-lie.jpg",
     title: "Why CSS was invented",

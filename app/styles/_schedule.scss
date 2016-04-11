@@ -32,6 +32,13 @@ $sgrid-dropshadow-color: #333;
     opacity: 0.8;
   }
 
+  .dgrid-column-hide {
+    border: 1px solid red;
+    opacity: 0;
+    visibility: hidden;
+    padding-bottom: 25%;
+  }
+
   .schedule-item {
     position: absolute;
     top: 0;
