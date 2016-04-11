@@ -63,8 +63,7 @@ $sgrid-dropshadow-color: #333;
     }
   }
 
-  .dgrid-column-inner:not(.no-hover):hover,
-  .dgrid-column:not(.no-hover):focus {
+  .dgrid-column-inner:not(.no-hover):hover {
     outline: none;
     cursor: default;
     .schedule-time {
@@ -72,6 +71,19 @@ $sgrid-dropshadow-color: #333;
     }
     .schedule-description {
       opacity: 1;
+    }
+  }
+
+  .dgrid-column:focus {
+    outline: none;
+    cursor: default;
+    .dgrid-column-inner:not(.no-hover) {
+      .schedule-time {
+        opacity: 0;
+      }
+      .schedule-description {
+        opacity: 1;
+      }
     }
   }
 }
@@ -98,7 +110,7 @@ $sgrid-dropshadow-color: #333;
 }
 
 #schedule-modal h4 {
-  font-size: 1em;
+  font-size: 1.3em;
 }
 
 .schedule-modal-photo {
