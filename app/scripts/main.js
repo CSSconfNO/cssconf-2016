@@ -282,5 +282,7 @@ $('#schedule-modal').on('closed.zf.reveal', Schedule.refocus); // refocus correc
 // Focus on section when navigating using keyboard
 $('#magellan-menu').on('click.zf.magellan', function(e) {
   var arrival = e.target.getAttribute('href');
-  $(arrival).focus();
+  window.setTimeout(function() {
+    $(arrival).focus();
+  },500);
 });
