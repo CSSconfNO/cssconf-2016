@@ -284,5 +284,5 @@ $('#magellan-menu').on('click.zf.magellan', function(e) {
   var arrival = e.target.getAttribute('href');
   window.setTimeout(function() {
     $(arrival).focus();
-  },500);
+  }, 500);
 });
