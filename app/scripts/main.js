@@ -134,7 +134,7 @@ var ScheduleDetails = {
   "1530": {
     speaker: "Eva Ferreira",
     photo: "/images/speakers/eva-ferreira.jpg",
-    title: "You don't know Transforms",
+    title: "Raiders of the Lost Transforms",
     description: "In 2016 every developer has used transforms but its top-notch attributes are still hidden from view. In order to unleash the secret powers, it is necessary to enter the woods of geometry. In this talk, I'll take you through the most powerful features of this property with live-coding examples and a little help from our friend Maths."
   },
   "1615": {
