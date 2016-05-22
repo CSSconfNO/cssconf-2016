@@ -40,9 +40,9 @@
       <div id="magellan-menu" class="menu" data-magellan data-options="activeClass:is-active;barOffset:80;threshold:80;deepLinking:true;">
         <ul data-dropdown-menu>
           <li><a class="nav-link" href="#info">Info</a></li>
-          <li><a class="nav-link" href="#speakers">Speakers</a></li>
           <li><a class="nav-link" href="#schedule">Schedule</a></li>
           <li><a class="nav-link" href="#venue">Venue</a></li>
+          <li><a class="nav-link" href="#speakers">Speakers</a></li>
           <li><a class="nav-link" href="#sponsors">Sponsors</a></li>
           <li><a class="nav-link" href="https://webrebels.org/buytickets" target="_blank">Tickets</a></li>
           <li><a class="nav-link" href="#updates">Updates</a></li>
@@ -105,6 +105,108 @@
             <a href="http://cssconf.org/" title="CSSconf Events Around the World" class="float-right no-style"><img src="/images/css-family-logo.svg" width="150" alt="CSSconf Family" /></a>
             Since the prototype, CSSconf US, was started by Nicole Sullivan in 2013, the CSSconf family has expanded around the globe. All CSSconf organizer teams share the vision of an international, diverse and creative CSS community, for which the CSSconf series offers a platform to meet, hack, share knowledge and build friendships.
           </p>
+        </div>
+      </div>
+    </section>
+    <section id="schedule" tabindex="0" data-magellan-target="schedule">
+      <h2>Schedule</h2>
+      <div class="row">
+        <div class="column small-12">
+          <ol class="schedule-grid clearfix">
+            <li class="dgrid-column dgrid-column-hide"><div class="dgrid-column-inner"></div></li>
+            <li class="dgrid-column dgrid-column-hide"><div class="dgrid-column-inner"></div></li>
+            <li class="dgrid-column"><div class="dgrid-column-inner no-hover">
+              <div class="schedule-item">
+                <div class="schedule-time">08:00</div>
+                <div class="schedule-description">Registration</div>
+              </div>
+            </div></li>
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="0900"><div class="dgrid-column-inner">
+              <div class="schedule-item">
+                <div class="schedule-time">09:00</div>
+                <div class="schedule-description">Why CSS was invented</div>
+              </div>
+            </div></li>
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="0945"><div class="dgrid-column-inner">
+              <div class="schedule-item">
+                <div class="schedule-time">09:45</div>
+                <div class="schedule-description">A creative approach to SVG</div>
+              </div>
+            </div></li>
+            <li class="dgrid-column schedule-item-special"><div class="dgrid-column-inner no-hover">
+              <div class="schedule-item">
+                <div class="schedule-time">10:30</div>
+                <div class="schedule-description">Break</div>
+              </div>
+            </div></li>
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1100"><div class="dgrid-column-inner">
+              <div class="schedule-item">
+                <div class="schedule-time">11:00</div>
+                <div class="schedule-description">Transitioning to Sass at Scale</div>
+              </div>
+            </div></li>
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1145"><div class="dgrid-column-inner">
+              <div class="schedule-item">
+                <div class="schedule-time">11:45</div>
+                <div class="schedule-description">Alice in Web Animations API Land</div>
+              </div>
+            </div></li>
+            <li class="dgrid-column schedule-item-special"><div class="dgrid-column-inner no-hover">
+              <div class="schedule-item">
+                <div class="schedule-time">12:30</div>
+                <div class="schedule-description">Lunch</div>
+              </div>
+            </div></li>
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1330"><div class="dgrid-column-inner">
+              <div class="schedule-item">
+                <div class="schedule-time">13:30</div>
+                <div class="schedule-description">Revolutionize your page: Real art direction on the web</div>
+              </div>
+            </div></li>
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1415"><div class="dgrid-column-inner">
+              <div class="schedule-item">
+                <div class="schedule-time">14:15</div>
+                <div class="schedule-description">Mad Science with CSS</div>
+              </div>
+            </div></li>
+            <li class="dgrid-column schedule-item-special"><div class="dgrid-column-inner no-hover">
+              <div class="schedule-item">
+                <div class="schedule-time">15:00</div>
+                <div class="schedule-description">Break</div>
+              </div>
+            </div></li>
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1530"><div class="dgrid-column-inner">
+              <div class="schedule-item">
+                <div class="schedule-time">15:30</div>
+                <div class="schedule-description">Raiders of the Lost Transforms</div>
+              </div>
+            </div></li>
+            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1615"><div class="dgrid-column-inner">
+              <div class="schedule-item">
+                <div class="schedule-time">16:15</div>
+                <div class="schedule-description">Surviving in a high-speed environment</div>
+                </div>
+            </div></li>
+            <li class="dgrid-column schedule-item-special"><div class="dgrid-column-inner no-hover">
+              <div class="schedule-item">
+                <div class="schedule-time">17:00</div>
+                <div class="schedule-description">Social stuff</div>
+              </div>
+            </div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section id="venue" tabindex="0" data-magellan-target="venue">
+      <h2>Venue</h2>
+      <div class="row">
+        <div class="column small-12">
+          <p>Dansens Hus, Norway’s national stage for dance, is located in the Vulkan area of Oslo next to the Akerselva river. It's really close to the Grünerløkka district where you can find a lot of design shops, little cafés, restaurant and bars.</p>
+        </div>
+      </div>
+      <div class="row expanded">
+        <div class="column small-12">
+          <div id="venue-map"></div>
         </div>
       </div>
     </section>
@@ -182,103 +284,6 @@
         </div>
       </div>
     </section>
-    <section id="schedule" tabindex="0" data-magellan-target="schedule">
-      <h2>Schedule</h2>
-      <div class="row">
-        <div class="column small-12">
-          <ol class="schedule-grid clearfix">
-            <li class="dgrid-column dgrid-column-hide"><div class="dgrid-column-inner"></div></li>
-            <li class="dgrid-column dgrid-column-hide"><div class="dgrid-column-inner"></div></li>
-            <li class="dgrid-column"><div class="dgrid-column-inner no-hover">
-              <div class="schedule-item">
-                <div class="schedule-time">08:00<br/>Registration</div>
-              </div>
-            </div></li>
-            <li class="dgrid-column js-schedule-item" data-slot="0900"><div class="dgrid-column-inner">
-              <div class="schedule-item">
-                <div class="schedule-time">09:00</div>
-                <div class="schedule-description">Why CSS was invented</div>
-              </div>
-            </div></li>
-            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1000"><div class="dgrid-column-inner">
-              <div class="schedule-item">
-                <div class="schedule-time">09:45</div>
-                <div class="schedule-description">A creative approach to SVG</div>
-              </div>
-            </div></li>
-            <li class="dgrid-column schedule-item-special"><div class="dgrid-column-inner no-hover">
-              <div class="schedule-item">
-                <div class="schedule-time">10:30<br/>Break</div>
-              </div>
-            </div></li>
-            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1100"><div class="dgrid-column-inner">
-              <div class="schedule-item">
-                <div class="schedule-time">11:00</div>
-                <div class="schedule-description">Transitioning to Sass at Scale</div>
-              </div>
-            </div></li>
-            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1145"><div class="dgrid-column-inner">
-              <div class="schedule-item">
-                <div class="schedule-time">11:45</div>
-                <div class="schedule-description">Alice in Web Animations API Land</div>
-              </div>
-            </div></li>
-            <li class="dgrid-column schedule-item-special"><div class="dgrid-column-inner no-hover">
-              <div class="schedule-item">
-                <div class="schedule-time">12:30<br/>Lunch</div>
-              </div>
-            </div></li>
-            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1330"><div class="dgrid-column-inner">
-              <div class="schedule-item">
-                <div class="schedule-time">13:30</div>
-                <div class="schedule-description">Revolutionize your page: Real art direction on the web</div>
-              </div>
-            </div></li>
-            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1415"><div class="dgrid-column-inner">
-              <div class="schedule-item">
-                <div class="schedule-time">14:15</div>
-                <div class="schedule-description">Mad Science with CSS</div>
-              </div>
-            </div></li>
-            <li class="dgrid-column schedule-item-special"><div class="dgrid-column-inner no-hover">
-              <div class="schedule-item">
-                <div class="schedule-time">15:00<br/>Break</div>
-              </div>
-            </div></li>
-            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1530"><div class="dgrid-column-inner">
-              <div class="schedule-item">
-                <div class="schedule-time">15:30</div>
-                <div class="schedule-description">Raiders of the Lost Transforms</div>
-              </div>
-            </div></li>
-            <li class="dgrid-column js-schedule-item" tabindex="0" data-slot="1615"><div class="dgrid-column-inner">
-              <div class="schedule-item">
-                <div class="schedule-time">16:15</div>
-                <div class="schedule-description">Surviving in a high-speed environment</div>
-                </div>
-            </div></li>
-            <li class="dgrid-column schedule-item-special"><div class="dgrid-column-inner no-hover">
-              <div class="schedule-item">
-                <div class="schedule-time">17:00<br/>Social stuff</div>
-              </div>
-            </div></li>
-          </ol>
-        </div>
-      </div>
-    </section>
-    <section id="venue" tabindex="0" data-magellan-target="venue">
-      <h2>Venue</h2>
-      <div class="row">
-        <div class="column small-12">
-          <p>Dansens Hus, Norway’s national stage for dance, is located in the Vulkan area of Oslo next to the Akerselva river. It's really close to the Grünerløkka district where you can find a lot of design shops, little cafés, restaurant and bars.</p>
-        </div>
-      </div>
-      <div class="row expanded">
-        <div class="column small-12">
-          <div id="venue-map"></div>
-        </div>
-      </div>
-    </section>
     <section id="sponsors" tabindex="0" data-magellan-target="sponsors">
       <h2>Sponsors</h2>
       <div class="row align-center">
@@ -296,7 +301,6 @@
           <p>We are looking for sponsors to help keep our tickets affordable. Check out our <a href="files/CSSconfNO-sponsorship.pdf">sponsorship packages</a> and <a href="mailto:hello@cssconf.no?subject=Let’s talk about sponsoring CSSconfNO">get in touch!</a></p>
         </div>
       </div>
-
     </section>
     <section id="updates" tabindex="0" data-magellan-target="updates">
       <h2>Updates</h2>
@@ -363,7 +367,7 @@
     <h3 id="schedule-modal-title"></h3>
     <h4>by <span id="schedule-modal-speaker"></span></h4>
     <p id="schedule-modal-description"></p>
-    <div class="schedule-modal-photo"><img id="schedule-modal-photo" src="" alt="" /></div>
+    <div class="schedule-modal-photo"><div class="schedule-modal-photo-wrapper"><img id="schedule-modal-photo" src="" alt="" /></div></div>
     <button class="close-button" data-close aria-label="Close modal" type="button">
       <span aria-hidden="true">&times;</span>
     </button>

@@ -101,7 +101,7 @@ var ScheduleDetails = {
     title: "Why CSS was invented",
     description: "Let's go back to the beginning! CSS was first proposed by Håkon Wium Lie in 1994. We are really happy to open the first CSSconf Nordic with Håkon talking about <strong>why</strong> CSS was invented."
   },
-  "1000": {
+  "0945": {
     speaker: "Aga Naplocha",
     photo: "/images/speakers/aga-naplocha.png",
     title: "A Creative Approach to SVG",

@@ -52,47 +52,109 @@ $sgrid-dropshadow-color: #333;
     > div {
       position: absolute;
       width: 100%;
-      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     .schedule-time {
-      opacity: 1;
+      height: 40%;
+      top: 0;
+      //opacity: 1;
       font-size: 2.5rem;
+      align-items: flex-end;
     }
 
     .schedule-description {
-      opacity: 0;
+      //opacity: 0;
+      height: 60%;
+      top: 40%;
       line-height: 0.9;
       font-size: 2rem;
+      align-items: flex-start;
+    }
+  }
+
+  .dgrid-column-inner.no-hover {
+    .schedule-time {
+      height: 50%;
+    }
+
+    .schedule-description {
+      height: 50%;
+      top: 50%;
     }
   }
 
   .dgrid-column-inner:not(.no-hover):hover {
     outline: none;
-    cursor: default;
-    .schedule-time {
-      opacity: 0;
-    }
-    .schedule-description {
-      opacity: 1;
-    }
+    cursor: pointer;
   }
 
   .dgrid-column:focus {
     outline: none;
     cursor: default;
     .dgrid-column-inner:not(.no-hover) {
+      background: $cta-color;
+    }
+  }
+
+  @media screen and (max-width: 450px) { // iPhone 6plus
+    .dgrid-column-inner.no-hover {
       .schedule-time {
-        opacity: 0;
+        font-size: 2.25rem;
+        line-height: 1.25;
+      }
+    }
+
+    .dgrid-column-inner:not(.no-hover) {
+      .schedule-time {
+        height: 30%;
+        font-size: 2.25rem;
       }
       .schedule-description {
-        opacity: 1;
+        top: 30%;
+        font-size: 1.8rem;
       }
     }
   }
+
+  @media screen and (max-width: 375px) { // iPhone 6
+    .dgrid-column-inner.no-hover {
+      .schedule-time {
+        font-size: 2rem;
+      }
+    }
+
+    .dgrid-column-inner:not(.no-hover) {
+      .schedule-time {
+        font-size: 2rem;
+      }
+      .schedule-description {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 321px) { // iPhone 5
+    .dgrid-column-inner.no-hover {
+      .schedule-time {
+        line-height: 1;
+      }
+      .schedule-description {
+        font-size: 1.8rem;
+      }
+    }
+
+    .dgrid-column-inner:not(.no-hover) {
+      .schedule-time {
+      }
+      .schedule-description {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
 }
 
 #schedule-modal {
@@ -114,6 +176,11 @@ $sgrid-dropshadow-color: #333;
   margin-right: 10px;
   float: left;
   shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+
+  @media screen and (max-width: 450px) { // iPhone 6plus
+    display: none;
+    visibility: hidden;
+  }
 }
 
 #schedule-modal h4 {
@@ -122,18 +189,27 @@ $sgrid-dropshadow-color: #333;
 
 .schedule-modal-photo {
   width: 150px;
-  height: 0;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  overflow: hidden;
+  height: 150px;
   display: block;
   position: absolute;
-  margin: ((150px * $sgrid-diamond-scale-up) - 150px) / 2;
+  margin: ceil(((150px * $sgrid-diamond-scale-up) - 150px) / 2);
   top: 1rem;
   left: 1rem;
-  padding-bottom: 150px;
+
+  .schedule-modal-photo-wrapper {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    overflow: hidden;
+  }
 
   img {
+    -webkit-transform: rotate(45deg) scale($sgrid-diamond-scale-up);
     transform: rotate(45deg) scale($sgrid-diamond-scale-up);
   }
+
+  @media screen and (max-width: 450px) { // iPhone 6plus
+    display: none;
+    visibility: hidden;
+  }
 }
+
