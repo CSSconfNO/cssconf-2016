@@ -69,6 +69,11 @@ $sgrid-dropshadow-color: #333;
 
 }
 
+#speaker-modal h3 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
 #speaker-modal-name {
   font-family: $secondary-font-family;
   font-size: 2.5em;
