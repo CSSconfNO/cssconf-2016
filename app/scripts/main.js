@@ -140,7 +140,7 @@ var ScheduleDetails = {
   "1615": {
     speaker: "Lena Reinhard",
     photo: "/images/speakers/lena-reinhard.jpg",
-    title: "Surviving in a high-speed environment: 15 things that will help you stand the pressure in tech",
+    title: "Existing in the Tech Industry: How to cope with the pressure of a fast-paced environment",
     description: "Over the past few years, several CSS methodologies and JavaScript frameworks have been released. In one year, we receive 32,120 business emails. Every weekday, we're active on Slack for 2 hours 15 minutes. Technology is moving fast, and constantly, there's so much going on. We read the latest think-pieces about which tools to use, but how often do we really change our behavior as a result? We constantly have to adapt in an ever-changing environment, while somehow still doing our job of building proper, functioning software to the latest tight-super-unrealistic deadline.<br/><br/>This talk will look at the human side of our daily work in technology. Together, we will examine which factors affect us physically and emotionally in our work. We'll learn how they lead to pressure, stress, self-consciousness and ultimately burnout, and we'll find out how to identify early warning signs of being affected. We'll learn from other fields like philosophy, psychology and climatology things that can help us cope. You'll leave with a realistic look at your own, human capabilities, and the knowledge of what you can do to take care of yourself while working on software."
   }
 }
