@@ -1,19 +1,55 @@
-# CSSconf 2016
+# CSSconf Nordic Website
 
-# Technicalities
+Make sure you have Node.js installed.
 
-## Running localhost
+```sh
+# Check version.
+$ node -v
+```
 
-````bash
-  $ npm install
-  $ npm start
+If version is lower than v5.3, please upgrade. You can grab the latest stable version from here
+
+https://nodejs.org/en/
+
+or install through your favorite package manager.
+
+## Dependencies
+
+```sh
+# Install gulp globally.
+$ npm install -g gulp
+
+# Install bower globally.
+$ npm install -g bower
 ````
 
+## Installation
 
-## Deploying
+```sh
+# Install packages
+$ npm install
+$ bower install
+```
 
+<<<<<<< HEAD
 ````bash
   $ npm run predeploy # packaging assets and things
   $ modulus login
   $ modulus project deploy -p css-conf
+=======
+## Developing
+
+```sh
+# Start server
+$ gulp serve
+```
+
+## Deploying
+````sh
+$ gulp build # Packaging assets and things
+$ modulus login
+$ modulus project deploy -p cssconf_no
+>>>>>>> develop
 ````
+
+

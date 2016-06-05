@@ -1,0 +1,408 @@
+@import '_foundation-settings.scss';
+// bower:scss
+@import 'bower_components/foundation-sites/scss/foundation.scss';
+// endbower
+@include foundation-everything(true);
+
+@import url(https://fonts.googleapis.com/css?family=VT323|Open+Sans:400,300,600,800);
+$primary-font-family: 'Open Sans';
+$secondary-font-family: 'VT323';
+
+// Calculeate brightness of a given color.
+@function brightness($color) {
+  @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
+}
+
+// Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
+@function color-contrast($color, $dark: $dark-text-default, $light: $light-text-default) {
+  @if $color == null {
+    @return null;
+  }
+  @else {
+    $color-brightness: brightness($color);
+    $light-text-brightness: brightness($light);
+    $dark-text-brightness: brightness($dark);
+
+    @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);
+  }
+}
+
+$background: #1b374b;
+$light-background: #e5f3fc;
+
+$dark-text-default: #333333;
+$light-text-default: #dddddd;
+
+$cta-color: saturate(lighten(#d97720,10%),30%);
+$primary-color: #2a80c5;
+
+@import 'diamond-grid';
+@import 'header';
+@import 'speakers';
+@import 'schedule';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fafafa;
+  font-family: $primary-font-family;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 16px;
+}
+
+h3 {
+  font-weight: bold;
+  margin: 1em 0 0.5em;
+}
+
+p {
+  a:link, a:visited {
+    display: inline-block;
+    padding: 0 0.2em;
+    color: $cta-color;
+  }
+
+  a:hover, a:active {
+    color: #fff;
+    text-decoration: none;
+    background: $cta-color;
+  }
+}
+
+a.no-style:link, a.no-style:visited {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+a.no-style:hover, a.no-style:active {
+  color: inherit;
+  background: none;
+}
+
+quote {
+  position: relative;
+  display: block;
+  clear: both;
+  width: 100%;
+  text-align: center;
+  margin: 2em 0;
+  padding: 1em;
+  background: rgba($primary-color,0.5); //rgba($background, 0.15);
+  border-radius: 5px;
+  &:after {
+    position: absolute;
+    right: 20px;
+    bottom: -15px;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid rgba($primary-color,0.5);
+  }
+}
+
+.float-right {
+  float: right;
+  margin-left: 1em;
+}
+
+.float-left {
+  float: left;
+  margin-right: 1em;
+}
+
+$nav-height: 60px;
+$nav-background: $background;
+$nav-desktop-background: rgba($light-background,0.9);
+.row.expanded.sticky-container {
+  background: rgba($light-background,0.9);
+}
+.main-nav {
+  width: 100%;
+  position: relative;
+  z-index: 99 !important;
+  //background: rgba($light-background,0.9); //$background;
+  //color: $background; //$dark-text-default;
+  font-family: $secondary-font-family;
+  font-size: 22px;
+  transition: box-shadow 300ms linear, font-size 300ms linear, line-height 300ms linear;
+  &.is-stuck {
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  &.title-bar {
+    height: $nav-height;
+    line-height: $nav-height - 5px;
+    padding: 0 10px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+
+  &.top-bar {
+    height: $nav-height;
+    line-height: $nav-height - 5px;
+    background: $nav-desktop-background;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $nav-background;
+    color: $light-text-default;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    > li {
+      padding: 10px 12px;
+      display: block;
+      border-top: 1px solid rgba($light-text-default,0.5);
+    }
+  }
+
+  a {
+    text-align: left;
+    color: inherit;
+    position: relative;
+    z-index: 0;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    color: #fff;
+    &:hover, &.is-active {
+      color: $cta-color;
+    }
+  }
+
+  @media screen and (min-width: 40em) {
+    height: $nav-height;
+    //line-height: $nav-height;
+    font-size: 22px;
+
+    ul {
+      position: relative;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      > li {
+        display: inline-block;
+        margin: 0;
+        padding: 0 10px;
+        border-top: none;
+      }
+    }
+
+    a {
+      color: $background;
+      text-align: center;
+      line-height: $nav-height + 5px;
+    }
+  }
+}
+
+.main-nav.title-bar {
+  background: $background;
+  color: #fff;
+}
+
+.topbar-logo {
+  max-height: $nav-height - 15px;
+  // line-height: 1;
+  // vertical-align: 0;
+}
+
+.title-bar-logo {
+  max-height: $nav-height - 5px;
+  padding: 5px 0;
+  float: right;
+}
+
+.main-nav .dropdown.menu {
+  background: $background;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  > li {
+    display: table-row;
+  }
+  @media screen and (min-width: 40em) {
+    position: relative;
+    background: transparent;
+    height: $nav-height;
+    line-height: $nav-height;
+    > li {
+      display: table-cell;
+    }
+  }
+}
+
+.css-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/css-family-logo.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 90%;
+  filter: saturate(50%);
+  &:hover {
+    filter: saturate(100%);
+  }
+}
+
+footer {
+  min-height: 220px;
+  max-width: 100%;
+  overflow: hidden;
+  background: $background;
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 211px;
+    width: 1300px;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -650px;
+    // background: lighten($background, 10%);
+    // overflow: hidden;
+    // mask-image: url('/images/oslo-skyline-2.png');
+    background: url('/images/oslo-skyline-3.png') no-repeat center bottom;
+    background-size: 100% auto;
+  }
+}
+
+.footer-content {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  color: $light-text-default;
+  font-size: 13px;
+  p {
+    margin: 0.5em;
+    padding: 0;
+    line-height: 1.5;
+  }
+}
+
+$total-sections: 7;
+$section-start-background: #cfe8f9;
+$section-end-background: $background;
+
+.content {
+  background: $section-end-background;
+}
+
+.content > section {
+  width: 100%;
+  padding-top: 2em;
+  padding-bottom: 4em;
+  position: relative;
+  &:focus {
+    outline: none;
+  }
+}
+
+@for $i from 1 through $total-sections {
+  .content > section:nth-child(#{$i}) {
+    @if $i == 1 {
+      $background: $section-start-background;
+    } @else if $i == $total-sections {
+      $background: $section-end-background;
+    } @else {
+      $background: mix($section-start-background, $section-end-background, (100 - ($i / $total-sections * 100)));
+    }
+    z-index: ($i + 1);
+    background: $background;
+    color: color-contrast($background);
+    filter: drop-shadow(0 -1px 0px rgba(darken($background,50%),0.3));
+    > h2:first-child {
+      z-index: $i;
+      color: $background;
+      //text-shadow: -1px -1px 0px rgba(#222, 0.4), 1px 1px 0px rgba(#eee, 0.4);
+    }
+  }
+}
+
+.content > section > h2:first-child {
+  font-family: $primary-font-family;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -0.1em;
+  text-transform: uppercase;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 10px;
+  transform: translateY(-90%);
+  &:before {
+    content: '< ';
+  }
+  &:after {
+    content: ' />';
+  }
+}
+
+section#venue {
+  padding: 20px 0 70px;
+}
+
+#venue-map {
+  height: 400px;
+  width: 100%;
+  color: $dark-text-default;
+}
+
+#map-infowindow {
+  h3 {
+    font-size: 1em;
+  }
+  img {
+    max-height: 70px;
+  }
+}
+
+.reveal {
+  background: $background;
+  color: $light-text-default;
+  border-color: transparent;
+  box-shadow: 0 0 15px 10px rgba(0,0,0,0.5);
+
+  .close-button {
+    color: $light-text-default;
+  }
+}
+
+.live-stream-wrapper {
+  position: relative;
+  padding-bottom: 56%; /* 16:9 */
+  height: 0;
+}
+.live-stream-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+

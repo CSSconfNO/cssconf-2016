@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="120" viewbox="0 0 80 120">
+  <defs>
+    <g id="C">
+      <rect width="20" height="20" x="0" y="20" fill="black" />
+      <rect width="20" height="20" x="0" y="40" fill="black" />
+      <rect width="20" height="20" x="0" y="60" fill="black" />
+      <rect width="20" height="20" x="0" y="80" fill="black" />
+      <rect width="20" height="20" x="20" y="0" fill="black" />
+      <rect width="20" height="20" x="20" y="100" fill="black" />
+      <rect width="20" height="20" x="40" y="0" fill="black" />
+      <rect width="20" height="20" x="40" y="100" fill="black" />
+      <rect width="20" height="20" x="60" y="20" fill="black" />
+      <rect width="20" height="20" x="60" y="80" fill="black" />
+    </g>
+    <g id="S">
+      <rect width="20" height="20" x="0" y="20" fill="black" />
+      <rect width="20" height="20" x="0" y="80" fill="black" />
+      <rect width="20" height="20" x="20" y="0" fill="black" />
+      <rect width="20" height="20" x="20" y="40" fill="black" />
+      <rect width="20" height="20" x="20" y="100" fill="black" />
+      <rect width="20" height="20" x="40" y="0" fill="black" />
+      <rect width="20" height="20" x="40" y="60" fill="black" />
+      <rect width="20" height="20" x="40" y="100" fill="black" />
+      <rect width="20" height="20" x="60" y="20" fill="black" />
+      <rect width="20" height="20" x="60" y="80" fill="black" />
+    </g>
+  </defs>
+</svg>

@@ -1,0 +1,18 @@
+{
+  "name": "cssconf-2016-new",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.1",
+    "foundation-sites": "^6.1.2",
+    "motion-ui": "^1.2.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "resolutions": {
+    "jquery": "~2.1.0",
+    "what-input": "~2.0.0"
+  }
+}
