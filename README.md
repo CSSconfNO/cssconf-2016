@@ -31,12 +31,6 @@ $ npm install
 $ bower install
 ```
 
-<<<<<<< HEAD
-````bash
-  $ npm run predeploy # packaging assets and things
-  $ modulus login
-  $ modulus project deploy -p css-conf
-=======
 ## Developing
 
 ```sh
@@ -49,7 +43,4 @@ $ gulp serve
 $ gulp build # Packaging assets and things
 $ modulus login
 $ modulus project deploy -p cssconf_no
->>>>>>> develop
 ````
-
-
