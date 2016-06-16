@@ -61,13 +61,13 @@ h3 {
 }
 
 p {
-  a:link, a:visited {
+  a:link:not(.button), a:visited:not(.button) {
     display: inline-block;
     padding: 0 0.2em;
     color: $cta-color;
   }
 
-  a:hover, a:active {
+  a:hover:not(.button), a:active:not(.button) {
     color: #fff;
     text-decoration: none;
     background: $cta-color;
@@ -303,7 +303,7 @@ footer {
   }
 }
 
-$total-sections: 8;
+$total-sections: 7;
 $section-start-background: #cfe8f9;
 $section-end-background: $background;
 
